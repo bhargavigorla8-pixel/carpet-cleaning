@@ -1,0 +1,1765 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clean Nest</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="gallery.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+                         HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        
+        <a href="index.html" class="site-logo">
+
+    <img src="images/logo.png" alt="Go Clean Logo">
+
+    <span class="logo-text">
+        <span class="logo-go">Clean</span>
+        <span class="logo-clean">Nest</span>
+    </span>
+
+</a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav" id="mainNav">
+
+
+            <!-- HOME DROPDOWN -->
+
+            <div class="nav-dropdown">
+
+                <a href="index.html"
+                   class="nav-link home-link">
+
+                    Home
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html">
+                        Home 1
+                    </a>
+
+                    <a href="home2.html">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+           
+
+
+
+            <!-- SERVICES -->
+
+            <a href="about.html"
+               class="nav-link">
+
+                About
+
+            </a>
+
+            <a href="services.html"
+               class="nav-link">
+
+                Services
+
+            </a>
+
+<a href="blog.html"
+               class="nav-link">
+
+                Blog
+
+            <!-- BLOG -->
+
+            <a href="pricing.html"
+               class="nav-link">
+
+                Pricing
+
+            </a>
+            <a href="gallery.html"
+               class="nav-link active">
+
+                Gallery
+
+            </a>
+
+
+
+            <!-- CONTACT -->
+
+            <a href="contact.html"
+               class="nav-link">
+
+                Contact
+
+            </a>
+<a href="dashboard.html"
+               class="nav-link">
+
+                Dashboard
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- HEADER RIGHT SIDE -->
+
+        <div class="header-actions">
+
+
+            <!-- RTL / LTR -->
+
+            <button class="control-btn"
+                    id="rtlBtn"
+                    type="button"
+                    aria-label="Change direction">
+
+                
+                <span id="directionText">
+                    RTL
+                </span>
+
+            </button>
+
+
+
+            <!-- LIGHT / DARK -->
+
+            <button class="control-btn"
+                    id="themeBtn"
+                    type="button"
+                    aria-label="Change theme">
+
+                <i class="fa-solid fa-moon"
+                   id="themeIcon"></i>
+
+            </button>
+
+
+
+            <!-- LOGIN -->
+
+            <a href="login.html"
+               class="login-btn">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+                    Login
+                </span>
+
+            </a>
+
+
+
+            <!-- MOBILE MENU -->
+
+            <button class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     CARPET & UPHOLSTERY BEFORE / AFTER GALLERY
+     Header & Footer intentionally excluded
+========================================================= -->
+
+<main class="cleaning-gallery">
+
+    <!-- =====================================================
+         1. GALLERY HERO
+    ====================================================== -->
+
+    <section class="gallery-hero">
+
+        <div class="gallery-hero-content">
+
+            <span class="gallery-eyebrow">
+                REAL CLEANING RESULTS
+            </span>
+
+            <h1>
+                See The Difference
+                <span>Professional Cleaning Makes.</span>
+            </h1>
+
+            <p>
+                Explore real before-and-after results from our
+                carpet, sofa, upholstery and mattress cleaning services.
+            </p>
+
+            
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         2. GALLERY INTRO
+    ====================================================== -->
+
+    <section class="gallery-intro">
+
+        <div class="gallery-section-heading">
+
+            <span class="gallery-eyebrow">
+                OUR RESULTS
+            </span>
+
+            <h2>
+                From Dirty To
+                <span>Fresh.</span>
+            </h2>
+
+            <p>
+                Every cleaning project is different. Our professional
+                equipment and cleaning methods help remove dirt,
+                stains, odors and buildup from everyday use.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-stats">
+
+            <div class="gallery-stat">
+                <strong>500+</strong>
+                <span>Cleaning Jobs</span>
+            </div>
+
+            <div class="gallery-stat">
+                <strong>100%</strong>
+                <span>Professional Care</span>
+            </div>
+
+            <div class="gallery-stat">
+                <strong>4.9★</strong>
+                <span>Customer Rating</span>
+            </div>
+
+            <div class="gallery-stat">
+                <strong>24/7</strong>
+                <span>Booking Support</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         3. BEFORE / AFTER GALLERY
+    ====================================================== -->
+
+    <section class="before-after-section" id="gallery">
+
+        <div class="gallery-section-heading">
+
+            <span class="gallery-eyebrow">
+                BEFORE & AFTER
+            </span>
+
+            <h2>
+                Real Cleaning
+                <span>Transformations</span>
+            </h2>
+
+            <p>
+                Browse some of our carpet and upholstery cleaning
+                transformations.
+            </p>
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="gallery-filters">
+
+            <button class="gallery-filter active"
+                    data-filter="all">
+                All Results
+            </button>
+
+            <button class="gallery-filter"
+                    data-filter="carpet">
+                Carpets
+            </button>
+
+            <button class="gallery-filter"
+                    data-filter="sofa">
+                Sofas
+            </button>
+
+            <button class="gallery-filter"
+                    data-filter="upholstery">
+                Upholstery
+            </button>
+
+            <button class="gallery-filter"
+                    data-filter="mattress">
+                Mattresses
+            </button>
+
+        </div>
+
+
+        <!-- GALLERY GRID -->
+
+        <div class="before-after-grid">
+
+
+            <!-- CARD 1 -->
+
+            <article class="before-after-card"
+                     data-category="carpet">
+
+                <div class="before-after-image">
+
+                    <div class="ba-image before-image">
+
+                        <span class="ba-label">
+                            BEFORE
+                        </span>
+
+                        <img
+                            src="images/carpet-before.png"
+                            alt="Dirty carpet before cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="ba-image after-image">
+
+                        <span class="ba-label">
+                            AFTER
+                        </span>
+
+                        <img
+                            src="images/carpet-after.png"
+                            alt="Clean carpet after professional cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <button class="gallery-view-btn"
+                            aria-label="View carpet transformation">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="before-after-content">
+
+                    <span class="result-type">
+                        CARPET CLEANING
+                    </span>
+
+                    <h3>
+                        Deep Carpet Restoration
+                    </h3>
+
+                    <p>
+                        Removed years of accumulated dirt,
+                        dust and surface stains.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="before-after-card"
+                     data-category="sofa">
+
+                <div class="before-after-image">
+
+                    <div class="ba-image before-image">
+
+                        <span class="ba-label">
+                            BEFORE
+                        </span>
+
+                        <img
+                            src="images/sofa-before.png"
+                            alt="Dirty sofa before cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="ba-image after-image">
+
+                        <span class="ba-label">
+                            AFTER
+                        </span>
+
+                        <img
+                            src="images/sofa-after.png"
+                            alt="Clean sofa after professional cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <button class="gallery-view-btn"
+                            aria-label="View sofa transformation">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="before-after-content">
+
+                    <span class="result-type">
+                        SOFA CLEANING
+                    </span>
+
+                    <h3>
+                        Sofa Freshening
+                    </h3>
+
+                    <p>
+                        Deep extraction cleaning helped remove
+                        dirt, stains and unwanted odors.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="before-after-card"
+                     data-category="upholstery">
+
+                <div class="before-after-image">
+
+                    <div class="ba-image before-image">
+
+                        <span class="ba-label">
+                            BEFORE
+                        </span>
+
+                        <img
+                            src="images/up-before.png"
+                            alt="Upholstery before cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="ba-image after-image">
+
+                        <span class="ba-label">
+                            AFTER
+                        </span>
+
+                        <img
+                            src="images/up-after.png"
+                            alt="Upholstery after cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <button class="gallery-view-btn"
+                            aria-label="View upholstery transformation">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="before-after-content">
+
+                    <span class="result-type">
+                        UPHOLSTERY
+                    </span>
+
+                    <h3>
+                        Fabric Upholstery Revival
+                    </h3>
+
+                    <p>
+                        Professional fabric cleaning restored
+                        a cleaner and fresher appearance.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="before-after-card"
+                     data-category="mattress">
+
+                <div class="before-after-image">
+
+                    <div class="ba-image before-image">
+
+                        <span class="ba-label">
+                            BEFORE
+                        </span>
+
+                        <img
+                            src="images/before-matress.png"
+                            alt="Mattress before cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="ba-image after-image">
+
+                        <span class="ba-label">
+                            AFTER
+                        </span>
+
+                        <img
+                            src="images/after-matress.png"
+                            alt="Mattress after cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <button class="gallery-view-btn"
+                            aria-label="View mattress transformation">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="before-after-content">
+
+                    <span class="result-type">
+                        MATTRESS CLEANING
+                    </span>
+
+                    <h3>
+                        Mattress Deep Cleaning
+                    </h3>
+
+                    <p>
+                        Deep cleaning helped refresh the mattress
+                        surface and remove accumulated dust.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="before-after-card"
+                     data-category="carpet">
+
+                <div class="before-after-image">
+
+                    <div class="ba-image before-image">
+
+                        <span class="ba-label">
+                            BEFORE
+                        </span>
+
+                        <img
+                            src="images/before.png"
+                            alt="Stained carpet before cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="ba-image after-image">
+
+                        <span class="ba-label">
+                            AFTER
+                        </span>
+
+                        <img
+                            src="images/after.png"
+                            alt="Clean carpet after stain treatment"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <button class="gallery-view-btn"
+                            aria-label="View carpet transformation">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="before-after-content">
+
+                    <span class="result-type">
+                        STAIN REMOVAL
+                    </span>
+
+                    <h3>
+                        Carpet Stain Treatment
+                    </h3>
+
+                    <p>
+                        Targeted stain treatment improved the
+                        appearance of heavily marked carpet areas.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 6 -->
+
+            <article class="before-after-card"
+                     data-category="sofa">
+
+                <div class="before-after-image">
+
+                    <div class="ba-image before-image">
+
+                        <span class="ba-label">
+                            BEFORE
+                        </span>
+
+                        <img
+                            src="images/rug-before.png"
+                            alt="Sofa before deep cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="ba-image after-image">
+
+                        <span class="ba-label">
+                            AFTER
+                        </span>
+
+                        <img
+                            src="images/rug-after.png"
+                            alt="Sofa after deep cleaning"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <button class="gallery-view-btn"
+                            aria-label="View sofa transformation">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="before-after-content">
+
+                    <span class="result-type">
+                        UPHOLSTERY CLEANING
+                    </span>
+
+                    <h3>
+                        Fabric Sofa Refresh
+                    </h3>
+
+                    <p>
+                        A detailed cleaning process refreshed
+                        the fabric and improved overall appearance.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         4. CLEANING PROCESS
+    ====================================================== -->
+
+    <section class="gallery-process">
+
+        <div class="gallery-section-heading">
+
+            <span class="gallery-eyebrow">
+                HOW WE CREATE THE RESULTS
+            </span>
+
+            <h2>
+                Our Cleaning
+                <span>Process</span>
+            </h2>
+
+            <p>
+                We follow a professional cleaning process designed
+                to treat different carpet and fabric surfaces safely.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h3>
+                    Inspect
+                </h3>
+
+                <p>
+                    We inspect the material, stains and overall
+                    condition before cleaning.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-spray-can-sparkles"></i>
+                </div>
+
+                <h3>
+                    Pre-Treat
+                </h3>
+
+                <p>
+                    Suitable cleaning solutions are applied
+                    to stains and heavily soiled areas.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+
+                <h3>
+                    Deep Clean
+                </h3>
+
+                <p>
+                    Professional equipment extracts dirt,
+                    moisture and cleaning residue.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <h3>
+                    Final Check
+                </h3>
+
+                <p>
+                    We inspect the cleaned surface and make
+                    sure the job is completed properly.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         5. RESULTS HIGHLIGHT
+    ====================================================== -->
+
+    <section class="results-highlight">
+
+        <div class="results-highlight-image">
+
+            <img
+                src="images/carpet.jpg"
+                alt="Professional carpet cleaning result"
+                loading="lazy"
+            >
+
+            <div class="results-image-badge">
+                <strong>AFTER</strong>
+                <span>Professional Cleaning</span>
+            </div>
+
+        </div>
+
+
+        <div class="results-highlight-content">
+
+            <span class="gallery-eyebrow">
+                THE GO CLEAN DIFFERENCE
+            </span>
+
+            <h2>
+                Cleaner Surfaces.
+                <span>Fresher Spaces.</span>
+            </h2>
+
+            <p>
+                Professional carpet and upholstery cleaning can
+                dramatically improve the appearance and freshness
+                of frequently used surfaces.
+            </p>
+
+
+            <div class="result-check-list">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Deep dirt extraction</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Targeted stain treatment</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Odor treatment options</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Fabric-safe cleaning methods</span>
+                </div>
+
+            </div>
+
+            <a href="#booking" class="results-button">
+                Get Your Cleaning Quote
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         6. FINAL CTA
+    ====================================================== -->
+
+    <section class="gallery-cta" id="booking">
+
+        <div class="gallery-cta-content">
+
+            <span class="gallery-eyebrow">
+                READY FOR YOUR TRANSFORMATION?
+            </span>
+
+            <h2>
+                Your Carpet Could Be
+                <span>Next.</span>
+            </h2>
+
+            <p>
+                Give your carpets, sofas and upholstery the
+                professional cleaning they deserve.
+            </p>
+
+            <div class="gallery-cta-buttons">
+
+                
+
+                <a href="contact.html"
+                   class="gallery-book-butn">
+                    Book Cleaning
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section> 
+
+
+    <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
+
+    <div class="gallery-lightbox" id="galleryLightbox">
+
+        <button class="lightbox-close"
+                aria-label="Close gallery">
+            ×
+        </button>
+
+        <div class="lightbox-content">
+
+            <div class="lightbox-before">
+
+                <span>BEFORE</span>
+
+                <img id="lightboxBefore"
+                     src=""
+                     alt="Before cleaning">
+
+            </div>
+
+
+            <div class="lightbox-after">
+
+                <span>AFTER</span>
+
+                <img id="lightboxAfter"
+                     src=""
+                     alt="After cleaning">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+                         FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-column footer-brand">
+
+
+            <!-- SAME LOGO -->
+
+            
+                     <a href="index.html" class="site-logo">
+
+    <img src="images/logo.png" alt="Go Clean Logo">
+
+    <span class="logo-text">
+        <span class="logo-go">Clean</span>
+        <span class="logo-clean">Nest</span>
+    </span>
+
+</a>
+
+            </a>
+
+
+            <p>
+
+                We provide reliable and professional
+                cleaning solutions for homes, offices
+                and businesses.
+
+            </p>
+
+
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="social-icons">
+
+
+                <a href="#"
+                   aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="Twitter">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-column">
+
+            <h3>
+                Services
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="services.html">
+                        Residential Cleaning
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Office Cleaning
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Deep Cleaning
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Commercial Cleaning
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Move-In Cleaning
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+            <h3>
+                Company
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Our Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <ul class="contact-list">
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Hyderabad, Telangana, India
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a href="tel:+919999999999">
+                        +91 99999 99999
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:hello@goclean.com">
+                        hello@goclean.com
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p>
+                © 2026 Go Clean. All Rights Reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="terms.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+                         JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+                  LIGHT / DARK MODE
+========================================================= */
+
+const themeBtn =
+    document.getElementById("themeBtn");
+
+const themeIcon =
+    document.getElementById("themeIcon");
+
+
+const savedTheme =
+    localStorage.getItem("goCleanTheme");
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark-mode");
+
+    themeIcon.classList.remove("fa-moon");
+
+    themeIcon.classList.add("fa-sun");
+
+}
+
+
+themeBtn.addEventListener("click", function () {
+
+
+    document.body.classList.toggle("dark-mode");
+
+
+    if (document.body.classList.contains("dark-mode")) {
+
+
+        localStorage.setItem(
+            "goCleanTheme",
+            "dark"
+        );
+
+
+        themeIcon.classList.remove(
+            "fa-moon"
+        );
+
+        themeIcon.classList.add(
+            "fa-sun"
+        );
+
+
+    } else {
+
+
+        localStorage.setItem(
+            "goCleanTheme",
+            "light"
+        );
+
+
+        themeIcon.classList.remove(
+            "fa-sun"
+        );
+
+        themeIcon.classList.add(
+            "fa-moon"
+        );
+
+    }
+
+});
+
+
+
+/* =========================================================
+                         RTL / LTR
+========================================================= */
+
+const rtlBtn =
+    document.getElementById("rtlBtn");
+
+const directionText =
+    document.getElementById("directionText");
+
+
+const savedDirection =
+    localStorage.getItem("goCleanDirection");
+
+
+if (savedDirection === "rtl") {
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        "rtl"
+    );
+
+    document.body.classList.add("rtl");
+
+    directionText.textContent = "LTR";
+
+
+} else {
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        "ltr"
+    );
+
+    document.body.classList.remove("rtl");
+
+    directionText.textContent = "RTL";
+
+}
+
+
+
+rtlBtn.addEventListener("click", function () {
+
+
+    const currentDirection =
+        document.documentElement.getAttribute("dir");
+
+
+    if (currentDirection === "ltr") {
+
+
+        document.documentElement.setAttribute(
+            "dir",
+            "rtl"
+        );
+
+        document.body.classList.add("rtl");
+
+
+        localStorage.setItem(
+            "goCleanDirection",
+            "rtl"
+        );
+
+
+        directionText.textContent = "LTR";
+
+
+    } else {
+
+
+        document.documentElement.setAttribute(
+            "dir",
+            "ltr"
+        );
+
+        document.body.classList.remove("rtl");
+
+
+        localStorage.setItem(
+            "goCleanDirection",
+            "ltr"
+        );
+
+
+        directionText.textContent = "RTL";
+
+    }
+
+});
+
+
+
+/* =========================================================
+                       MOBILE MENU
+========================================================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const mainNav =
+    document.getElementById("mainNav");
+
+
+menuBtn.addEventListener("click", function () {
+
+
+    mainNav.classList.toggle("show");
+
+
+    const icon =
+        menuBtn.querySelector("i");
+
+
+    if (mainNav.classList.contains("show")) {
+
+
+        icon.classList.remove("fa-bars");
+
+        icon.classList.add("fa-xmark");
+
+
+    } else {
+
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    }
+
+});
+/* =========================================================
+   CARPET & UPHOLSTERY BEFORE / AFTER GALLERY JS
+========================================================= */
+
+
+/* =========================================================
+   1. CATEGORY FILTER
+========================================================= */
+
+const galleryFilters =
+    document.querySelectorAll(".gallery-filter");
+
+const galleryCards =
+    document.querySelectorAll(".before-after-card");
+
+
+galleryFilters.forEach(filter => {
+
+    filter.addEventListener("click", function () {
+
+        /* Remove active class */
+        galleryFilters.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        /* Add active class */
+        this.classList.add("active");
+
+
+        /* Selected category */
+        const selectedCategory =
+            this.getAttribute("data-filter");
+
+
+        /* Filter cards */
+        galleryCards.forEach(card => {
+
+            const cardCategory =
+                card.getAttribute("data-category");
+
+
+            if (
+                selectedCategory === "all" ||
+                cardCategory === selectedCategory
+            ) {
+
+                card.classList.remove("hide");
+
+            } else {
+
+                card.classList.add("hide");
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* =========================================================
+   2. LIGHTBOX
+========================================================= */
+
+const viewButtons =
+    document.querySelectorAll(".gallery-view-btn");
+
+const lightbox =
+    document.getElementById("galleryLightbox");
+
+const lightboxBefore =
+    document.getElementById("lightboxBefore");
+
+const lightboxAfter =
+    document.getElementById("lightboxAfter");
+
+const closeLightbox =
+    document.querySelector(".lightbox-close");
+
+
+viewButtons.forEach(button => {
+
+    button.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+
+        const card =
+            this.closest(".before-after-card");
+
+
+        const beforeImage =
+            card.querySelector(".before-image img");
+
+        const afterImage =
+            card.querySelector(".after-image img");
+
+
+        /* Set lightbox images */
+        lightboxBefore.src =
+            beforeImage.src;
+
+        lightboxAfter.src =
+            afterImage.src;
+
+
+        lightboxBefore.alt =
+            beforeImage.alt;
+
+        lightboxAfter.alt =
+            afterImage.alt;
+
+
+        /* Open */
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+
+/* =========================================================
+   CLOSE LIGHTBOX
+========================================================= */
+
+function closeGalleryLightbox() {
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+closeLightbox.addEventListener(
+    "click",
+    closeGalleryLightbox
+);
+
+
+/* Click outside content */
+
+lightbox.addEventListener("click", function (event) {
+
+    if (event.target === lightbox) {
+
+        closeGalleryLightbox();
+
+    }
+
+});
+
+
+/* Escape key */
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        closeGalleryLightbox();
+
+    }
+
+});
+
+
+/* =========================================================
+   3. SMOOTH SCROLL
+========================================================= */
+
+document.querySelectorAll(
+    '.cleaning-gallery a[href^="#"]'
+).forEach(link => {
+
+    link.addEventListener("click", function (event) {
+
+        const targetId =
+            this.getAttribute("href");
+
+        const target =
+            document.querySelector(targetId);
+
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   4. SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".before-after-card, .process-card, .gallery-stat"
+    );
+
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add(
+                        "gallery-reveal",
+                        "show"
+                    );
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+</script>
+
+
+</body>
+
+</html>
+

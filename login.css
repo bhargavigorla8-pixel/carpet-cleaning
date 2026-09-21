@@ -1,0 +1,938 @@
+/* =========================================================
+   CARPET & UPHOLSTERY CLEANING
+   LOGIN PAGE
+   ========================================================= */
+
+:root {
+    --primary: #176B3A;
+    --secondary: #eac800;
+
+    --white: #ffffff;
+    --black: #111111;
+
+    --bg: #f7faf8;
+    --card-bg: #ffffff;
+    --text: #18231d;
+    --muted: #6d776f;
+    --border: #dfe7e2;
+    --input-bg: #f9fbfa;
+
+    --shadow: 0 20px 60px rgba(23, 107, 58, 0.12);
+    --radius: 18px;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+/* =========================================================
+   LOGIN PAGE
+   ========================================================= */
+
+.login-page {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 115vh;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(23, 107, 58, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(234, 200, 0, 0.10),
+            transparent 30%
+        ),
+        var(--bg);
+}
+
+/* =========================================================
+   TOP RIGHT CONTROLS
+   ========================================================= */
+
+.top-controls {
+    position: fixed;
+    top: 22px;
+    right: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+.control-btn {
+    min-width: 44px;
+    height: 42px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--card-bg);
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.control-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.control-btn i {
+    font-size: 16px;
+}
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.login-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 455px;
+
+    max-height: calc(105vh - 50px);
+
+    padding: 34px 38px;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.login-card::-webkit-scrollbar {
+    display: none;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 26px;
+}
+
+.brand > div {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 58px;
+    height: 58px;
+
+    margin-right: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.brand-details a,
+.brand-details .logo {
+    text-decoration: none;
+}
+
+.brand-details h1 {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 27px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: var(--primary);
+}
+
+.brand-details h1 span {
+    color: var(--secondary);
+}
+
+/* =========================================================
+   LOGIN HEADING
+   ========================================================= */
+
+.login-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-heading h2 {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 27px;
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    margin-bottom: 7px;
+}
+
+.login-heading p {
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: var(--muted);
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+#loginForm {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+/* =========================================================
+   INPUT BOX
+   ========================================================= */
+
+.input-box {
+    position: relative;
+
+    width: 100%;
+}
+
+.input-box > i {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--primary);
+
+    font-size: 15px;
+
+    z-index: 2;
+}
+
+.input-box input {
+    width: 100%;
+    height: 51px;
+
+    padding: 0 45px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--input-bg);
+    color: var(--text);
+
+    outline: none;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.input-box input::placeholder {
+    color: #9aa39d;
+}
+
+.input-box input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(23, 107, 58, 0.10);
+
+    background: var(--card-bg);
+}
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
+.password-toggle {
+    position: absolute;
+
+    right: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--muted);
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 7px;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: var(--primary);
+    background: rgba(23, 107, 58, 0.08);
+}
+
+/* =========================================================
+   REMEMBER / FORGOT
+   ========================================================= */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 5px 0 20px;
+
+    font-size: 13px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--muted);
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.remember input {
+    display: none;
+}
+
+.checkmark {
+    width: 17px;
+    height: 17px;
+
+    border: 1.5px solid var(--border);
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: transparent;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.remember input:checked + .checkmark {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.checkmark i {
+    font-size: 9px;
+}
+
+.forgot-password {
+    color: var(--primary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: var(--secondary);
+}
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-button {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow:
+        0 8px 20px rgba(23, 107, 58, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.login-button:hover {
+    background: #125c31;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(23, 107, 58, 0.28);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.login-button i {
+    font-size: 13px;
+
+    transition: transform 0.2s ease;
+}
+
+.login-button:hover i {
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.divider {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 22px 0;
+}
+
+.divider span {
+    height: 1px;
+
+    flex: 1;
+
+    background: var(--border);
+}
+
+.divider p {
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color: var(--muted);
+}
+
+/* =========================================================
+   GOOGLE / APPLE BUTTONS
+   ========================================================= */
+
+.social-button {
+    width: 100%;
+    height: 49px;
+
+    margin-bottom: 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--card-bg);
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.social-button:hover {
+    border-color: var(--primary);
+
+    background: var(--input-bg);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.social-button i {
+    position: absolute;
+
+    left: 17px;
+
+    font-size: 17px;
+}
+
+#googleLogin i {
+    color: #db4437;
+}
+
+#appleLogin i {
+    color: var(--text);
+}
+
+/* =========================================================
+   REGISTER
+   ========================================================= */
+
+.register-text {
+    text-align: center;
+
+    margin-top: 21px;
+
+    font-size: 13px;
+
+    color: var(--muted);
+}
+
+.register-text a {
+    margin-left: 4px;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.register-text a:hover {
+    color: var(--secondary);
+}
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+.toast {
+    position: fixed;
+
+    left: 50%;
+    bottom: 25px;
+
+    transform:
+        translate(-50%, 25px);
+
+    min-width: 280px;
+    max-width: calc(100vw - 30px);
+
+    padding: 13px 17px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 9999;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate(-50%, 0);
+}
+
+.toast i {
+    font-size: 16px;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode {
+    --bg: #0c1510;
+    --card-bg: #132019;
+
+    --text: #f1f6f3;
+    --muted: #a5b0a9;
+
+    --border: #2b3a31;
+    --input-bg: #101b15;
+
+    --shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .login-page {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(23, 107, 58, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(234, 200, 0, 0.08),
+            transparent 30%
+        ),
+        var(--bg);
+}
+
+body.dark-mode .control-btn:hover {
+    background: var(--secondary);
+    color: #111111;
+    border-color: var(--secondary);
+}
+
+body.dark-mode .input-box input:focus {
+    background: #15231b;
+}
+
+body.dark-mode #appleLogin i {
+    color: var(--white);
+}
+
+/* =========================================================
+   RTL SUPPORT
+   ========================================================= */
+
+html[dir="rtl"] .top-controls {
+    right: auto;
+    left: 25px;
+}
+
+html[dir="rtl"] .brand-logo {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+html[dir="rtl"] .input-box > i {
+    left: auto;
+    right: 15px;
+}
+
+html[dir="rtl"] .input-box input {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+html[dir="rtl"] .password-toggle {
+    right: auto;
+    left: 13px;
+}
+
+html[dir="rtl"] .forgot-password {
+    text-align: left;
+}
+
+html[dir="rtl"] .social-button i {
+    left: auto;
+    right: 17px;
+}
+
+html[dir="rtl"] .register-text a {
+    margin-left: 0;
+    margin-right: 4px;
+}
+
+html[dir="rtl"] .login-button:hover i {
+    transform: translateX(-4px);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .login-page {
+        padding: 20px 15px;
+    }
+
+    .top-controls {
+        top: 15px;
+        right: 15px;
+    }
+
+    .control-btn {
+        height: 38px;
+        min-width: 40px;
+
+        padding: 0 11px;
+    }
+
+    .login-card {
+        max-width: 430px;
+
+        padding: 29px 25px;
+
+        max-height: calc(100vh - 40px);
+    }
+
+    .brand {
+        margin-bottom: 22px;
+    }
+
+    .brand-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand-details h1 {
+        font-size: 24px;
+    }
+
+    .login-heading h2 {
+        font-size: 24px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .login-page {
+        padding: 15px 12px;
+    }
+
+    .top-controls {
+        top: 10px;
+        right: 10px;
+    }
+
+    .control-btn {
+        height: 36px;
+        min-width: 38px;
+
+        font-size: 11px;
+    }
+
+    .login-card {
+        padding: 25px 19px;
+
+        border-radius: 15px;
+
+        max-height: calc(100vh - 30px);
+    }
+
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+
+        margin-right: 9px;
+    }
+
+    .brand-details h1 {
+        font-size: 22px;
+    }
+
+    .login-heading h2 {
+        font-size: 22px;
+    }
+
+    .login-heading p {
+        font-size: 12.5px;
+    }
+
+    .input-box input {
+        height: 48px;
+    }
+
+    .login-button {
+        height: 49px;
+    }
+
+    .social-button {
+        height: 47px;
+        font-size: 12.5px;
+    }
+}
+
+/* =========================================================
+   VERY SHORT SCREENS
+   ========================================================= */
+
+@media (max-height: 700px) {
+
+    .login-page {
+        align-items: flex-start;
+
+        padding-top: 65px;
+        padding-bottom: 20px;
+    }
+
+    .login-card {
+        max-height: calc(100vh - 80px);
+
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .brand {
+        margin-bottom: 17px;
+    }
+
+    .login-heading {
+        margin-bottom: 18px;
+    }
+
+    .form-group {
+        margin-bottom: 13px;
+    }
+
+    .divider {
+        margin: 16px 0;
+    }
+
+    .register-text {
+        margin-top: 15px;
+    }
+}

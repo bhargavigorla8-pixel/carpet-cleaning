@@ -1,0 +1,1663 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Go Clean</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="blog-2.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+                         HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        
+        <a href="index.html" class="site-logo">
+
+    <img src="images/logo.png" alt="Go Clean Logo">
+
+    <span class="logo-text">
+        <span class="logo-go">Clean</span>
+        <span class="logo-clean">Nest</span>
+    </span>
+
+</a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav" id="mainNav">
+
+
+            <!-- HOME DROPDOWN -->
+
+            <div class="nav-dropdown">
+
+                <a href="index.html"
+                   class="nav-link home-link">
+
+                    Home
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html">
+                        Home 1
+                    </a>
+
+                    <a href="home2.html">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+           
+
+
+
+            <!-- SERVICES -->
+             <a href="about.html"
+               class="nav-link">
+
+                About
+
+            </a>
+
+            <a href="services.html"
+               class="nav-link">
+
+                Services
+
+            </a>
+
+
+
+            <!-- BLOG -->
+
+            <a href="pricing.html"
+               class="nav-link">
+
+                Pricing
+
+            </a>
+            <a href="blog.html"
+               class="nav-link">
+
+                Blog
+
+            </a>
+
+ <a href="gallery.html"
+               class="nav-link">
+
+                Gallery
+
+            </a>
+
+            <!-- CONTACT -->
+
+            <a href="contact.html"
+               class="nav-link">
+
+                Contact
+
+            </a>
+<a href="dashboard.html"
+               class="nav-link">
+
+                Dashboard
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- HEADER RIGHT SIDE -->
+
+        <div class="header-actions">
+
+
+            <!-- RTL / LTR -->
+
+            <button class="control-btn"
+                    id="rtlBtn"
+                    type="button"
+                    aria-label="Change direction">
+
+                
+                <span id="directionText">
+                    RTL
+                </span>
+
+            </button>
+
+
+
+            <!-- LIGHT / DARK -->
+
+            <button class="control-btn"
+                    id="themeBtn"
+                    type="button"
+                    aria-label="Change theme">
+
+                <i class="fa-solid fa-moon"
+                   id="themeIcon"></i>
+
+            </button>
+
+
+
+            <!-- LOGIN -->
+
+            <a href="login.html"
+               class="login-btn">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+                    Login
+                </span>
+
+            </a>
+
+
+
+            <!-- MOBILE MENU -->
+
+            <button class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<body>
+
+    <!-- =========================
+         BLOG HERO
+    ========================== -->
+
+    <section class="blog-detail-hero">
+
+        <div class="blog-container">
+
+            
+
+            <div class="blog-category">
+                Carpet Cleaning
+            </div>
+
+            <h1>
+                How Often Should You
+                <span>Professionally Clean</span>
+                Your Carpets?
+            </h1>
+
+            <p class="blog-intro">
+                Discover how regular professional carpet cleaning can
+                improve your home's appearance, comfort, freshness and
+                overall indoor environment.
+            </p>
+
+            <div class="blog-meta">
+
+                <div class="author">
+                    <div class="author-image">
+                        <img src="images/detail-3.jpg" alt="Author">
+                    </div>
+
+                    <div>
+                        <strong>Sarah Wilson</strong>
+                        <span>Cleaning Expert</span>
+                    </div>
+                </div>
+
+                <div class="meta-divider"></div>
+
+                <div class="meta-item">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>September 21, 2026</span>
+                </div>
+
+                <div class="meta-divider"></div>
+
+                <div class="meta-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>6 Min Read</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURED IMAGE
+    ========================== -->
+
+    <section class="featured-section">
+
+        <div class="blog-container">
+
+            <div class="featured-image">
+                <img src="images/matress.jpg"
+                     alt="Professional carpet cleaning service">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BLOG CONTENT
+    ========================== -->
+
+    <section class="blog-content-section">
+
+        <div class="blog-container content-grid">
+
+            <!-- MAIN ARTICLE -->
+
+            <article class="article-content">
+
+                <p class="lead">
+                    Your carpets do more than add comfort and warmth to
+                    your home. They also collect dust, dirt, allergens,
+                    pet hair and everyday debris. While regular vacuuming
+                    is important, it cannot remove everything trapped
+                    deep inside carpet fibers.
+                </p>
+
+                <p>
+                    Professional carpet cleaning helps remove deeply
+                    embedded dirt and buildup that ordinary household
+                    cleaning may leave behind. But how often should you
+                    actually schedule a professional cleaning?
+                </p>
+
+
+                <h2>
+                    How Often Should You Clean Your Carpets?
+                </h2>
+
+                <p>
+                    For most homes, professional carpet cleaning every
+                    <strong>6 to 12 months</strong> is a good starting
+                    point. However, the ideal cleaning schedule depends
+                    on your lifestyle, household size, pets and the
+                    amount of traffic your carpets receive.
+                </p>
+
+
+                <!-- INFO BOX -->
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <h3>Quick Tip</h3>
+
+                        <p>
+                            High-traffic homes may benefit from professional
+                            carpet cleaning more frequently than homes with
+                            lighter foot traffic.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    5 Signs Your Carpet Needs Professional Cleaning
+                </h2>
+
+                <p>
+                    Sometimes your carpet can look clean while dirt and
+                    residue are still hidden deep within the fibers.
+                    Watch for these common signs.
+                </p>
+
+
+                <!-- TIP CARDS -->
+
+                <div class="tip-list">
+
+                    <div class="tip-item">
+
+                        <span>01</span>
+
+                        <div>
+                            <h3>Visible Stains</h3>
+
+                            <p>
+                                Persistent stains that remain after
+                                regular cleaning may require professional
+                                treatment.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tip-item">
+
+                        <span>02</span>
+
+                        <div>
+                            <h3>Unpleasant Odors</h3>
+
+                            <p>
+                                Lingering smells can come from dirt,
+                                spills, pets or moisture trapped deep
+                                inside carpet fibers.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tip-item">
+
+                        <span>03</span>
+
+                        <div>
+                            <h3>Heavy Foot Traffic</h3>
+
+                            <p>
+                                Busy hallways, living rooms and entryways
+                                can accumulate dirt much faster than
+                                other areas.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tip-item">
+
+                        <span>04</span>
+
+                        <div>
+                            <h3>Flattened Carpet</h3>
+
+                            <p>
+                                High-traffic areas can become flattened
+                                and dull over time due to accumulated
+                                dirt and pressure.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tip-item">
+
+                        <span>05</span>
+
+                        <div>
+                            <h3>It Has Been Over a Year</h3>
+
+                            <p>
+                                If you cannot remember the last time your
+                                carpets were professionally cleaned, it
+                                may be time to schedule a service.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECOND IMAGE -->
+
+                <figure class="article-image">
+
+                    <img src="images/sofa.jpg"
+                         alt="Deep carpet cleaning">
+
+                    <figcaption>
+                        Professional cleaning helps refresh carpets
+                        and remove deeply embedded dirt.
+                    </figcaption>
+
+                </figure>
+
+
+                <h2>
+                    Why Regular Professional Cleaning Matters
+                </h2>
+
+                <p>
+                    Regular professional cleaning is about more than
+                    simply making your carpet look fresh. Dirt particles
+                    can become embedded deep inside carpet fibers and
+                    gradually affect their appearance and texture.
+                </p>
+
+                <p>
+                    Professional cleaning can help refresh the fibers,
+                    remove stubborn buildup and restore the appearance
+                    of heavily used areas.
+                </p>
+
+
+                <!-- BENEFITS -->
+
+                <div class="benefits-grid">
+
+                    <div class="benefit-card">
+
+                        <i class="fa-solid fa-sparkles"></i>
+
+                        <h3>Fresh Appearance</h3>
+
+                        <p>
+                            Restore a cleaner and fresher appearance
+                            to your carpets.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit-card">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                        <h3>Cleaner Environment</h3>
+
+                        <p>
+                            Remove accumulated dirt and unwanted
+                            particles from carpet fibers.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit-card">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <h3>More Comfortable Home</h3>
+
+                        <p>
+                            Enjoy softer, cleaner and more comfortable
+                            living spaces.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit-card">
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                        <h3>Better Carpet Care</h3>
+
+                        <p>
+                            Regular maintenance helps keep carpets
+                            looking their best.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    Don't Forget About Upholstery
+                </h2>
+
+                <p>
+                    Your sofas, chairs and other upholstered furniture
+                    also collect dust, food particles, pet hair and
+                    everyday dirt. Just like carpets, upholstery can
+                    benefit from professional cleaning.
+                </p>
+
+                <p>
+                    Depending on how frequently furniture is used,
+                    professional upholstery cleaning every 6 to 12
+                    months can help keep it looking fresh and inviting.
+                </p>
+
+
+                <!-- QUOTE -->
+
+                <blockquote>
+
+                    <i class="fa-solid fa-quote-left"></i>
+
+                    <p>
+                        "A clean carpet doesn't just change the way
+                        your home looks — it can change the way your
+                        home feels."
+                    </p>
+
+                </blockquote>
+
+
+                <h2>
+                    Simple Ways to Keep Your Carpet Cleaner
+                </h2>
+
+                <ul class="check-list">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Vacuum regularly, especially in high-traffic areas.
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Clean spills as soon as possible.
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Use entrance mats to reduce tracked-in dirt.
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Avoid excessive moisture when cleaning carpets.
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Schedule professional cleaning regularly.
+                    </li>
+
+                </ul>
+
+
+                <!-- CONCLUSION -->
+
+                <div class="article-conclusion">
+
+                    <h2>
+                        Give Your Carpets the Care They Deserve
+                    </h2>
+
+                    <p>
+                        Regular vacuuming and quick spot cleaning are
+                        important parts of carpet care, but professional
+                        cleaning can provide a deeper refresh.
+                    </p>
+
+                    <p>
+                        If your carpets look tired, smell unpleasant or
+                        have not been professionally cleaned for a long
+                        time, it may be the perfect time to give them
+                        some professional attention.
+                    </p>
+
+                </div>
+
+
+                <!-- TAGS -->
+
+                <div class="article-tags">
+
+                    <span>Tags:</span>
+
+                    <a href="#">Carpet Cleaning</a>
+                    <a href="#">Home Cleaning</a>
+                    <a href="#">Upholstery</a>
+                    <a href="#">Cleaning Tips</a>
+
+                </div>
+
+
+                <!-- SHARE -->
+
+                <div class="share-section">
+
+                    <span>Share this article</span>
+
+                    <div class="share-buttons">
+
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="blog-sidebar">
+
+                <!-- CTA -->
+
+                <div class="sidebar-cta">
+
+                    <div class="cta-icon">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+
+                    <h3>
+                        Ready for a
+                        <span>Cleaner Home?</span>
+                    </h3>
+
+                    <p>
+                        Give your carpets and upholstery the professional
+                        care they deserve.
+                    </p>
+
+                    <a href="#" class="sidebar-btn">
+                        Book a Cleaning
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- TABLE OF CONTENTS -->
+
+                <div class="sidebar-card">
+
+                    <h3>In This Article</h3>
+
+                    <ul class="toc">
+
+                        <li>
+                            <a href="#">
+                                How often should you clean carpets?
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Signs your carpet needs cleaning
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Why professional cleaning matters
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Upholstery cleaning
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Carpet maintenance tips
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT CARD -->
+
+                <div class="sidebar-contact">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <span>Need help?</span>
+
+                    <h3>
+                        Talk to our cleaning team
+                    </h3>
+
+                    <a href="tel:+919999999999">
+                        +91 99999 99999
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RELATED POSTS
+    ========================== -->
+
+    <section class="related-section">
+
+        <div class="blog-container">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        KEEP READING
+                    </span>
+
+                    <h2>
+                        More Cleaning Tips
+                    </h2>
+                </div>
+
+                <a href="#" class="view-all">
+                    View All Articles
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="related-grid">
+
+                <article class="related-card">
+
+                    <div class="related-image">
+
+                        <img src="images/up-after.png"
+                             alt="Upholstery cleaning">
+
+                        <span>Upholstery</span>
+
+                    </div>
+
+                    <div class="related-content">
+
+                        <small>
+                            <i class="fa-regular fa-calendar"></i>
+                            September 15, 2026
+                        </small>
+
+                        <h3>
+                            7 Easy Ways to Keep Your Sofa Looking Fresh
+                        </h3>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="related-card">
+
+                    <div class="related-image">
+
+                        <img src="images/carpet-after.png"
+                             alt="Carpet stain removal">
+
+                        <span>Cleaning Tips</span>
+
+                    </div>
+
+                    <div class="related-content">
+
+                        <small>
+                            <i class="fa-regular fa-calendar"></i>
+                            September 10, 2026
+                        </small>
+
+                        <h3>
+                            How to Deal With Common Carpet Stains
+                        </h3>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="related-card">
+
+                    <div class="related-image">
+
+                        <img src="images/details 8.jpg"
+                             alt="Deep cleaning service">
+
+                        <span>Deep Cleaning</span>
+
+                    </div>
+
+                    <div class="related-content">
+
+                        <small>
+                            <i class="fa-regular fa-calendar"></i>
+                            September 05, 2026
+                        </small>
+
+                        <h3>
+                            Why Professional Deep Cleaning Is Worth It
+                        </h3>
+
+                        <a href="#">
+                            Read Article
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="blog-cta">
+
+        <div class="blog-container">
+
+            <div class="cta-inner">
+
+                <div class="cta-content">
+
+                    <span>
+                        READY FOR A FRESH START?
+                    </span>
+
+                    <h2>
+                        Give your carpets and
+                        <strong>upholstery the care they deserve.</strong>
+                    </h2>
+
+                    <p>
+                        Professional cleaning that leaves your home
+                        looking fresh, clean and inviting.
+                    </p>
+
+                </div>
+
+                <a href="#" class="cta-button">
+                    Get a Free Quote
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+<!-- =========================================================
+                         FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-column footer-brand">
+
+
+            <!-- SAME LOGO -->
+
+            
+                     <a href="index.html" class="site-logo">
+
+    <img src="images/logo.png" alt="Go Clean Logo">
+
+    <span class="logo-text">
+        <span class="logo-go">Clean</span>
+        <span class="logo-clean">Nest</span>
+    </span>
+
+</a>
+
+            </a>
+
+
+            <p>
+
+                We provide reliable and professional
+                cleaning solutions for homes, offices
+                and businesses.
+
+            </p>
+
+
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="social-icons">
+
+
+                <a href="#"
+                   aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="Twitter">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-column">
+
+            <h3>
+                Services
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="services.html">
+                        Residential Cleaning
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Office Cleaning
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Deep Cleaning
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Commercial Cleaning
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Move-In Cleaning
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+            <h3>
+                Company
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Our Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <ul class="contact-list">
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Hyderabad, Telangana, India
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a href="tel:+919999999999">
+                        +91 99999 99999
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:hello@goclean.com">
+                        hello@goclean.com
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p>
+                © 2026 Clean Nest. All Rights Reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="terms.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+                         JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+                  LIGHT / DARK MODE
+========================================================= */
+
+const themeBtn =
+    document.getElementById("themeBtn");
+
+const themeIcon =
+    document.getElementById("themeIcon");
+
+
+const savedTheme =
+    localStorage.getItem("goCleanTheme");
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark-mode");
+
+    themeIcon.classList.remove("fa-moon");
+
+    themeIcon.classList.add("fa-sun");
+
+}
+
+
+themeBtn.addEventListener("click", function () {
+
+
+    document.body.classList.toggle("dark-mode");
+
+
+    if (document.body.classList.contains("dark-mode")) {
+
+
+        localStorage.setItem(
+            "goCleanTheme",
+            "dark"
+        );
+
+
+        themeIcon.classList.remove(
+            "fa-moon"
+        );
+
+        themeIcon.classList.add(
+            "fa-sun"
+        );
+
+
+    } else {
+
+
+        localStorage.setItem(
+            "goCleanTheme",
+            "light"
+        );
+
+
+        themeIcon.classList.remove(
+            "fa-sun"
+        );
+
+        themeIcon.classList.add(
+            "fa-moon"
+        );
+
+    }
+
+});
+
+
+
+/* =========================================================
+                         RTL / LTR
+========================================================= */
+
+const rtlBtn =
+    document.getElementById("rtlBtn");
+
+const directionText =
+    document.getElementById("directionText");
+
+
+const savedDirection =
+    localStorage.getItem("goCleanDirection");
+
+
+if (savedDirection === "rtl") {
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        "rtl"
+    );
+
+    document.body.classList.add("rtl");
+
+    directionText.textContent = "LTR";
+
+
+} else {
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        "ltr"
+    );
+
+    document.body.classList.remove("rtl");
+
+    directionText.textContent = "RTL";
+
+}
+
+
+
+rtlBtn.addEventListener("click", function () {
+
+
+    const currentDirection =
+        document.documentElement.getAttribute("dir");
+
+
+    if (currentDirection === "ltr") {
+
+
+        document.documentElement.setAttribute(
+            "dir",
+            "rtl"
+        );
+
+        document.body.classList.add("rtl");
+
+
+        localStorage.setItem(
+            "goCleanDirection",
+            "rtl"
+        );
+
+
+        directionText.textContent = "LTR";
+
+
+    } else {
+
+
+        document.documentElement.setAttribute(
+            "dir",
+            "ltr"
+        );
+
+        document.body.classList.remove("rtl");
+
+
+        localStorage.setItem(
+            "goCleanDirection",
+            "ltr"
+        );
+
+
+        directionText.textContent = "RTL";
+
+    }
+
+});
+
+
+
+/* =========================================================
+                       MOBILE MENU
+========================================================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const mainNav =
+    document.getElementById("mainNav");
+
+
+menuBtn.addEventListener("click", function () {
+
+
+    mainNav.classList.toggle("show");
+
+
+    const icon =
+        menuBtn.querySelector("i");
+
+
+    if (mainNav.classList.contains("show")) {
+
+
+        icon.classList.remove("fa-bars");
+
+        icon.classList.add("fa-xmark");
+
+
+    } else {
+
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    }
+
+});
+/* =========================================
+   BLOG DETAIL JAVASCRIPT
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ==============================
+       DARK MODE
+    ============================== */
+
+    const savedTheme = localStorage.getItem("cleaningTheme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+
+    /* ==============================
+       TABLE OF CONTENTS
+    ============================== */
+
+    const tocLinks = document.querySelectorAll(".toc a");
+
+    tocLinks.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetText = link.textContent.trim().toLowerCase();
+
+            const headings = document.querySelectorAll(
+                ".article-content h2"
+            );
+
+            let targetHeading = null;
+
+            headings.forEach(function (heading) {
+
+                if (
+                    heading.textContent
+                        .trim()
+                        .toLowerCase()
+                        .includes(targetText.substring(0, 20))
+                ) {
+                    targetHeading = heading;
+                }
+
+            });
+
+            if (targetHeading) {
+
+                event.preventDefault();
+
+                const offset = 30;
+
+                const headingPosition =
+                    targetHeading.getBoundingClientRect().top +
+                    window.scrollY -
+                    offset;
+
+                window.scrollTo({
+                    top: headingPosition,
+                    behavior: "smooth"
+                });
+            }
+
+        });
+
+    });
+
+
+    /* ==============================
+       SCROLL REVEAL
+    ============================== */
+
+    const revealElements = document.querySelectorAll(
+        ".tip-item, .benefit-card, .related-card, .info-box"
+    );
+
+    const revealObserver = new IntersectionObserver(
+        function (entries, observer) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    revealElements.forEach(function (element) {
+
+        element.classList.add("reveal");
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /* ==============================
+       SHARE BUTTONS
+    ============================== */
+
+    const currentUrl = encodeURIComponent(
+        window.location.href
+    );
+
+    const pageTitle = encodeURIComponent(
+        document.title
+    );
+
+
+    /* Facebook */
+
+    const facebookButton = document.querySelector(
+        ".fa-facebook-f"
+    );
+
+    if (facebookButton) {
+
+        facebookButton.parentElement.href =
+            "https://www.facebook.com/sharer/sharer.php?u=" +
+            currentUrl;
+
+        facebookButton.parentElement.target = "_blank";
+
+    }
+
+
+    /* X / Twitter */
+
+    const twitterButton = document.querySelector(
+        ".fa-x-twitter"
+    );
+
+    if (twitterButton) {
+
+        twitterButton.parentElement.href =
+            "https://twitter.com/intent/tweet?url=" +
+            currentUrl +
+            "&text=" +
+            pageTitle;
+
+        twitterButton.parentElement.target = "_blank";
+
+    }
+
+
+    /* WhatsApp */
+
+    const whatsappButton = document.querySelector(
+        ".fa-whatsapp"
+    );
+
+    if (whatsappButton) {
+
+        whatsappButton.parentElement.href =
+            "https://wa.me/?text=" +
+            pageTitle +
+            "%20" +
+            currentUrl;
+
+        whatsappButton.parentElement.target = "_blank";
+
+    }
+
+
+    /* ==============================
+       IMAGE LAZY LOADING
+    ============================== */
+
+    const images = document.querySelectorAll("img");
+
+    images.forEach(function (image) {
+
+        image.setAttribute("loading", "lazy");
+
+    });
+
+
+    /* ==============================
+       CURRENT YEAR
+    ============================== */
+
+    const yearElements = document.querySelectorAll(
+        ".current-year"
+    );
+
+    yearElements.forEach(function (element) {
+
+        element.textContent =
+            new Date().getFullYear();
+
+    });
+
+});
+</script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,3805 @@
+
+/* =========================================================
+                     GLOBAL VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #176B3A;
+
+    --secondary: #eac800;
+
+    --white: #ffffff;
+
+    --black: #111111;
+
+    --body-bg: #ffffff;
+
+    --text-color: #222222;
+
+    --muted-text: #666666;
+
+    --header-bg: #ffffff;
+
+    --footer-bg: #ffffff;
+
+    --border-color: rgba(0, 120, 135, 0.15);
+
+    --container-width: 1200px;
+
+    --transition: 0.3s ease;
+
+}
+
+
+
+/* =========================================
+   DARK MODE - BLACK BACKGROUND
+========================================= */
+
+body.dark-mode {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Header */
+body.dark-mode .site-header {
+    background: #000000;
+    border-bottom-color: #222222;
+}
+
+/* Main content */
+body.dark-mode main {
+    background: #000000;
+}
+
+/* Demo section */
+body.dark-mode .demo-section {
+    background: #000000;
+}
+
+/* Footer */
+body.dark-mode .site-footer {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Footer bottom */
+body.dark-mode .footer-bottom {
+    background: #000000;
+    border-top-color: #222222;
+}
+
+/* Navigation */
+body.dark-mode .nav-link {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: #eac800;
+}
+
+/* Footer links */
+body.dark-mode .footer-column a {
+    color: #ffffff;
+}
+
+body.dark-mode .footer-column a:hover {
+    color: #eac800;
+}
+
+/* Footer headings */
+body.dark-mode .footer-column h3 {
+    color: #ffffff;
+}
+
+/* Paragraphs */
+body.dark-mode p {
+    color: #dddddd;
+}
+
+/* Dropdown */
+body.dark-mode .dropdown-menu {
+    background: #000000;
+    border-color: #333333;
+}
+
+body.dark-mode .dropdown-menu a {
+    color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu a:hover {
+    background: #eac800;
+    color: #000000;
+}
+
+/* Buttons */
+body.dark-mode .control-btn {
+    background: #000000;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .control-btn:hover {
+    color: #eac800;
+    border-color:#eac800;
+}
+
+/* Login button */
+body.dark-mode .login-btn {
+    background: #176B3A;
+    color: #ffffff;
+}
+
+body.dark-mode .login-btn:hover {
+    background: #eac800;
+    color: #000000;
+}
+
+/* Social icons */
+body.dark-mode .social-icons a {
+    background: #111111;
+    color: #ffffff;
+}
+
+body.dark-mode .social-icons a:hover {
+    background:#eac800;
+    color: #000000;
+}
+
+
+/* =========================================================
+                           RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    background: var(--body-bg);
+
+    color: var(--text-color);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+
+/* =========================================================
+                         CONTAINER
+========================================================= */
+
+.header-container,
+.footer-container,
+.footer-bottom-container {
+
+    width: min(
+        calc(100% - 40px),
+        var(--container-width)
+    );
+
+    margin: 0 auto;
+
+}
+
+
+
+/* =========================================================
+                           HEADER
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    background: var(--header-bg);
+
+    border-bottom:
+        1px solid var(--border-color);
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        background-color var(--transition),
+        border-color var(--transition);
+
+}
+
+
+
+/* =========================================================
+                     HEADER CONTAINER
+========================================================= */
+
+.header-container {
+
+    min-height: 82px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+
+/* =========================================
+   LOGO WITH TWO COLORS
+========================================= */
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.site-logo img {
+    width: 100px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+.logo-go {
+    color: var(--primary);
+}
+
+.logo-clean {
+    color: var(--secondary);
+}
+
+/* Dark Mode */
+
+body.dark-mode .logo-go {
+    color: var(--primary);
+}
+
+body.dark-mode .logo-clean {
+    color: var(--secondary);
+}
+
+/* RTL */
+
+body.rtl .site-logo {
+    flex-direction: row;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .site-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-text {
+        font-size: 21px;
+    }
+
+}
+/* =========================================================
+                         NAVIGATION
+========================================================= */
+
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+}
+
+
+.nav-link {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 30px 0;
+
+    color: var(--text-color);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        color var(--transition);
+
+}
+
+
+.nav-link:hover {
+
+    color: var(--primary);
+
+}
+
+
+/* Active navigation */
+
+.nav-link.active {
+
+    color: var(--primary);
+
+}
+
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 22px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--secondary);
+
+    transition:
+        width var(--transition);
+
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+
+    width: 100%;
+
+}
+
+
+
+/* =========================================================
+                       HOME DROPDOWN
+========================================================= */
+
+.nav-dropdown {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.home-link i {
+
+    font-size: 10px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: calc(100% - 5px);
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(10px);
+
+    min-width: 175px;
+
+    padding: 10px;
+
+    background: var(--header-bg);
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        all 0.25s ease;
+
+    z-index: 10000;
+
+}
+
+
+.dropdown-menu a {
+
+    display: block;
+
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    color: var(--text-color);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        all 0.25s ease;
+
+}
+
+
+.dropdown-menu a:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+
+.nav-dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+}
+
+
+.nav-dropdown:hover .home-link i {
+
+    transform: rotate(180deg);
+
+}
+
+
+
+/* =========================================================
+                 HEADER RIGHT SIDE CONTROLS
+========================================================= */
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+}
+
+
+
+/* =========================================================
+                       RTL BUTTON
+========================================================= */
+
+
+.control-btn {
+
+    height: 42px;
+
+    min-width: 42px;
+
+    padding: 0 12px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: var(--text-color);
+
+    cursor: pointer;
+
+    transition:
+        all var(--transition);
+        border-color: var(--primary);
+
+}
+
+
+.control-btn:hover {
+
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: var(--white);
+
+    transform: translateY(-2px);
+    border-color: var(--secondary);
+
+}
+
+
+#directionText {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+                       LOGIN BUTTON
+========================================================= */
+
+.login-btn {
+
+    height: 42px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        all var(--transition);
+
+}
+
+
+.login-btn:hover {
+
+    background: var(--secondary);
+
+    color: var(--black);
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+                        MOBILE BUTTON
+========================================================= */
+
+.menu-btn {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: var(--text-color);
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+}
+
+
+
+/* =========================================================
+                        DEMO CONTENT
+========================================================= */
+
+.demo-section {
+
+    min-height: 650px;
+
+    padding: 100px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.demo-content {
+
+    max-width: 750px;
+
+    text-align: center;
+
+}
+
+
+.small-title {
+
+    color: var(--secondary);
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.demo-content h1 {
+
+    margin: 15px 0;
+
+    font-size:
+        clamp(42px, 6vw, 72px);
+
+    line-height: 1.05;
+
+}
+
+
+.demo-content h1 span {
+
+    color: var(--primary);
+
+}
+
+
+.demo-content p {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    color: var(--muted-text);
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+                           FOOTER
+========================================================= */
+
+.site-footer {
+
+    background: var(--footer-bg);
+
+    color: var(--text-color);
+
+    border-top:
+        1px solid var(--border-color);
+
+    transition:
+        background-color var(--transition),
+        color var(--transition);
+
+}
+
+
+
+/* =========================================================
+                     FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+
+    padding-top: 70px;
+
+    padding-bottom: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 55px;
+
+}
+
+
+
+/* =========================================================
+                       FOOTER LOGO
+========================================================= */
+
+.footer-logo {
+
+    display: inline-flex;
+
+    margin-bottom: 20px;
+
+}
+
+
+.footer-logo img {
+
+    width: 100px;
+
+    height: 75px;
+
+    display: block;
+
+}
+
+
+.footer-brand p {
+
+    max-width: 360px;
+
+    color: var(--muted-text);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+                    FOOTER HEADINGS
+========================================================= */
+
+.footer-column h3 {
+
+    margin-bottom: 22px;
+
+    color: var(--text-color);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================================
+                      FOOTER LIST
+========================================================= */
+
+.footer-column ul {
+
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+}
+
+
+.footer-column ul li {
+
+    font-size: 14px;
+
+}
+
+
+.footer-column ul li a {
+
+    color: var(--muted-text);
+
+    transition:
+        all var(--transition);
+
+}
+
+
+.footer-column ul li a:hover {
+
+    color: var(--primary);
+
+    padding-left: 5px;
+
+}
+
+
+
+/* =========================================================
+                       SOCIAL ICONS
+========================================================= */
+
+.social-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+.social-icons a {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 120, 135, 0.10);
+
+    color: var(--primary);
+
+    transition:
+        all var(--transition);
+
+}
+
+
+.social-icons a:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* =========================================================
+                         CONTACT
+========================================================= */
+
+.contact-list li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: var(--muted-text);
+
+    line-height: 1.6;
+
+}
+
+
+.contact-list i {
+
+    width: 18px;
+
+    margin-top: 4px;
+
+    color: var(--secondary);
+
+}
+
+
+.contact-list a:hover {
+
+    color: var(--primary);
+
+}
+
+
+
+/* =========================================================
+                       FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    border-top:
+        1px solid var(--border-color);
+
+}
+
+
+.footer-bottom-container {
+
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.footer-bottom p {
+
+    color: var(--muted-text);
+
+    font-size: 13px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.footer-links a {
+
+    color: var(--muted-text);
+
+    font-size: 13px;
+
+    transition:
+        color var(--transition);
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--primary);
+
+}
+
+
+
+/* =========================================================
+                    DARK MODE ACTIVE COLOR
+========================================================= */
+
+/* Navigation active */
+
+body.dark-mode .nav-link.active {
+
+    color: #eac800;
+
+}
+
+
+/* Navigation hover */
+
+body.dark-mode .nav-link:hover {
+
+    color: #eac800;
+
+}
+
+
+/* Navigation underline */
+
+body.dark-mode .nav-link::after {
+
+    background: #eac800;
+
+}
+
+
+/* Dropdown */
+
+body.dark-mode .dropdown-menu {
+
+    background: #0b252a;
+
+    border-color:
+        rgba(221, 166, 99, 0.35);
+
+}
+
+
+/* Dropdown hover */
+
+body.dark-mode .dropdown-menu a:hover {
+
+    background: #eac800;
+
+    color: #111111;
+
+}
+
+
+/* Dropdown active */
+
+body.dark-mode .dropdown-menu a.active {
+
+    background: #eac800;
+
+    color: #111111;
+
+}
+
+
+/* Home arrow */
+
+body.dark-mode .home-link i {
+
+    color:#eac800;
+
+}
+
+
+/* Social icons */
+
+body.dark-mode .social-icons a {
+
+    background:
+        rgba(221, 166, 99, 0.12);
+
+    color: #eac800;
+
+}
+
+
+body.dark-mode .social-icons a:hover {
+
+    background: #eac800;
+
+    color: #111111;
+
+}
+
+
+
+/* =========================================================
+                           RTL
+========================================================= */
+
+html[dir="rtl"] .site-logo {
+
+    justify-content: flex-start;
+
+}
+
+
+html[dir="rtl"] .header-actions {
+
+    justify-content: flex-end;
+
+}
+
+
+html[dir="rtl"] .nav-link::after {
+
+    left: 0;
+
+    
+}
+
+
+html[dir="rtl"] .dropdown-menu {
+
+    left: 50%;
+
+    
+
+    transform:
+        translateX(-50%)
+        translateY(10px);
+}
+
+
+html[dir="rtl"] .nav-dropdown:hover .dropdown-menu {
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+}
+
+
+html[dir="rtl"] .footer-column ul li a:hover {
+
+    padding-left: 0;
+
+    padding-right: 5px;
+
+}
+
+
+
+/* =========================================================
+                           TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+
+    .header-container {
+
+        grid-template-columns:
+            auto
+            1fr
+            auto;
+
+    }
+
+
+    .main-nav {
+
+        gap: 20px;
+
+    }
+
+
+    .nav-link {
+
+        font-size: 14px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+
+    }
+
+}
+
+
+
+/* =========================================================
+                           MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+
+    .header-container {
+
+        min-height: 72px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+    }
+
+
+    .site-logo img {
+
+        width: 125px;
+
+    }
+
+
+    /* MOBILE NAV */
+
+    .main-nav {
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 15px;
+
+        right: 15px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 15px;
+
+        background: var(--header-bg);
+
+        border:
+            1px solid var(--border-color);
+
+        border-radius: 15px;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.12);
+
+    }
+
+
+    .main-nav.show {
+
+        display: flex;
+
+    }
+
+
+    .nav-link {
+
+        width: 100%;
+
+        padding: 14px 10px;
+
+    }
+
+
+    .nav-link::after {
+
+        display: none;
+
+    }
+
+
+
+    /* MOBILE HOME DROPDOWN */
+
+    .nav-dropdown {
+
+        display: block;
+
+        width: 100%;
+
+    }
+
+
+    .home-link {
+
+        width: 100%;
+
+        justify-content: space-between;
+
+    }
+
+
+    .dropdown-menu {
+
+        position: static;
+
+        width: 100%;
+
+        min-width: 0;
+
+        margin-top: 5px;
+
+        padding: 5px;
+
+        display: none;
+
+        transform: none !important;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        box-shadow: none;
+
+        border-radius: 10px;
+
+    }
+
+
+    .nav-dropdown:hover .dropdown-menu {
+
+        display: block;
+
+    }
+
+
+    .dropdown-menu a {
+
+        padding: 11px 15px;
+
+    }
+
+
+
+    /* HEADER ACTIONS */
+
+    .header-actions {
+
+        gap: 5px;
+
+    }
+
+
+    #directionText {
+
+        display: none;
+
+    }
+
+
+    .control-btn {
+
+        width: 40px;
+
+        padding: 0;
+
+    }
+
+
+    .login-btn {
+
+        width: 40px;
+
+        padding: 0;
+
+    }
+
+
+    .login-btn span {
+
+        display: none;
+
+    }
+
+
+    .menu-btn {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 45px 30px;
+
+        padding-top: 55px;
+
+        padding-bottom: 45px;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .footer-bottom-container {
+
+        padding: 20px 0;
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+
+
+/* =========================================================
+                       SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+
+    .header-container,
+    .footer-container,
+    .footer-bottom-container {
+
+        width:
+            calc(100% - 30px);
+
+    }
+
+
+    .site-logo img {
+
+        width: 110px;
+
+    }
+
+
+    .header-actions {
+
+        gap: 4px;
+
+    }
+
+
+    .control-btn,
+    .login-btn,
+    .menu-btn {
+
+        width: 38px;
+
+        height: 38px;
+
+        min-width: 38px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column: auto;
+
+    }
+
+
+    .footer-links {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .footer-bottom-container {
+
+        width:
+            calc(100% - 30px);
+
+    }
+
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   Carpet & Upholstery Cleaning
+   Header & Footer NOT INCLUDED
+========================================================= */
+
+:root {
+
+    --primary: #176B3A;
+    --primary-dark: #0d4d29;
+    --primary-light: #eaf5ee;
+
+    --secondary: #eac800;
+    --secondary-light: #fff7c7;
+
+    --black: #172018;
+    --white: #ffffff;
+
+    --text: #555f58;
+    --muted: #747d76;
+
+    --light-bg: #f7f9f6;
+    --border: #e1e7e2;
+
+    --shadow:
+        0 20px 50px rgba(23, 107, 58, 0.10);
+
+    --radius: 20px;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.cleaning-contact {
+
+    width: 100%;
+
+    background: var(--white);
+
+    color: var(--black);
+
+    overflow: hidden;
+}
+
+.cleaning-contact * {
+
+    box-sizing: border-box;
+}
+
+.cleaning-contact a {
+
+    text-decoration: none;
+}
+
+.contact-container {
+
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.contact-eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.contact-section-heading {
+
+    max-width: 720px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.contact-section-heading h2 {
+
+    margin: 0 0 16px;
+
+    color: var(--black);
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+}
+
+.contact-section-heading h2 span {
+
+    color: var(--primary);
+}
+
+.contact-section-heading p {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   1. HERO
+========================================================= */
+
+.contact-hero {
+
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1800&q=85")
+        center / cover;
+}
+
+.contact-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5, 25, 13, .90),
+            rgba(23, 107, 58, .78)
+        );
+}
+
+.contact-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    color: var(--white);
+}
+
+.contact-hero .contact-eyebrow {
+
+    color: var(--secondary);
+}
+
+.contact-hero h1 {
+
+    margin: 0 0 22px;
+
+    color: var(--white);
+
+    font-size: clamp(42px, 6vw, 60px);
+
+    line-height: 1.05;
+
+    font-weight: 850;
+}
+
+.contact-hero h1 span {
+
+    display: block;
+
+    color: var(--secondary);
+}
+
+.contact-hero p {
+
+    max-width: 680px;
+
+    margin: 0 auto 35px;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.contact-hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.contact-primary-btn,
+.contact-secondary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 52px;
+
+    padding: 0 25px;
+
+    border-radius: 10px;
+
+    font-weight: 750;
+
+    transition: .3s ease;
+}
+
+.contact-primary-btn {
+
+    background: var(--primary);
+
+    color:var(--white);
+}
+
+.contact-primary-btn:hover {
+
+    background: var(--secondary);
+
+    color: var(--black);
+
+    transform: translateY(-3px);
+}
+
+.contact-secondary-btn {
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    color: var(--white);
+
+    background: rgba(255,255,255,.08);
+}
+
+.contact-secondary-btn:hover {
+
+    background: var(--white);
+
+    color: var(--black);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   2. CONTACT INFORMATION
+========================================================= */
+
+.contact-info-section {
+
+    padding: 100px 0;
+
+    background: var(--white);
+}
+
+.contact-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.contact-info-card {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: var(--white);
+
+    box-shadow: var(--shadow);
+
+    transition: .3s ease;
+}
+
+.contact-info-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--primary);
+}
+
+.contact-info-icon {
+
+    flex: 0 0 55px;
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 21px;
+}
+
+.contact-info-card span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.contact-info-card h3 {
+
+    margin: 0 0 7px;
+
+    color: var(--black);
+
+    font-size: 20px;
+}
+
+.contact-info-card p {
+
+    margin: 0 0 10px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.contact-info-card a {
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   3. FORM SECTION
+========================================================= */
+
+.contact-form-section {
+
+    padding: 100px 0;
+
+    background: var(--light-bg);
+}
+
+.contact-form-wrapper {
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    padding: 55px;
+
+    border-radius: 28px;
+
+    background: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.contact-form-content h2 {
+
+    margin: 0 0 18px;
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    line-height: 1.1;
+}
+
+.contact-form-content h2 span {
+
+    color: var(--primary);
+}
+
+.contact-form-content > p {
+
+    margin: 0 0 28px;
+
+    color: var(--text);
+
+    line-height: 1.8;
+}
+
+.form-benefits {
+
+    display: grid;
+
+    gap: 15px;
+}
+
+.form-benefits div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: var(--black);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.form-benefits i {
+
+    width: 24px;
+
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 11px;
+}
+
+
+/* Form */
+
+.cleaning-contact-form {
+
+    width: 100%;
+}
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--black);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fbfcfa;
+
+    color: var(--black);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: .25s ease;
+}
+
+.form-group input,
+.form-group select {
+
+    height: 50px;
+
+    padding: 0 15px;
+}
+
+.form-group textarea {
+
+    padding: 14px 15px;
+
+    resize: vertical;
+
+    min-height: 145px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(23,107,58,.10);
+
+    background: var(--white);
+}
+
+.form-checkbox {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+.form-checkbox input {
+
+    accent-color: var(--primary);
+
+    margin-top: 3px;
+}
+
+.contact-submit-btn {
+
+    width: 100%;
+
+    min-height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.contact-submit-btn:hover {
+
+    background: var(--secondary);
+
+    color: var(--black);
+
+    transform: translateY(-2px);
+}
+
+.form-note {
+
+    margin: 13px 0 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+.form-success-message {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 18px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 650;
+}
+
+.form-success-message.show {
+
+    display: flex;
+}
+
+
+/* =========================================================
+   4. DIRECT CONTACT
+========================================================= */
+
+.direct-contact-section {
+
+    padding: 100px 0;
+
+    background: var(--white);
+}
+
+.direct-contact-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.direct-contact-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: var(--white);
+
+    color: var(--black);
+
+    transition: .3s ease;
+}
+
+.direct-contact-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--primary);
+
+    box-shadow: var(--shadow);
+}
+
+.direct-contact-icon {
+
+    flex: 0 0 48px;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: var(--secondary-light);
+
+    color: var(--primary);
+
+    font-size: 19px;
+}
+
+.direct-contact-card span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.direct-contact-card h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 17px;
+}
+
+.direct-contact-card p {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+.direct-contact-card > i:last-child {
+
+    margin-left: auto;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   5. LOCATION
+========================================================= */
+
+.contact-location-section {
+
+    padding: 100px 0;
+
+    background: var(--light-bg);
+}
+
+.location-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.location-content h2 {
+
+    margin: 0 0 18px;
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    line-height: 1.1;
+}
+
+.location-content h2 span {
+
+    color: var(--primary);
+}
+
+.location-content > p {
+
+    margin: 0 0 30px;
+
+    color: var(--text);
+
+    line-height: 1.8;
+}
+
+.location-details {
+
+    display: grid;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.location-detail {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+.location-detail-icon {
+
+    flex: 0 0 43px;
+
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+.location-detail strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--black);
+
+    font-size: 14px;
+}
+
+.location-detail p {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.location-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 22px;
+
+    border-radius: 9px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-weight: 750;
+
+    transition: .3s ease;
+}
+
+.location-button:hover {
+
+    background: var(--secondary);
+
+    color: var(--black);
+
+    transform: translateY(-2px);
+}
+
+
+/* Map */
+
+.location-map {
+
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(23,107,58,.90),
+            rgba(13,77,41,.95)
+        );
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.location-map::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .12;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+}
+
+.map-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: var(--white);
+}
+
+.map-pin {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: var(--secondary);
+
+    color: #111;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 0 0 15px rgba(234,200,0,.15);
+}
+
+.map-content h3 {
+
+    margin: 0 0 8px;
+
+    font-size: 24px;
+}
+
+.map-content p {
+
+    margin: 0 0 22px;
+
+    color: rgba(255,255,255,.8);
+}
+
+.map-content a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    background: var(--white);
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   6. FAQ
+========================================================= */
+
+.contact-faq-section {
+
+    padding: 100px 0;
+
+    background: var(--white);
+}
+
+.contact-faq-list {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    border-top: 1px solid var(--border);
+}
+
+.contact-faq-item {
+
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-faq-question {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 24px 5px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--black);
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.contact-faq-question i {
+
+    color: var(--primary);
+
+    transition: transform .3s ease;
+}
+
+.contact-faq-item.active
+.contact-faq-question i {
+
+    transform: rotate(45deg);
+}
+
+.contact-faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .35s ease;
+}
+
+.contact-faq-answer p {
+
+    margin: 0;
+
+    padding: 0 35px 24px 5px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   7. FINAL CTA
+========================================================= */
+
+.contact-final-cta {
+
+    position: relative;
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--white),
+            
+        );
+
+    text-align: center;
+
+    color: var(--black);
+
+    overflow: hidden;
+}
+
+.contact-final-cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(234,200,0,.08);
+
+    top: -170px;
+
+    right: -100px;
+}
+
+.contact-cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin: auto;
+}
+
+.contact-final-cta .contact-eyebrow {
+
+    color: var(--secondary);
+}
+
+.contact-final-cta h2 {
+
+    margin: 0 0 18px;
+
+    color: var(--black);
+
+    font-size: clamp(34px, 5vw, 55px);
+
+    line-height: 1.1;
+}
+
+.contact-final-cta h2 span {
+
+    color: var(--primary);
+}
+
+.contact-final-cta p {
+
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: var(--black);
+
+    line-height: 1.8;
+}
+
+.contact-cta-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.cta-call-btn,
+.cta-book-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 52px;
+
+    padding: 0 25px;
+
+    border-radius: 9px;
+
+    font-weight: 750;
+
+    transition: .3s ease;
+}
+
+.cta-call-btn {
+
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+.cta-call-btn:hover {
+
+    background: var(--secondary);
+
+    color: var(--black);
+
+    transform: translateY(-3px);
+}
+
+.cta-book-btn {
+
+    border: 1px solid rgba(255,255,255,.4);
+
+    color: var(--);
+
+    background: transparent;
+}
+
+.cta-book-btn:hover {
+
+    background: var(--white);
+
+    color: var(--black);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-form-wrapper {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .location-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .location-map {
+
+        min-height: 380px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .contact-info-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .direct-contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper {
+
+        padding: 35px 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-hero {
+
+        min-height: 520px;
+
+        padding: 80px 18px;
+    }
+
+    .contact-hero h1 {
+
+        font-size: 42px;
+    }
+
+    .contact-hero p {
+
+        font-size: 15px;
+    }
+
+    .contact-info-section,
+    .contact-form-section,
+    .direct-contact-section,
+    .contact-location-section,
+    .contact-faq-section {
+
+        padding: 70px 0;
+    }
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .contact-info-card {
+
+        padding: 22px;
+    }
+
+    .location-map {
+
+        min-height: 320px;
+    }
+
+    .contact-final-cta {
+
+        padding: 75px 20px;
+    }
+
+}/* =========================================================
+   CONTACT PAGE - DARK MODE
+   Header & Footer NOT INCLUDED
+   Uses existing body.dark-mode toggle
+========================================================= */
+
+
+/* =========================================================
+   DARK MODE VARIABLES
+========================================================= */
+
+body.dark-mode .cleaning-contact {
+
+    --contact-bg: #080c09;
+    --contact-section-bg: #0d130f;
+    --contact-card-bg: #141b16;
+
+    --contact-text: #f1f5f2;
+    --contact-muted: #b7c1b9;
+
+    --contact-border: #29342c;
+
+    --contact-primary: #176B3A;
+    --contact-secondary: #eac800;
+
+    background: var(--contact-bg);
+
+    color: var(--contact-text);
+}
+
+
+/* =========================================================
+   COMMON TEXT
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.contact-section-heading h2 {
+
+    color: #f5f7f5;
+}
+
+body.dark-mode .cleaning-contact
+.contact-section-heading h2 span {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.contact-section-heading p {
+
+    color: #b7c1b9;
+}
+
+body.dark-mode .cleaning-contact
+.contact-eyebrow {
+
+    color: #eac800;
+}
+
+
+/* =========================================================
+   1. CONTACT HERO
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.contact-hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(2, 10, 5, .96),
+            rgba(8, 48, 24, .90)
+        ),
+        url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1800&q=85")
+        center / cover;
+}
+
+body.dark-mode .cleaning-contact
+.contact-hero-overlay {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 8, 3, .90),
+            rgba(13, 77, 41, .82)
+        );
+}
+
+body.dark-mode .cleaning-contact
+.contact-hero h1 {
+
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-contact
+.contact-hero h1 span {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.contact-hero p {
+
+    color: #cbd4cd;
+}
+
+
+/* Hero primary button */
+
+body.dark-mode .cleaning-contact
+.contact-primary-btn {
+
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+body.dark-mode .cleaning-contact
+.contact-primary-btn:hover {
+
+    background: var(--secondary);
+
+    color: var(--black);
+}
+
+
+/* Hero secondary button */
+
+body.dark-mode .cleaning-contact
+.contact-secondary-btn {
+
+    background: rgba(255,255,255,.06);
+
+    border-color:
+        rgba(255,255,255,.35);
+
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-contact
+.contact-secondary-btn:hover {
+
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color: #ffffff;
+}
+
+
+/* =========================================================
+   2. CONTACT INFORMATION
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.contact-info-section {
+
+    background: #080c09;
+}
+
+body.dark-mode .cleaning-contact
+.contact-info-card {
+
+    background: #141b16;
+
+    border-color: #29342c;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.30);
+}
+
+body.dark-mode .cleaning-contact
+.contact-info-card:hover {
+
+    border-color: #176B3A;
+
+    box-shadow:
+        0 20px 45px rgba(23,107,58,.20);
+}
+
+
+/* Icons */
+
+body.dark-mode .cleaning-contact
+.contact-info-icon {
+
+    background:
+        rgba(23,107,58,.20);
+
+    color: #eac800;
+}
+
+
+/* Card text */
+
+body.dark-mode .cleaning-contact
+.contact-info-card span {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.contact-info-card h3 {
+
+    color: #f5f7f5;
+}
+
+body.dark-mode .cleaning-contact
+.contact-info-card p {
+
+    color: #b7c1b9;
+}
+
+body.dark-mode .cleaning-contact
+.contact-info-card a {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.contact-info-card a:hover {
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   3. CONTACT FORM SECTION
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.contact-form-section {
+
+    background: #0d130f;
+}
+
+
+/* Main form card */
+
+body.dark-mode .cleaning-contact
+.contact-form-wrapper {
+
+    background: #141b16;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.40);
+}
+
+
+/* Left side */
+
+body.dark-mode .cleaning-contact
+.contact-form-content h2 {
+
+    color: #f5f7f5;
+}
+
+body.dark-mode .cleaning-contact
+.contact-form-content h2 span {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.contact-form-content > p {
+
+    color: #b7c1b9;
+}
+
+
+/* Benefits */
+
+body.dark-mode .cleaning-contact
+.form-benefits div {
+
+    color: #e9eee9;
+}
+
+body.dark-mode .cleaning-contact
+.form-benefits i {
+
+    background:
+        rgba(23,107,58,.20);
+
+    color: #eac800;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.form-group label {
+
+    color: #e9eee9;
+}
+
+body.dark-mode .cleaning-contact
+.form-group input,
+body.dark-mode .cleaning-contact
+.form-group select,
+body.dark-mode .cleaning-contact
+.form-group textarea {
+
+    background: #0b100c;
+
+    border-color: #303b32;
+
+    color: #f1f5f2;
+}
+
+
+/* Placeholder */
+
+body.dark-mode .cleaning-contact
+.form-group input::placeholder,
+body.dark-mode .cleaning-contact
+.form-group textarea::placeholder {
+
+    color: #7f8a82;
+}
+
+
+/* Focus */
+
+body.dark-mode .cleaning-contact
+.form-group input:focus,
+body.dark-mode .cleaning-contact
+.form-group select:focus,
+body.dark-mode .cleaning-contact
+.form-group textarea:focus {
+
+    background: #101711;
+
+    border-color: #176B3A;
+
+    box-shadow:
+        0 0 0 3px rgba(23,107,58,.18);
+}
+
+
+/* Select options */
+
+body.dark-mode .cleaning-contact
+.form-group select option {
+
+    background: #141b16;
+
+    color: #ffffff;
+}
+
+
+/* Checkbox */
+
+body.dark-mode .cleaning-contact
+.form-checkbox {
+
+    color: #b7c1b9;
+}
+
+body.dark-mode .cleaning-contact
+.form-checkbox input {
+
+    accent-color: #eac800;
+}
+
+
+/* Submit button */
+
+body.dark-mode .cleaning-contact
+.contact-submit-btn {
+
+    background: #176B3A;
+
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-contact
+.contact-submit-btn:hover {
+
+    background: #eac800;
+
+    color: #111111;
+}
+
+
+/* Form note */
+
+body.dark-mode .cleaning-contact
+.form-note {
+
+    color: #7f8a82;
+}
+
+
+/* Success message */
+
+body.dark-mode .cleaning-contact
+.form-success-message {
+
+    background:
+        rgba(23,107,58,.18);
+
+    border:
+        1px solid rgba(23,107,58,.35);
+
+    color: #eac800;
+}
+
+
+/* =========================================================
+   4. DIRECT CONTACT
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.direct-contact-section {
+
+    background: #080c09;
+}
+
+body.dark-mode .cleaning-contact
+.direct-contact-card {
+
+    background: #141b16;
+
+    border-color: #29342c;
+
+    color: #f5f7f5;
+}
+
+body.dark-mode .cleaning-contact
+.direct-contact-card:hover {
+
+    background: #182119;
+
+    border-color: #176B3A;
+
+    box-shadow:
+        0 20px 45px rgba(23,107,58,.20);
+}
+
+
+/* Direct contact icon */
+
+body.dark-mode .cleaning-contact
+.direct-contact-icon {
+
+    background:
+        rgba(234,200,0,.12);
+
+    color: #eac800;
+}
+
+
+/* Text */
+
+body.dark-mode .cleaning-contact
+.direct-contact-card span {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.direct-contact-card h3 {
+
+    color: #f5f7f5;
+}
+
+body.dark-mode .cleaning-contact
+.direct-contact-card p {
+
+    color: #b7c1b9;
+}
+
+body.dark-mode .cleaning-contact
+.direct-contact-card > i:last-child {
+
+    color: #7f8a82;
+}
+
+
+/* =========================================================
+   5. LOCATION SECTION
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.contact-location-section {
+
+    background: #0d130f;
+}
+
+
+/* Location text */
+
+body.dark-mode .cleaning-contact
+.location-content h2 {
+
+    color: #f5f7f5;
+}
+
+body.dark-mode .cleaning-contact
+.location-content h2 span {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.location-content > p {
+
+    color: #b7c1b9;
+}
+
+
+/* Location details */
+
+body.dark-mode .cleaning-contact
+.location-detail-icon {
+
+    background: #176B3A;
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.location-detail strong {
+
+    color: #f1f5f2;
+}
+
+body.dark-mode .cleaning-contact
+.location-detail p {
+
+    color: #b7c1b9;
+}
+
+
+/* Location button */
+
+body.dark-mode .cleaning-contact
+.location-button {
+
+    background: #176B3A;
+
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-contact
+.location-button:hover {
+
+    background: #eac800;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.location-map {
+
+    background:
+        linear-gradient(
+            135deg,
+            #07150c,
+            #0d4d29
+        );
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+}
+
+body.dark-mode .cleaning-contact
+.location-map::before {
+
+    opacity: .10;
+}
+
+body.dark-mode .cleaning-contact
+.map-pin {
+
+    background: #eac800;
+
+    color: #111111;
+
+    box-shadow:
+        0 0 0 15px rgba(234,200,0,.12);
+}
+
+body.dark-mode .cleaning-contact
+.map-content h3 {
+
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-contact
+.map-content p {
+
+    color: #c0c9c2;
+}
+
+body.dark-mode .cleaning-contact
+.map-content a {
+
+    background: #ffffff;
+
+    color: #176B3A;
+}
+
+body.dark-mode .cleaning-contact
+.map-content a:hover {
+
+    background: #eac800;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   6. FAQ
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.contact-faq-section {
+
+    background: #080c09;
+}
+
+body.dark-mode .cleaning-contact
+.contact-faq-list {
+
+    border-top-color: #29342c;
+}
+
+body.dark-mode .cleaning-contact
+.contact-faq-item {
+
+    border-bottom-color: #29342c;
+}
+
+
+/* FAQ question */
+
+body.dark-mode .cleaning-contact
+.contact-faq-question {
+
+    color: #f1f5f2;
+}
+
+body.dark-mode .cleaning-contact
+.contact-faq-question:hover {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.contact-faq-question i {
+
+    color: #eac800;
+}
+
+
+/* FAQ answer */
+
+body.dark-mode .cleaning-contact
+.contact-faq-answer p {
+
+    color: #b7c1b9;
+}
+
+
+/* =========================================================
+   7. FINAL CTA
+========================================================= */
+
+body.dark-mode .cleaning-contact
+.contact-final-cta {
+
+    background:
+        linear-gradient(
+            135deg,
+            #030804,
+            #0d4d29
+        );
+
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-contact
+.contact-final-cta::before {
+
+    background:
+        rgba(234,200,0,.06);
+}
+
+body.dark-mode .cleaning-contact
+.contact-final-cta h2 {
+
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-contact
+.contact-final-cta h2 span {
+
+    color: #eac800;
+}
+
+body.dark-mode .cleaning-contact
+.contact-final-cta p {
+
+    color: #c0c9c2;
+}
+
+
+/* Call button */
+
+body.dark-mode .cleaning-contact
+.cta-call-btn {
+
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+body.dark-mode .cleaning-contact
+.cta-call-btn:hover {
+
+    background: var(--secondary);
+
+    color: #111111;
+}
+
+
+/* Book button */
+
+body.dark-mode .cleaning-contact
+.cta-book-btn {
+
+    background: transparent;
+
+    border-color:
+        rgba(255,255,255,.35);
+
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-contact
+.cta-book-btn:hover {
+
+    background: #ffffff;
+
+    border-color: #ffffff;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   CONTACT PAGE SCROLLBAR
+========================================================= */
+
+body.dark-mode .cleaning-contact {
+
+    scrollbar-color:
+        #176B3A #0b100c;
+}
+
+
+/* =========================================================
+   MOBILE DARK MODE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body.dark-mode .cleaning-contact
+    .contact-info-card {
+
+        box-shadow:
+            0 10px 25px rgba(0,0,0,.28);
+    }
+
+    body.dark-mode .cleaning-contact
+    .contact-form-wrapper {
+
+        box-shadow:
+            0 15px 35px rgba(0,0,0,.35);
+    }
+
+    body.dark-mode .cleaning-contact
+    .direct-contact-card {
+
+        box-shadow:
+            0 10px 25px rgba(0,0,0,.25);
+    }
+
+}

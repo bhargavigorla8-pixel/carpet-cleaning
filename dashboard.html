@@ -1,0 +1,2235 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Go Clean</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+
+<body><!-- =========================================================
+     CLEAN NEST
+     CARPET & UPHOLSTERY CLEANING
+     ADMIN DASHBOARD
+========================================================= -->
+
+<div class="cleaning-dashboard">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="dashboard-brand">
+
+            <div class="dashboard-logo">
+                <a href="index.html" class="site-logo">
+               <img src="images/logo.png">
+            </div>
+
+            <div>
+                <strong>Clean<span>Nest</span></strong>
+                
+            </div>
+</a>
+        </div>
+
+
+        <!-- Main Navigation -->
+
+        <nav class="dashboard-nav">
+
+            <div class="nav-label">
+                MAIN NAVIGATION
+            </div>
+
+            <button
+                class="dashboard-nav-link active"
+                data-section="overview"
+            >
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Overview & Analytics</span>
+            </button>
+
+
+            <button
+                class="dashboard-nav-link"
+                data-section="bookings"
+            >
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Live Bookings & Sales</span>
+                <b>12</b>
+            </button>
+
+
+            <button
+                class="dashboard-nav-link"
+                data-section="services"
+            >
+                <i class="fa-solid fa-broom"></i>
+                <span>Cleaning Services</span>
+            </button>
+
+
+            <button
+                class="dashboard-nav-link"
+                data-section="customers"
+            >
+                <i class="fa-solid fa-users"></i>
+                <span>Customer Insights</span>
+            </button>
+
+
+            <button
+                class="dashboard-nav-link"
+                data-section="settings"
+            >
+                <i class="fa-solid fa-sliders"></i>
+                <span>Settings & Preferences</span>
+            </button>
+
+        </nav>
+
+
+        <!-- Service Status -->
+
+        <div class="sidebar-status">
+
+            <div class="status-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+
+                <strong>
+                    Cleaning Team Active
+                </strong>
+
+                <p>
+                    8 teams available today
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sidebar User -->
+
+        <div class="sidebar-user">
+
+            <div class="user-avatar">
+                UK
+            </div>
+
+            <div class="user-details">
+
+                <strong>
+                    Admin User
+                </strong>
+
+                <span>
+                    Cleaning Manager
+                </span>
+
+            </div>
+
+            <button>
+                <i class="fa-solid fa-ellipsis"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="dashboard-topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="dashboard-menu-btn"
+                    id="dashboardMenuBtn"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+
+                    <span class="portal-label">
+                        PREMIUM PORTAL
+                    </span>
+
+                    <h1>
+                        Welcome back, Admin
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <!-- Search -->
+
+                <div class="dashboard-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="dashboardSearch"
+                        placeholder="Search bookings, customers..."
+                    >
+
+                </div>
+
+
+                <!-- Notifications -->
+
+                <button
+                    class="topbar-icon-btn"
+                    id="notificationBtn"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- Theme -->
+
+                <button
+                    class="topbar-icon-btn"
+                    id="dashboardThemeBtn"
+                >
+
+                    <i class="fa-solid fa-moon" id="dashboardThemeIcon"></i>
+
+                </button>
+
+
+                <!-- Profile -->
+
+                <div class="dashboard-profile">
+
+                    <div class="profile-avatar">
+                        UK
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Uday Kiran
+                        </strong>
+
+                        <span>
+                            Cleaning Admin
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             NOTIFICATION PANEL
+        ================================================== -->
+
+        <div
+            class="notification-panel"
+            id="notificationPanel"
+        >
+
+            <div class="notification-header">
+
+                <strong>
+                    Notifications
+                </strong>
+
+                <span>
+                    3 New
+                </span>
+
+            </div>
+
+
+            <div class="notification-item">
+
+                <div class="notification-icon green">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        New Booking #CN-4829
+                    </strong>
+
+                    <p>
+                        3-seater sofa cleaning booked
+                    </p>
+
+                    <small>
+                        5 minutes ago
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="notification-item">
+
+                <div class="notification-icon yellow">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        New Customer Review
+                    </strong>
+
+                    <p>
+                        Priya rated the service 5 stars
+                    </p>
+
+                    <small>
+                        1 hour ago
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="notification-item">
+
+                <div class="notification-icon red">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Low Cleaning Supplies
+                    </strong>
+
+                    <p>
+                        Upholstery cleaning solution is low
+                    </p>
+
+                    <small>
+                        3 hours ago
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- =================================================
+                 OVERVIEW
+            ================================================== -->
+
+            <section
+                class="dashboard-section active"
+                id="overview"
+            >
+
+                <!-- Section Heading -->
+
+                <div class="dashboard-section-header">
+
+                    <div>
+
+                        <span>
+                            BUSINESS OVERVIEW
+                        </span>
+
+                        <h2>
+                            Cleaning Performance
+                        </h2>
+
+                    </div>
+
+                    <button class="date-filter">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        Last 30 Days
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     KPI CARDS
+                ================================================== -->
+
+                <div class="dashboard-kpi-grid">
+
+
+                    <!-- Revenue -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-card-top">
+
+                            <div class="kpi-icon green">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                            </div>
+
+                            <span class="kpi-growth positive">
+                                +18.4%
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Monthly Revenue
+                        </p>
+
+                        <h3>
+                            ₹4,82,500
+                        </h3>
+
+                        <small>
+                            vs last month
+                        </small>
+
+                    </div>
+
+
+                    <!-- Bookings -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-card-top">
+
+                            <div class="kpi-icon yellow">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+
+                            <span class="kpi-growth positive">
+                                +12.1%
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Total Bookings
+                        </p>
+
+                        <h3>
+                            1,420
+                        </h3>
+
+                        <small>
+                            this month
+                        </small>
+
+                    </div>
+
+
+                    <!-- Customers -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-card-top">
+
+                            <div class="kpi-icon blue">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <span class="kpi-growth positive">
+                                +24.8%
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Active Customers
+                        </p>
+
+                        <h3>
+                            3,890
+                        </h3>
+
+                        <small>
+                            repeat customers
+                        </small>
+
+                    </div>
+
+
+                    <!-- Rating -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-card-top">
+
+                            <div class="kpi-icon purple">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <span class="kpi-growth positive">
+                                +0.3
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Customer Rating
+                        </p>
+
+                        <h3>
+                            4.9 / 5
+                        </h3>
+
+                        <small>
+                            from 1,284 reviews
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ANALYTICS
+                ================================================== -->
+
+                <div class="analytics-grid">
+
+
+                    <!-- Revenue Chart -->
+
+                    <div class="dashboard-card revenue-chart-card">
+
+                        <div class="dashboard-card-header">
+
+                            <div>
+
+                                <h3>
+                                    Revenue & Booking Growth
+                                </h3>
+
+                                <p>
+                                    Monthly cleaning performance
+                                </p>
+
+                            </div>
+
+                            <div class="chart-period">
+
+                                <button class="active">
+                                    6 Months
+                                </button>
+
+                                <button>
+                                    1 Year
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="chart-wrapper">
+
+                            <canvas
+                                id="revenueChart"
+                            ></canvas>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Service Sales -->
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-header">
+
+                            <div>
+
+                                <h3>
+                                    Service Bookings
+                                </h3>
+
+                                <p>
+                                    Bookings by service
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="service-sales">
+
+                            <div class="service-sale-row">
+
+                                <div class="service-sale-info">
+
+                                    <span class="service-color carpet"></span>
+
+                                    <strong>
+                                        Carpet Cleaning
+                                    </strong>
+
+                                </div>
+
+                                <b>
+                                    38%
+                                </b>
+
+                            </div>
+
+                            <div class="service-progress">
+                                <span style="width:38%"></span>
+                            </div>
+
+
+                            <div class="service-sale-row">
+
+                                <div class="service-sale-info">
+
+                                    <span class="service-color sofa"></span>
+
+                                    <strong>
+                                        Sofa Cleaning
+                                    </strong>
+
+                                </div>
+
+                                <b>
+                                    27%
+                                </b>
+
+                            </div>
+
+                            <div class="service-progress">
+                                <span style="width:27%"></span>
+                            </div>
+
+
+                            <div class="service-sale-row">
+
+                                <div class="service-sale-info">
+
+                                    <span class="service-color upholstery"></span>
+
+                                    <strong>
+                                        Upholstery
+                                    </strong>
+
+                                </div>
+
+                                <b>
+                                    21%
+                                </b>
+
+                            </div>
+
+                            <div class="service-progress">
+                                <span style="width:21%"></span>
+                            </div>
+
+
+                            <div class="service-sale-row">
+
+                                <div class="service-sale-info">
+
+                                    <span class="service-color mattress"></span>
+
+                                    <strong>
+                                        Mattress Cleaning
+                                    </strong>
+
+                                </div>
+
+                                <b>
+                                    14%
+                                </b>
+
+                            </div>
+
+                            <div class="service-progress">
+                                <span style="width:14%"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RECENT BOOKINGS
+                ================================================== -->
+
+                <div class="dashboard-card recent-bookings">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h3>
+                                Recent Cleaning Bookings
+                            </h3>
+
+                            <p>
+                                Latest customer appointments and service status
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="view-all-btn"
+                            data-section="bookings"
+                        >
+                            View All Bookings →
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="dashboard-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Booking ID
+                                    </th>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Service
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        <strong>#CN-4829</strong>
+                                    </td>
+
+                                    <td>
+                                        <div class="customer-cell">
+
+                                            <div class="mini-avatar">
+                                                AF
+                                            </div>
+
+                                            Aria Fernandes
+
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        3-Seater Sofa Cleaning
+                                    </td>
+
+                                    <td>
+                                        ₹1,499
+                                    </td>
+
+                                    <td>
+                                        Sep 17, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="status delivered">
+                                            Completed
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>#CN-4828</strong>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <div class="mini-avatar yellow">
+                                                ME
+                                            </div>
+
+                                            Meera Reddy
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        Carpet Deep Cleaning
+                                    </td>
+
+                                    <td>
+                                        ₹2,499
+                                    </td>
+
+                                    <td>
+                                        Sep 17, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="status processing">
+                                            In Progress
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>#CN-4827</strong>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <div class="mini-avatar blue">
+                                                SK
+                                            </div>
+
+                                            Sai Kumar
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        Office Upholstery Cleaning
+                                    </td>
+
+                                    <td>
+                                        ₹3,200
+                                    </td>
+
+                                    <td>
+                                        Sep 16, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="status delivered">
+                                            Completed
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>#CN-4826</strong>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <div class="mini-avatar purple">
+                                                LC
+                                            </div>
+
+                                            Lakshmi C.
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        Mattress Cleaning
+                                    </td>
+
+                                    <td>
+                                        ₹899
+                                    </td>
+
+                                    <td>
+                                        Sep 16, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="status scheduled">
+                                            Scheduled
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BOOKINGS SECTION
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="bookings"
+            >
+
+                <div class="dashboard-section-header">
+
+                    <div>
+
+                        <span>
+                            BOOKING MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Live Bookings & Sales
+                        </h2>
+
+                    </div>
+
+                    <button class="primary-dashboard-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        New Booking
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="booking-toolbar">
+
+                        <div class="dashboard-search inner-search">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="bookingSearch"
+                                placeholder="Filter bookings..."
+                            >
+
+                        </div>
+
+
+                        <select class="dashboard-select">
+
+                            <option>
+                                All Services
+                            </option>
+
+                            <option>
+                                Carpet Cleaning
+                            </option>
+
+                            <option>
+                                Sofa Cleaning
+                            </option>
+
+                            <option>
+                                Upholstery Cleaning
+                            </option>
+
+                            <option>
+                                Mattress Cleaning
+                            </option>
+
+                        </select>
+
+
+                        <select class="dashboard-select">
+
+                            <option>
+                                All Status
+                            </option>
+
+                            <option>
+                                Scheduled
+                            </option>
+
+                            <option>
+                                In Progress
+                            </option>
+
+                            <option>
+                                Completed
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table
+                            class="dashboard-table booking-table"
+                        >
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Booking
+                                    </th>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Service
+                                    </th>
+
+                                    <th>
+                                        Quantity
+                                    </th>
+
+                                    <th>
+                                        Total
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>#CN-4825</td>
+                                    <td>Clara Bennett</td>
+                                    <td>2 Bedroom Carpet Cleaning</td>
+                                    <td>2 Rooms</td>
+                                    <td>₹2,200</td>
+                                    <td>
+                                        <span class="status delivered">
+                                            Completed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#CN-4824</td>
+                                    <td>Rahul Sharma</td>
+                                    <td>5-Seater Sofa Cleaning</td>
+                                    <td>1 Set</td>
+                                    <td>₹1,799</td>
+                                    <td>
+                                        <span class="status processing">
+                                            Processing
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#CN-4823</td>
+                                    <td>Sophie Rao</td>
+                                    <td>Office Chair Cleaning</td>
+                                    <td>8 Chairs</td>
+                                    <td>₹1,600</td>
+                                    <td>
+                                        <span class="status delivered">
+                                            Completed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SERVICES SECTION
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="services"
+            >
+
+                <div class="dashboard-section-header">
+
+                    <div>
+
+                        <span>
+                            SERVICE MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Cleaning Services
+                        </h2>
+
+                    </div>
+
+                    <button class="primary-dashboard-btn">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Service
+
+                    </button>
+
+                </div>
+
+
+                <div class="service-management-grid">
+
+
+                    <div class="management-service-card">
+
+                        <div class="management-service-icon green">
+                            <i class="fa-solid fa-rug"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Carpet Deep Cleaning
+                            </h3>
+
+                            <p>
+                                Deep extraction and stain treatment
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            ₹1,499+
+                        </strong>
+
+                        <span class="service-active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="management-service-card">
+
+                        <div class="management-service-icon yellow">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Sofa Cleaning
+                            </h3>
+
+                            <p>
+                                Professional sofa & fabric cleaning
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            ₹799+
+                        </strong>
+
+                        <span class="service-active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="management-service-card">
+
+                        <div class="management-service-icon blue">
+                            <i class="fa-solid fa-chair"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Upholstery Cleaning
+                            </h3>
+
+                            <p>
+                                Fabric furniture deep cleaning
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            ₹699+
+                        </strong>
+
+                        <span class="service-active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="management-service-card">
+
+                        <div class="management-service-icon purple">
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Mattress Cleaning
+                            </h3>
+
+                            <p>
+                                Sanitization and deep extraction
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            ₹899+
+                        </strong>
+
+                        <span class="service-active">
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CUSTOMER SECTION
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="customers"
+            >
+
+                <div class="dashboard-section-header">
+
+                    <div>
+
+                        <span>
+                            CUSTOMER ANALYTICS
+                        </span>
+
+                        <h2>
+                            Customer Insights
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-insight-grid">
+
+
+                    <div class="insight-card">
+
+                        <span>
+                            CUSTOMER SATISFACTION
+                        </span>
+
+                        <strong>
+                            94 / 100
+                        </strong>
+
+                        <p>
+                            +3.2 pts this month
+                        </p>
+
+                    </div>
+
+
+                    <div class="insight-card">
+
+                        <span>
+                            REPEAT BOOKING RATE
+                        </span>
+
+                        <strong>
+                            84.6%
+                        </strong>
+
+                        <p>
+                            +6.8% 30-day repeat rate
+                        </p>
+
+                    </div>
+
+
+                    <div class="insight-card">
+
+                        <span>
+                            AVERAGE ORDER VALUE
+                        </span>
+
+                        <strong>
+                            ₹1,185
+                        </strong>
+
+                        <p>
+                            +15.2% per booking
+                        </p>
+
+                    </div>
+
+
+                    <div class="insight-card">
+
+                        <span>
+                            ACTIVE CUSTOMERS
+                        </span>
+
+                        <strong>
+                            3,890
+                        </strong>
+
+                        <p>
+                            Regular cleaning customers
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card customer-table-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h3>
+                                Top Cleaning Customers
+                            </h3>
+
+                            <p>
+                                Highest-value repeat customers
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="dashboard-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Preferred Service
+                                    </th>
+
+                                    <th>
+                                        Total Bookings
+                                    </th>
+
+                                    <th>
+                                        Lifetime Spend
+                                    </th>
+
+                                    <th>
+                                        Customer Since
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Aria Fernandes
+                                    </td>
+
+                                    <td>
+                                        Sofa Cleaning
+                                    </td>
+
+                                    <td>
+                                        34 Bookings
+                                    </td>
+
+                                    <td>
+                                        ₹34,200
+                                    </td>
+
+                                    <td>
+                                        Jan 2024
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+                                        Meera Reddy
+                                    </td>
+
+                                    <td>
+                                        Carpet Cleaning
+                                    </td>
+
+                                    <td>
+                                        26 Bookings
+                                    </td>
+
+                                    <td>
+                                        ₹28,900
+                                    </td>
+
+                                    <td>
+                                        May 2024
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+                                        Sai Kumar
+                                    </td>
+
+                                    <td>
+                                        Office Cleaning
+                                    </td>
+
+                                    <td>
+                                        19 Bookings
+                                    </td>
+
+                                    <td>
+                                        ₹19,400
+                                    </td>
+
+                                    <td>
+                                        Nov 2024
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <section
+                class="dashboard-section"
+                id="settings"
+            >
+
+                <div class="dashboard-section-header">
+
+                    <div>
+
+                        <span>
+                            ACCOUNT SETTINGS
+                        </span>
+
+                        <h2>
+                            Dashboard Preferences
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <div class="settings-heading">
+
+                        <div class="settings-avatar">
+                            UK
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Admin Profile
+                            </h3>
+
+                            <p>
+                                Manage your dashboard account
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-form">
+
+                        <div class="dashboard-form-group">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                value="Uday Kiran"
+                            >
+
+                        </div>
+
+
+                        <div class="dashboard-form-group">
+
+                            <label>
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                value="admin@goclean.com"
+                            >
+
+                        </div>
+
+
+                        <div class="dashboard-form-group">
+
+                            <label>
+                                Low Stock Alert Threshold
+                            </label>
+
+                            <select>
+
+                                <option>
+                                    10 units
+                                </option>
+
+                                <option>
+                                    20 units
+                                </option>
+
+                                <option>
+                                    30 units
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="dashboard-form-group">
+
+                            <label>
+                                Default Currency
+                            </label>
+
+                            <select>
+
+                                <option>
+                                    Indian Rupee (₹)
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="primary-dashboard-btn">
+                        Save Preferences
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+    /* =========================================================
+   CLEAN NEST DASHBOARD JAVASCRIPT
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =================================================
+           SIDEBAR NAVIGATION
+        ================================================= */
+
+        const navLinks =
+            document.querySelectorAll(
+                ".dashboard-nav-link"
+            );
+
+        const sections =
+            document.querySelectorAll(
+                ".dashboard-section"
+            );
+
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    const target =
+                        this.dataset.section;
+
+
+                    /* Active navigation */
+
+                    navLinks.forEach(function (item) {
+
+                        item.classList.remove("active");
+
+                    });
+
+                    this.classList.add("active");
+
+
+                    /* Active section */
+
+                    sections.forEach(function (section) {
+
+                        section.classList.remove("active");
+
+                    });
+
+
+                    const targetSection =
+                        document.getElementById(target);
+
+
+                    if (targetSection) {
+
+                        targetSection.classList.add("active");
+
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+
+                    }
+
+
+                    /* Close mobile sidebar */
+
+                    dashboardSidebar.classList.remove(
+                        "open"
+                    );
+
+                }
+            );
+
+        });
+
+
+        /* =================================================
+           VIEW ALL BUTTONS
+        ================================================= */
+
+        document.querySelectorAll(
+            "[data-section]"
+        ).forEach(function (button) {
+
+            if (
+                !button.classList.contains(
+                    "dashboard-nav-link"
+                )
+            ) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const target =
+                            this.dataset.section;
+
+                        navLinks.forEach(
+                            function (item) {
+
+                                item.classList.toggle(
+                                    "active",
+                                    item.dataset.section === target
+                                );
+
+                            }
+                        );
+
+                        sections.forEach(
+                            function (section) {
+
+                                section.classList.toggle(
+                                    "active",
+                                    section.id === target
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+            }
+
+        });
+
+
+        /* =================================================
+           MOBILE SIDEBAR
+        ================================================= */
+
+        const dashboardSidebar =
+            document.getElementById(
+                "dashboardSidebar"
+            );
+
+        const dashboardMenuBtn =
+            document.getElementById(
+                "dashboardMenuBtn"
+            );
+
+
+        if (dashboardMenuBtn) {
+
+            dashboardMenuBtn.addEventListener(
+                "click",
+                function () {
+
+                    dashboardSidebar.classList.toggle(
+                        "open"
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           NOTIFICATIONS
+        ================================================= */
+
+        const notificationBtn =
+            document.getElementById(
+                "notificationBtn"
+            );
+
+        const notificationPanel =
+            document.getElementById(
+                "notificationPanel"
+            );
+
+
+        notificationBtn.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                notificationPanel.classList.toggle(
+                    "show"
+                );
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    !notificationPanel.contains(
+                        event.target
+                    ) &&
+                    !notificationBtn.contains(
+                        event.target
+                    )
+                ) {
+
+                    notificationPanel.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =================================================
+           DARK MODE
+        ================================================= */
+
+        const dashboardThemeBtn =
+            document.getElementById(
+                "dashboardThemeBtn"
+            );
+
+        const dashboardThemeIcon =
+            document.getElementById(
+                "dashboardThemeIcon"
+            );
+
+
+        const savedDashboardTheme =
+            localStorage.getItem(
+                "cleanNestDashboardTheme"
+            );
+
+
+        if (
+            savedDashboardTheme === "dark"
+        ) {
+
+            document.body.classList.add(
+                "dashboard-dark"
+            );
+
+            dashboardThemeIcon.classList.remove(
+                "fa-moon"
+            );
+
+            dashboardThemeIcon.classList.add(
+                "fa-sun"
+            );
+
+        }
+
+
+        dashboardThemeBtn.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle(
+                    "dashboard-dark"
+                );
+
+
+                const dark =
+                    document.body.classList.contains(
+                        "dashboard-dark"
+                    );
+
+
+                localStorage.setItem(
+                    "cleanNestDashboardTheme",
+                    dark ? "dark" : "light"
+                );
+
+
+                dashboardThemeIcon.classList.toggle(
+                    "fa-moon",
+                    !dark
+                );
+
+                dashboardThemeIcon.classList.toggle(
+                    "fa-sun",
+                    dark
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           REVENUE CHART
+        ================================================= */
+
+        const revenueCanvas =
+            document.getElementById(
+                "revenueChart"
+            );
+
+
+        if (revenueCanvas) {
+
+            new Chart(
+                revenueCanvas,
+                {
+
+                    type: "line",
+
+                    data: {
+
+                        labels: [
+                            "Apr",
+                            "May",
+                            "Jun",
+                            "Jul",
+                            "Aug",
+                            "Sep"
+                        ],
+
+                        datasets: [
+
+                            {
+
+                                label: "Revenue",
+
+                                data: [
+                                    285000,
+                                    325000,
+                                    358000,
+                                    390000,
+                                    425000,
+                                    482500
+                                ],
+
+                                borderColor:
+                                    "#176B3A",
+
+                                backgroundColor:
+                                    "rgba(23,107,58,.10)",
+
+                                fill: true,
+
+                                tension: .4,
+
+                                borderWidth: 2,
+
+                                pointRadius: 3,
+
+                                pointBackgroundColor:
+                                    "#eac800"
+
+                            }
+
+                        ]
+
+                    },
+
+                    options: {
+
+                        responsive: true,
+
+                        maintainAspectRatio: false,
+
+                        plugins: {
+
+                            legend: {
+                                display: false
+                            }
+
+                        },
+
+                        scales: {
+
+                            x: {
+
+                                grid: {
+                                    display: false
+                                },
+
+                                ticks: {
+
+                                    color: "#7a847d",
+
+                                    font: {
+                                        size: 9
+                                    }
+
+                                }
+
+                            },
+
+                            y: {
+
+                                beginAtZero: false,
+
+                                grid: {
+
+                                    color:
+                                        "rgba(120,130,123,.12)"
+
+                                },
+
+                                ticks: {
+
+                                    color: "#7a847d",
+
+                                    font: {
+                                        size: 9
+                                    },
+
+                                    callback:
+                                        function (value) {
+
+                                            return "₹" +
+                                                (
+                                                    value / 1000
+                                                ) +
+                                                "k";
+
+                                        }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           BOOKING SEARCH
+        ================================================= */
+
+        const bookingSearch =
+            document.getElementById(
+                "bookingSearch"
+            );
+
+
+        if (bookingSearch) {
+
+            bookingSearch.addEventListener(
+                "input",
+                function () {
+
+                    const search =
+                        this.value.toLowerCase();
+
+                    const rows =
+                        document.querySelectorAll(
+                            ".booking-table tbody tr"
+                        );
+
+
+                    rows.forEach(function (row) {
+
+                        const text =
+                            row.textContent.toLowerCase();
+
+
+                        row.style.display =
+                            text.includes(search)
+                                ? ""
+                                : "none";
+
+                    });
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           MAIN SEARCH
+        ================================================= */
+
+        const dashboardSearch =
+            document.getElementById(
+                "dashboardSearch"
+            );
+
+
+        if (dashboardSearch) {
+
+            dashboardSearch.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Enter"
+                    ) {
+
+                        const search =
+                            this.value.toLowerCase();
+
+
+                        if (
+                            search.includes("booking") ||
+                            search.includes("order")
+                        ) {
+
+                            document.querySelector(
+                                '[data-section="bookings"]'
+                            ).click();
+
+                        }
+
+                        else if (
+                            search.includes("customer")
+                        ) {
+
+                            document.querySelector(
+                                '[data-section="customers"]'
+                            ).click();
+
+                        }
+
+                        else if (
+                            search.includes("service") ||
+                            search.includes("carpet") ||
+                            search.includes("sofa")
+                        ) {
+
+                            document.querySelector(
+                                '[data-section="services"]'
+                            ).click();
+
+                        }
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
+</script>
+</body>
+
+</html>
