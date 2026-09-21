@@ -1756,7 +1756,9 @@ body.dark-mode h2 span {
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
+    background: var(--secondary);
+
+    color: black;
 
     transform: translateY(-3px);
 
@@ -2147,16 +2149,25 @@ body.dark-mode .category {
 
     padding: 10px 14px;
 
-    background: #ffffff;
+    background: var(--primary);
 
-    color: var(--primary);
+    color: var(--white);
 
     border-radius: 7px;
 
     font-size: 12px;
     font-weight: 700;
 }
-
+.small-btn:hover{
+    color: var(--black);
+    background: var(--secondary);
+}
+body.dark-mode .small-btn:hover{
+    color: black;
+}
+body.dark-mode .small-btn{
+    color: white;
+}
 
 /* =========================================================
    ARTICLE

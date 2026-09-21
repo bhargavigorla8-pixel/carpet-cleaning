@@ -2553,13 +2553,16 @@ body.dark .blog-cta-card {
 .cta-button i {
 
     transition: transform 0.3s ease;
+    
 
 }
 
 
 .cta-button:hover {
 
-    background: var(--primary-dark);
+    background: var(--secondary);
+
+    color: var(--black);
 
     transform: translateY(-3px);
 
@@ -3087,20 +3090,21 @@ body.dark .blog-bottom-cta {
 ===================================================== */
 
 
-/* =====================================================
-   DARK MODE ROOT VARIABLES
-===================================================== */
+/* =========================================================
+   CLEAN NEST - DARK MODE
+   BLOG DETAIL PAGE
+========================================================= */
 
-body.dark {
+body.dark-mode {
 
-    --bg: #101a14;
-    --bg-secondary: #17251c;
-    --bg-card: #1d2d23;
+    --bg: #0b0f0c;
+    --bg-secondary: #111812;
+    --bg-card: #172019;
 
-    --text: #f1f5f2;
-    --text-light: #b1bdb5;
+    --text: #f5f7f5;
+    --text-light: #b8c2bb;
 
-    --border: #33483a;
+    --border: #2a382e;
 
     --white: #ffffff;
     --black: #ffffff;
@@ -3112,180 +3116,65 @@ body.dark {
     --secondary: #eac800;
     --secondary-dark: #c6a900;
 
+    --shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+
+    background: #0b0f0c;
+    color: #f5f7f5;
 }
 
 
-/* =====================================================
-   BLOG MAIN PAGE
-===================================================== */
+/* =========================================================
+   MAIN PAGE
+========================================================= */
 
-body.dark .blog-detail-page {
-
-    background: var(--bg);
-
-    color: var(--text);
-
+body.dark-mode .blog-detail-page {
+    background: #0b0f0c;
+    color: #f5f7f5;
 }
 
 
-/* =====================================================
+/* =========================================================
    BLOG HERO
-===================================================== */
+========================================================= */
 
-body.dark .blog-detail-hero {
+body.dark-mode .blog-detail-hero {
 
-    background: #142219;
+    background: #111812;
 
-    color: #f1f5f2;
-
-    border-color: #33483a;
+    border-bottom-color: #2a382e;
 
 }
 
 
-body.dark .blog-detail-hero h1 {
+body.dark-mode .blog-breadcrumb {
 
-    color: #f1f5f2;
+    color: #9eaaa2;
 
 }
 
 
-body.dark .blog-detail-hero h1 span {
+body.dark-mode .blog-breadcrumb a {
 
     color: #eac800;
 
 }
 
 
-body.dark .blog-hero-description {
+body.dark-mode .blog-breadcrumb a:hover {
 
-    color: #b1bdb5;
-
-}
-
-
-body.dark .blog-breadcrumb {
-
-    color: #a5b3a9;
+    color: #ffffff;
 
 }
 
 
-body.dark .blog-breadcrumb a {
+body.dark-mode .blog-breadcrumb i {
 
-    color: #eac800;
-
-}
-
-
-body.dark .blog-breadcrumb i {
-
-    color: #839589;
+    color: #718077;
 
 }
 
 
-body.dark .blog-category {
-
-    background: rgba(234, 200, 0, 0.15);
-
-    color: #eac800;
-
-}
-
-
-body.dark .blog-category i {
-
-    color: #eac800;
-
-}
-
-
-body.dark .blog-meta {
-
-    color: #b1bdb5;
-
-}
-
-
-body.dark .blog-meta i {
-
-    color: #eac800;
-
-}
-
-
-body.dark .meta-divider {
-
-    background: #33483a;
-
-}
-
-
-/* =====================================================
-   BLOG CONTENT SECTION
-===================================================== */
-
-body.dark .blog-content-section {
-
-    background: #101a14;
-
-    color: #f1f5f2;
-
-}
-
-
-body.dark .blog-article {
-
-    color: #f1f5f2;
-
-}
-
-
-body.dark .blog-article p {
-
-    color: #b1bdb5;
-
-}
-
-
-body.dark .article-intro {
-
-    color: #f1f5f2 !important;
-
-}
-
-
-/* =====================================================
-   ARTICLE HEADINGS
-===================================================== */
-
-body.dark .article-section h2 {
-
-    color: #f1f5f2;
-
-}
-
-
-body.dark .article-section h2 span {
-
-    color: #eac800;
-
-}
-
-
-body.dark .article-section h3 {
-
-    color: #f1f5f2;
-
-}
-
-
-/* =====================================================
-   BENEFITS
-===================================================== */
-
-body.dark .benefit-icon {
+body.dark-mode .blog-category {
 
     background: rgba(234, 200, 0, 0.12);
 
@@ -3294,41 +3183,149 @@ body.dark .benefit-icon {
 }
 
 
-body.dark .benefit-item p {
+body.dark-mode .blog-category i {
 
-    color: #b1bdb5;
+    color: #eac800;
 
 }
 
 
-/* =====================================================
-   ARTICLE TIP BOX
-===================================================== */
+body.dark-mode .blog-detail-hero h1 {
 
-body.dark .article-tip-box {
+    color: #f5f7f5;
 
-    background: #17251c;
+}
+
+
+body.dark-mode .blog-detail-hero h1 span {
+
+    color: #eac800;
+
+}
+
+
+body.dark-mode .blog-hero-description {
+
+    color: #b8c2bb;
+
+}
+
+
+body.dark-mode .blog-meta {
+
+    color: #9eaaa2;
+
+}
+
+
+body.dark-mode .blog-meta i {
+
+    color: #eac800;
+
+}
+
+
+body.dark-mode .meta-divider {
+
+    background: #2a382e;
+
+}
+
+
+/* =========================================================
+   BLOG CONTENT
+========================================================= */
+
+body.dark-mode .blog-content-section {
+
+    background: #0b0f0c;
+
+}
+
+
+body.dark-mode .blog-article {
+
+    color: #f5f7f5;
+
+}
+
+
+body.dark-mode .blog-article p {
+
+    color: #b8c2bb;
+
+}
+
+
+body.dark-mode .article-intro {
+
+    color: #f5f7f5 !important;
+
+}
+
+
+body.dark-mode .article-section h2 {
+
+    color: #f5f7f5;
+
+}
+
+
+body.dark-mode .article-section h2 span {
+
+    color: #eac800;
+
+}
+
+
+body.dark-mode .article-section h3 {
+
+    color: #f5f7f5;
+
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+body.dark-mode .benefit-item h3 {
+
+    color: #f5f7f5;
+
+}
+
+
+body.dark-mode .benefit-item p {
+
+    color: #b8c2bb;
+
+}
+
+
+body.dark-mode .benefit-icon {
+
+    background: rgba(23, 107, 58, 0.25);
+
+    color: #eac800;
+
+}
+
+
+/* =========================================================
+   TIP BOX
+========================================================= */
+
+body.dark-mode .article-tip-box {
+
+    background: #111812;
 
     border-left-color: #eac800;
 
 }
 
 
-body.dark .article-tip-box h3 {
-
-    color: #f1f5f2;
-
-}
-
-
-body.dark .article-tip-box p {
-
-    color: #b1bdb5;
-
-}
-
-
-body.dark .tip-icon {
+body.dark-mode .tip-icon {
 
     background: #eac800;
 
@@ -3337,29 +3334,43 @@ body.dark .tip-icon {
 }
 
 
-/* =====================================================
+body.dark-mode .article-tip-box h3 {
+
+    color: #f5f7f5;
+
+}
+
+
+body.dark-mode .article-tip-box p {
+
+    color: #b8c2bb;
+
+}
+
+
+/* =========================================================
    ARTICLE TAGS
-===================================================== */
+========================================================= */
 
-body.dark .article-tags {
+body.dark-mode .article-tags {
 
-    border-top-color: #33483a;
-
-}
-
-
-body.dark .article-tags span {
-
-    background: #17251c;
-
-    border-color: #33483a;
-
-    color: #b1bdb5;
+    border-top-color: #2a382e;
 
 }
 
 
-body.dark .article-tags span:hover {
+body.dark-mode .article-tags span {
+
+    background: #111812;
+
+    border-color: #2a382e;
+
+    color: #b8c2bb;
+
+}
+
+
+body.dark-mode .article-tags span:hover {
 
     border-color: #eac800;
 
@@ -3368,36 +3379,29 @@ body.dark .article-tags span:hover {
 }
 
 
-/* =====================================================
-   ARTICLE SHARE
-===================================================== */
+/* =========================================================
+   SHARE SECTION
+========================================================= */
 
-body.dark .article-share {
+body.dark-mode .article-share h3 {
 
-    color: #f1f5f2;
-
-}
-
-
-body.dark .article-share h3 {
-
-    color: #f1f5f2;
+    color: #f5f7f5;
 
 }
 
 
-body.dark .share-buttons a {
+body.dark-mode .share-buttons a {
 
-    background: #17251c;
+    background: #111812;
 
-    border-color: #33483a;
+    border-color: #2a382e;
 
-    color: #f1f5f2;
+    color: #eac800;
 
 }
 
 
-body.dark .share-buttons a:hover {
+body.dark-mode .share-buttons a:hover {
 
     background: #eac800;
 
@@ -3408,91 +3412,88 @@ body.dark .share-buttons a:hover {
 }
 
 
-/* =====================================================
+/* =========================================================
    SIDEBAR
-===================================================== */
+========================================================= */
 
-body.dark .blog-sidebar {
+body.dark-mode .blog-sidebar {
 
-    color: #f1f5f2;
+    color: #f5f7f5;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    CTA CARD
-   KEEP WHITE IN DARK MODE
-===================================================== */
+========================================================= */
 
-body.dark .blog-cta-card {
+body.dark-mode .blog-cta-card {
 
-    background: #ffffff;
+    background: #172019;
 
-    color: #202522;
+    color: #f5f7f5;
 
-    border-color: #ffffff;
+    border-color: #2a382e;
 
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-
-}
-
-
-body.dark .blog-cta-card h2 {
-
-    color: #202522;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
 
 }
 
 
-body.dark .blog-cta-card h2 span {
+body.dark-mode .cta-icon {
 
-    color: #176B3A;
+    background: rgba(23, 107, 58, 0.25);
 
-}
-
-
-body.dark .blog-cta-card p {
-
-    color: #68736c;
+    color: #eac800;
 
 }
 
 
-body.dark .cta-label {
+body.dark-mode .cta-label {
 
-    color: #176B3A;
-
-}
-
-
-body.dark .cta-icon {
-
-    background: rgba(23, 107, 58, 0.1);
-
-    color: #176B3A;
+    color: #eac800;
 
 }
 
 
-body.dark .cta-contact {
+body.dark-mode .blog-cta-card h2 {
 
-    color: #68736c;
-
-}
-
-
-body.dark .cta-contact i {
-
-    color: #176B3A;
+    color: #f5f7f5;
 
 }
 
 
-/* =====================================================
-   CTA BUTTON
-===================================================== */
+body.dark-mode .blog-cta-card h2 span {
 
-body.dark .cta-button {
+    color: #eac800;
+
+}
+
+
+body.dark-mode .blog-cta-card p {
+
+    color: #b8c2bb;
+
+}
+
+
+body.dark-mode .cta-contact {
+
+    color: #9eaaa2;
+
+}
+
+
+body.dark-mode .cta-contact i {
+
+    color: #eac800;
+
+}
+
+
+/* CTA BUTTON */
+
+body.dark-mode .cta-button {
 
     background: #176B3A;
 
@@ -3501,145 +3502,171 @@ body.dark .cta-button {
 }
 
 
-body.dark .cta-button:hover {
+body.dark-mode .cta-button:hover {
 
-    background: #0E4826;
+    background: #eac800;
+
+    color: #111111;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    RELATED POSTS
-===================================================== */
+========================================================= */
 
-body.dark .related-posts {
+body.dark-mode .related-posts {
 
-    background: #17251c;
+    background: #111812;
 
-    border-color: #33483a;
-
-}
-
-
-body.dark .related-posts > h3 {
-
-    color: #f1f5f2;
+    border-color: #2a382e;
 
 }
 
 
-body.dark .related-post {
+body.dark-mode .related-posts > h3 {
 
-    border-bottom-color: #33483a;
+    color: #f5f7f5;
 
 }
 
 
-body.dark .related-info span {
+body.dark-mode .related-post {
+
+    border-bottom-color: #2a382e;
+
+}
+
+
+body.dark-mode .related-info span {
 
     color: #eac800;
 
 }
 
 
-body.dark .related-info h4 {
+body.dark-mode .related-info h4 {
 
-    color: #f1f5f2;
+    color: #f5f7f5;
 
 }
 
 
-body.dark .related-post:hover .related-info h4 {
+body.dark-mode .related-post:hover .related-info h4 {
 
     color: #eac800;
 
 }
 
 
-body.dark .related-info small {
+body.dark-mode .related-info small {
 
-    color: #b1bdb5;
+    color: #9eaaa2;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    BOTTOM CTA
-   KEEP WHITE IN DARK MODE
-===================================================== */
+========================================================= */
 
-body.dark .blog-bottom-cta {
+body.dark-mode .blog-bottom-cta {
 
-    background: #ffffff;
+    background: #111812;
 
-    color: #202522;
+    color: #f5f7f5;
 
-    border-top-color: #ffffff;
-
-}
-
-
-body.dark .bottom-cta-label {
-
-    color: #176B3A;
+    border-top-color: #2a382e;
 
 }
 
 
-body.dark .bottom-cta-content h2 {
+body.dark-mode .bottom-cta-label {
 
-    color: #202522;
-
-}
-
-
-body.dark .bottom-cta-content h2 span {
-
-    color: #176B3A;
+    color: #eac800;
 
 }
 
 
-body.dark .bottom-cta-content p {
+body.dark-mode .bottom-cta-content h2 {
 
-    color: #68736c;
-
-}
-
-
-body.dark .bottom-cta-content .cta-button {
-
-    background: #176B3A;
-
-    color: #ffffff;
+    color: #f5f7f5;
 
 }
 
 
-body.dark .bottom-cta-content .cta-button:hover {
+body.dark-mode .bottom-cta-content h2 span {
 
-    background: #0E4826;
-
-}
-
-
-/* =====================================================
-   BLOG FEATURED IMAGE
-===================================================== */
-
-body.dark .blog-featured-image {
-
-    background: #17251c;
+    color: #eac800;
 
 }
 
 
-/* =====================================================
-   FOCUS ACCESSIBILITY
-===================================================== */
+body.dark-mode .bottom-cta-content p {
 
-body.dark :focus-visible {
+    color: #b8c2bb;
 
-    outline-color: #eac800;
+}
+
+
+/* =========================================================
+   FEATURED / ARTICLE IMAGE BACKGROUNDS
+========================================================= */
+
+body.dark-mode .blog-featured-image {
+
+    background: #111812;
+
+}
+
+
+body.dark-mode .article-small-image {
+
+    background: #111812;
+
+}
+
+
+/* =========================================================
+   GLOBAL HEADINGS / TEXT INSIDE BLOG
+========================================================= */
+
+body.dark-mode .blog-detail-page h1,
+body.dark-mode .blog-detail-page h2,
+body.dark-mode .blog-detail-page h3,
+body.dark-mode .blog-detail-page h4 {
+
+    color: #f5f7f5;
+
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+body.dark-mode .blog-detail-page a {
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* =========================================================
+   SMOOTH DARK MODE
+========================================================= */
+
+body.dark-mode,
+body.dark-mode .blog-detail-page,
+body.dark-mode .blog-detail-hero,
+body.dark-mode .blog-content-section,
+body.dark-mode .blog-bottom-cta,
+body.dark-mode .blog-cta-card,
+body.dark-mode .related-posts {
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 
 }
