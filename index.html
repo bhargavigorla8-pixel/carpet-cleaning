@@ -117,20 +117,7 @@
 
             </a>
 
-            <!-- BLOG -->
-
-            <a href="pricing.html"
-               class="nav-link">
-
-                Pricing
-
-            </a>
-            <a href="gallery.html"
-               class="nav-link">
-
-                Gallery
-
-            </a>
+            
 
 
 
@@ -341,7 +328,7 @@
                 <div class="sc-hero-image">
 
                     <img
-                        src="images/hero.jpeg"
+                        src="images/detail-3.jpg"
                         alt="Professional sofa cleaning"
                     >
 
@@ -355,9 +342,7 @@
 
                     <div class="sc-rating-card">
 
-                        <div class="sc-rating-icon">
-                            <i class="fa-solid fa-sparkles"></i>
-                        </div>
+                        
 
                         <div>
 
@@ -1146,66 +1131,32 @@
 
 
 
-    <!-- =====================================================
-                           CTA
-    ====================================================== -->
+    
 
-    <section
-        id="sc-booking"
-        class="sc-cta"
-    >
+    
+<!-- ================= CTA / NEWSLETTER ================= -->
+<section class="cleaning-cta">
+    <div class="cta-content">
 
-        <div class="sc-container">
-
-            <div class="sc-cta-box sc-reveal">
-
-                <div class="sc-cta-content">
-
-                    <div class="sc-eyebrow">
-                        <span class="sc-eyebrow-line"></span>
-                        READY FOR A FRESH SOFA?
-                    </div>
-
-                    <h2>
-                        Give Your Sofa
-                        <span>The Care It Deserves.</span>
-                    </h2>
-
-                    <p>
-                        Book your professional sofa and upholstery cleaning
-                        service today.
-                    </p>
-
-                </div>
-
-
-                <div class="sc-cta-action">
-
-                    <a
-                        href="tel:+919999999999"
-                        class="sc-btn sc-btn-yellow"
-                    >
-
-                        Book Now
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
+        <div class="cta-icon">
+            <i class="fa-regular fa-envelope"></i>
         </div>
 
-    </section>
+        <div class="cta-text">
+            <span>STAY IN THE KNOW</span>
+            <h2>Get fresh cleaning tips <strong>in your inbox.</strong></h2>
+            <p>Subscribe for useful cleaning advice, home-care tips and occasional service updates.</p>
+        </div>
 
+        <form class="cta-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">
+                Subscribe <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
 
-</main>
-    
-
-    
-
+    </div>
+</section>
 
 
 <!-- =========================================================
@@ -2172,7 +2123,81 @@ window.addEventListener(
 
     }
 );
+/* =========================================================
+        EXTRA ANIMATION JAVASCRIPT
+========================================================= */
 
+// Automatically stagger cards
+document.querySelectorAll(
+    ".sc-services-grid .sc-reveal, " +
+    ".sc-process-grid .sc-reveal, " +
+    ".sc-testimonial-grid .sc-reveal"
+).forEach(function (element, index) {
+
+    element.style.transitionDelay =
+        (index * 0.08) + "s";
+
+});
+
+
+// Mouse-follow effect for hero image
+const heroVisual =
+    document.querySelector(".sc-hero-visual");
+
+if (
+    heroVisual &&
+    !window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches
+) {
+
+    heroVisual.addEventListener(
+        "mousemove",
+        function (event) {
+
+            const rect =
+                heroVisual.getBoundingClientRect();
+
+            const x =
+                (event.clientX - rect.left)
+                / rect.width - 0.5;
+
+            const y =
+                (event.clientY - rect.top)
+                / rect.height - 0.5;
+
+            heroVisual.style.setProperty(
+                "--mouse-x",
+                (x * 8) + "px"
+            );
+
+            heroVisual.style.setProperty(
+                "--mouse-y",
+                (y * 6) + "px"
+            );
+
+        }
+    );
+
+
+    heroVisual.addEventListener(
+        "mouseleave",
+        function () {
+
+            heroVisual.style.setProperty(
+                "--mouse-x",
+                "0px"
+            );
+
+            heroVisual.style.setProperty(
+                "--mouse-y",
+                "0px"
+            );
+
+        }
+    );
+
+}
 
 
 </script>

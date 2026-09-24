@@ -1744,9 +1744,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
 
     padding: 100px 20px;
 
-    background:
-        url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1800&q=85")
-        center / cover;
+    
 }
 
 .contact-hero-overlay {
@@ -1755,12 +1753,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
 
     inset: 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(5, 25, 13, .90),
-            rgba(23, 107, 58, .78)
-        );
+    
 }
 
 .contact-hero-content {
@@ -1796,7 +1789,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
 
     display: block;
 
-    color: var(--secondary);
+    color: var(--);
 }
 
 .contact-hero p {
@@ -2761,154 +2754,28 @@ html[dir="rtl"] .footer-column ul li a:hover {
    7. FINAL CTA
 ========================================================= */
 
-.contact-final-cta {
 
-    position: relative;
-
-    padding: 100px 20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--white),
-            
-        );
-
-    text-align: center;
-
-    color: var(--black);
-
-    overflow: hidden;
+.mini-cta{padding:80px 20px;
+    text-align:center;
+    background:var(--primary);
+    color:#fff
+}.mini-cta h2
+{font-size:42px;
+    margin-bottom:10px
 }
-
-.contact-final-cta::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-
-    height: 350px;
-
-    border-radius: 50%;
-
-    background: rgba(234,200,0,.08);
-
-    top: -170px;
-
-    right: -100px;
-}
-
-.contact-cta-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 760px;
-
-    margin: auto;
-}
-
-.contact-final-cta .contact-eyebrow {
-
-    color: var(--secondary);
-}
-
-.contact-final-cta h2 {
-
-    margin: 0 0 18px;
-
-    color: var(--black);
-
-    font-size: clamp(34px, 5vw, 55px);
-
-    line-height: 1.1;
-}
-
-.contact-final-cta h2 span {
-
-    color: var(--primary);
-}
-
-.contact-final-cta p {
-
-    max-width: 650px;
-
-    margin: 0 auto 30px;
-
-    color: var(--black);
-
-    line-height: 1.8;
-}
-
-.contact-cta-buttons {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 14px;
-
-    flex-wrap: wrap;
-}
-
-.cta-call-btn,
-.cta-book-btn {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    min-height: 52px;
-
-    padding: 0 25px;
-
-    border-radius: 9px;
-
-    font-weight: 750;
-
-    transition: .3s ease;
-}
-
-.cta-call-btn {
-
-    background: var(--primary);
-
-    color: var(--white);
-}
-
-.cta-call-btn:hover {
-
-    background: var(--secondary);
-
-    color: var(--black);
-
-    transform: translateY(-3px);
-}
-
-.cta-book-btn {
-
-    border: 1px solid rgba(255,255,255,.4);
-
-    color: var(--);
-
-    background: transparent;
-}
-
-.cta-book-btn:hover {
-
-    background: var(--white);
-
-    color: var(--black);
-}
-
-
+.mini-cta a{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 28px;
+    border-radius:50px;
+    background:var(--primary);
+    color:white;
+    border: 2px solid var(--white);
+    font-weight:700}
+    .mini-cta a:hover{
+        color: var(--black);
+        background: var(--secondary);
+    }
 /* =========================================================
    RESPONSIVE
 ========================================================= */
@@ -3800,6 +3667,933 @@ body.dark-mode .cleaning-contact {
 
         box-shadow:
             0 10px 25px rgba(0,0,0,.25);
+    }
+
+}/* =========================================================
+   PREMIUM CONTACT HERO ANIMATIONS
+   CLEAN NEST
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO BASE
+--------------------------------------------------------- */
+
+.contact-hero {
+    isolation: isolate;
+    overflow: hidden;
+}
+
+
+/* Animated background layer */
+
+.contact-hero::before {
+
+    content: "";
+
+    position: absolute;
+    inset: -8%;
+
+    z-index: 0;
+
+    background:
+        url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+
+    transform: scale(1.08);
+
+    animation:
+        contactHeroZoom 14s
+        ease-in-out
+        infinite alternate;
+
+    will-change: transform;
+
+}
+
+
+@keyframes contactHeroZoom {
+
+    0% {
+        transform:
+            scale(1.08)
+            translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform:
+            scale(1.13)
+            translate3d(-1%, -1%, 0);
+    }
+
+    100% {
+        transform:
+            scale(1.18)
+            translate3d(1%, 1%, 0);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   OVERLAY
+--------------------------------------------------------- */
+
+.contact-hero-overlay {
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(4, 25, 13, .94),
+            rgba(23, 107, 58, .78),
+            rgba(5, 30, 16, .87)
+        );
+
+    background-size: 200% 200%;
+
+    animation:
+        overlayMove 8s
+        ease-in-out
+        infinite alternate;
+
+}
+
+
+@keyframes overlayMove {
+
+    0% {
+        background-position:
+            0% 50%;
+    }
+
+    100% {
+        background-position:
+            100% 50%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOVING GRID
+--------------------------------------------------------- */
+
+.contact-hero::after {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.045) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        65px 65px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+
+    opacity: .45;
+
+    animation:
+        gridMove 16s
+        linear
+        infinite;
+
+}
+
+
+@keyframes gridMove {
+
+    from {
+        background-position:
+            0 0;
+    }
+
+    to {
+        background-position:
+            65px 65px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   HERO CONTENT
+--------------------------------------------------------- */
+
+.contact-hero-content {
+
+    z-index: 3;
+
+    animation:
+        contactContentReveal
+        1.15s
+        cubic-bezier(.16,1,.3,1)
+        both;
+
+}
+
+
+@keyframes contactContentReveal {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(65px)
+            scale(.96);
+
+        filter:
+            blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   EYEBROW
+--------------------------------------------------------- */
+
+.contact-hero .contact-eyebrow {
+
+    position: relative;
+
+    animation:
+        eyebrowDrop
+        .9s
+        .15s
+        cubic-bezier(.16,1,.3,1)
+        both;
+
+}
+
+
+@keyframes eyebrowDrop {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-25px)
+            scale(.85);
+
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* Eyebrow glowing line */
+
+.contact-hero .contact-eyebrow::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 0;
+
+    height: 2px;
+
+    margin-right: 10px;
+
+    vertical-align: middle;
+
+    background:
+        var(--secondary);
+
+    animation:
+        eyebrowLine
+        1s
+        .7s
+        ease
+        forwards;
+
+}
+
+
+@keyframes eyebrowLine {
+
+    to {
+        width: 32px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   TITLE
+--------------------------------------------------------- */
+
+.contact-hero h1 {
+
+    animation:
+        titleReveal
+        1.1s
+        .3s
+        cubic-bezier(.16,1,.3,1)
+        both;
+
+}
+
+
+@keyframes titleReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(80px);
+
+        filter:
+            blur(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+    }
+
+}
+
+
+/* Highlighted text */
+
+.contact-hero h1 span {
+
+    position: relative;
+
+    animation:
+        highlightReveal
+        1s
+        .65s
+        cubic-bezier(.16,1,.3,1)
+        both;
+
+}
+
+
+@keyframes highlightReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-45px)
+            skewX(-8deg);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            skewX(0);
+    }
+
+}
+
+
+/* Animated underline */
+
+.contact-hero h1 span::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+
+    height: 3px;
+
+    border-radius: 5px;
+
+    background:
+        var(--secondary);
+
+    animation:
+        titleUnderline
+        1s
+        1.1s
+        ease
+        forwards;
+
+}
+
+
+@keyframes titleUnderline {
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------------- */
+
+.contact-hero p {
+
+    animation:
+        paragraphReveal
+        1s
+        .85s
+        ease
+        both;
+
+}
+
+
+@keyframes paragraphReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   BUTTONS
+--------------------------------------------------------- */
+
+.contact-hero-buttons {
+
+    animation:
+        buttonsReveal
+        1s
+        1s
+        cubic-bezier(.16,1,.3,1)
+        both;
+
+}
+
+
+@keyframes buttonsReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* Button setup */
+
+.contact-primary-btn,
+.contact-secondary-btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+}
+
+
+/* Shine */
+
+.contact-primary-btn::before,
+.contact-secondary-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -130%;
+
+    width: 80%;
+    height: 100%;
+
+    transform:
+        skewX(-25deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.45),
+            transparent
+        );
+
+    transition:
+        left .7s ease;
+
+}
+
+
+.contact-primary-btn:hover::before,
+.contact-secondary-btn:hover::before {
+
+    left: 140%;
+
+}
+
+
+.contact-primary-btn:hover {
+
+    transform:
+        translateY(-6px)
+        scale(1.03);
+
+    box-shadow:
+        0 18px 40px
+        rgba(23,107,58,.35);
+
+}
+
+
+.contact-secondary-btn:hover {
+
+    transform:
+        translateY(-6px)
+        scale(1.03);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0,0,0,.18);
+
+}
+
+
+/* Icon movement */
+
+.contact-primary-btn i,
+.contact-secondary-btn i {
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.contact-primary-btn:hover i {
+
+    transform:
+        translateX(5px)
+        rotate(-8deg);
+
+}
+
+
+/* ---------------------------------------------------------
+   FLOATING LIGHTS
+--------------------------------------------------------- */
+
+.contact-hero-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    left: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(234,200,0,.20),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    animation:
+        glowFloatOne
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.contact-hero-content::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    right: -100px;
+    bottom: -60px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.12),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    animation:
+        glowFloatTwo
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes glowFloatOne {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(25px,-20px)
+            scale(1.15);
+    }
+
+}
+
+
+@keyframes glowFloatTwo {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0);
+    }
+
+    50% {
+        transform:
+            translate(-20px,15px);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   HERO DEPTH
+--------------------------------------------------------- */
+
+.contact-hero-content > * {
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+/* ---------------------------------------------------------
+   SCROLL INDICATOR STYLE
+   (Creates subtle bottom glow)
+--------------------------------------------------------- */
+
+.contact-hero {
+
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+
+}
+
+
+.contact-hero-overlay {
+
+    transform:
+        translate(
+            var(--mouse-x),
+            var(--mouse-y)
+        )
+        scale(1.02);
+
+}
+
+
+/* ---------------------------------------------------------
+   CONTACT INFO CARD ANIMATION
+--------------------------------------------------------- */
+
+.contact-info-card,
+.direct-contact-card {
+
+    transition:
+        transform .45s cubic-bezier(.16,1,.3,1),
+        box-shadow .45s ease,
+        border-color .45s ease;
+
+}
+
+
+.contact-info-card:hover,
+.direct-contact-card:hover {
+
+    transform:
+        translateY(-9px)
+        scale(1.015) !important;
+
+    box-shadow:
+        0 25px 55px
+        rgba(23,107,58,.16);
+
+}
+
+
+/* Icons */
+
+.contact-info-icon,
+.direct-contact-icon {
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+
+.contact-info-card:hover .contact-info-icon,
+.direct-contact-card:hover .direct-contact-icon {
+
+    transform:
+        rotate(-8deg)
+        scale(1.1);
+
+}
+
+
+/* ---------------------------------------------------------
+   LOCATION DETAILS
+--------------------------------------------------------- */
+
+.location-detail {
+
+    transition:
+        transform .35s ease;
+
+}
+
+
+.location-detail:hover {
+
+    transform:
+        translateX(8px) !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   FAQ ANIMATION
+--------------------------------------------------------- */
+
+.contact-faq-item {
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+.contact-faq-item:hover {
+
+    transform:
+        translateX(5px) !important;
+
+}
+
+
+.contact-faq-question i {
+
+    transition:
+        transform .35s ease;
+
+}
+
+
+.contact-faq-item.active
+.contact-faq-question i {
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+/* ---------------------------------------------------------
+   FINAL CTA
+--------------------------------------------------------- */
+
+.contact-final-cta {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.contact-final-cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    top: -180px;
+    right: -120px;
+
+    border:
+        1px solid
+        rgba(234,200,0,.25);
+
+    animation:
+        ctaOrb
+        6s
+        ease-in-out
+        infinite alternate;
+
+}
+
+
+@keyframes ctaOrb {
+
+    from {
+
+        transform:
+            scale(.85)
+            rotate(0deg);
+
+        opacity: .3;
+
+    }
+
+    to {
+
+        transform:
+            scale(1.2)
+            rotate(25deg);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   REDUCED MOTION
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-hero::before,
+    .contact-hero::after,
+    .contact-hero-overlay,
+    .contact-hero-content,
+    .contact-hero h1,
+    .contact-hero h1 span,
+    .contact-hero p,
+    .contact-hero-buttons,
+    .contact-hero .contact-eyebrow,
+    .contact-hero-content::before,
+    .contact-hero-content::after,
+    .contact-final-cta::before {
+
+        animation: none !important;
     }
 
 }

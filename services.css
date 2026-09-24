@@ -1796,12 +1796,7 @@ a {
     align-items: center;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(8, 36, 20, .90),
-            rgba(8, 36, 20, .55),
-            rgba(8, 36, 20, .15)
-        ),
+        
         url(images/ABOUT.jpg)
         center / cover no-repeat;
 
@@ -1817,7 +1812,7 @@ a {
 }
 
 .hero-content .eyebrow {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .hero-content h1 {
@@ -1830,10 +1825,11 @@ a {
     letter-spacing: -4px;
 
     margin-bottom: 25px;
+    color: var(--black);
 }
 
 .hero-content h1 span {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .hero-content > p {
@@ -2543,109 +2539,116 @@ a {
    7. BOOKING CTA
 ========================================= */
 
-.booking-section {
-    position: relative;
+/* =========================
+   MINI CTA
+========================= */
 
-    overflow: hidden;
-
-    padding: 110px 5%;
-
-    background:
-        linear-gradient(
-            120deg,
-            var(--white),
-        );
-
-    color: var(--black);
-
-    text-align: center;
-    border: 2px solid var(--primary);
+.mini-cta {
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
-.booking-content {
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 850px;
-
-    margin: auto;
-}
-
-.booking-content .eyebrow {
-    color: var(--primary);
-}
-
-.booking-content h2 {
-    font-size: clamp(40px, 6vw, 65px);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 20px;
-}
-
-.booking-content h2 span {
-    color: var(--primary);
-}
-
-.booking-content p {
-    max-width: 600px;
-
-    margin: 0 auto 30px;
-
-  color: black;
-    line-height: 1.8;
-}
-
-.booking-buttons {
+.mini-cta-content {
+    background: var(--primary);
+    border-radius: 20px;
+    padding: 35px 45px;
     display: flex;
-
-    justify-content: center;
-
-    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn-light {
-    background: var(--white);
-
-    color: var(--primary);
-}
-
-.btn-yellow {
-    background: var(--secondary);
-
-    color: var(--black);
-}
-
-.btn-light:hover,
-.btn-yellow:hover {
-    transform: translateY(-3px);
-}
-
-.booking-decoration span {
+.mini-cta-content::before {
+    content: "";
     position: absolute;
-
-    color: rgba(255,255,255,.08);
-
-    font-size: 150px;
+    width: 180px;
+    height: 180px;
+    border: 35px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    right: -70px;
+    top: -80px;
 }
 
-.booking-decoration span:nth-child(1) {
-    top: 20px;
-    left: 5%;
+.cta-label {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
 
-.booking-decoration span:nth-child(2) {
-    right: 5%;
-    bottom: 0;
+.mini-cta h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 8px 0;
 }
 
-.booking-decoration span:nth-child(3) {
-    top: 30%;
-    right: 20%;
-    font-size: 70px;
+.mini-cta p {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    font-size: 15px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 22px; 
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border: 2px solid var(--white);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    color: var(--black);
+    background: var(--secondary);
+}
+
+.cta-btn i {
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* DARK MODE */
+body.dark-mode .mini-cta-content {
+    background: #0d2d20;
+}
+
+/* RTL */
+body.rtl .cta-btn:hover i {
+    transform: translateX(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .mini-cta-content {
+        padding: 30px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mini-cta h2 {
+        font-size: 25px;
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 
@@ -3308,3 +3311,1108 @@ body.dark-mode .process-card {
 
 }
 
+/* =========================================================
+   EXTRA PREMIUM ANIMATIONS
+   Clean Nest Services Page
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   HERO CONTENT REVEAL
+--------------------------------------------------------- */
+
+.services-hero .hero-content {
+    animation: heroContentReveal 1s ease forwards;
+}
+
+.services-hero .eyebrow {
+    animation: fadeDown 0.8s ease 0.15s both;
+}
+
+.services-hero h1 {
+    animation: fadeUp 0.9s ease 0.3s both;
+}
+
+.services-hero p {
+    animation: fadeUp 0.9s ease 0.45s both;
+}
+
+.services-hero .hero-buttons {
+    animation: fadeUp 0.9s ease 0.6s both;
+}
+
+.services-hero .hero-stats {
+    animation: fadeUp 0.9s ease 0.75s both;
+}
+
+
+@keyframes heroContentReveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   HERO BUTTON ANIMATION
+--------------------------------------------------------- */
+
+.btn-primary,
+.btn-outline {
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.btn-primary::before,
+.btn-outline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background: rgba(255,255,255,0.20);
+
+    transform: skewX(-25deg);
+
+    transition: left 0.6s ease;
+
+}
+
+
+.btn-primary:hover::before,
+.btn-outline:hover::before {
+
+    left: 140%;
+
+}
+
+
+.btn-primary i,
+.btn-primary span {
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.btn-primary:hover i,
+.btn-primary:hover span {
+
+    transform: translateX(5px);
+
+}
+
+
+/* ---------------------------------------------------------
+   HERO STATS
+--------------------------------------------------------- */
+
+.hero-stats > div {
+
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+
+}
+
+
+.hero-stats > div:hover {
+
+    transform: translateY(-7px);
+
+}
+
+
+.hero-stats strong {
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+.hero-stats > div:hover strong {
+
+    color: var(--secondary);
+
+}
+.sc-eyebrow-line {
+
+    width:
+        32px;
+
+    height:
+        2px;
+
+    background:
+        var(--sc-secondary);
+        
+
+}
+
+/* ---------------------------------------------------------
+   SECTION HEADING ANIMATION
+--------------------------------------------------------- */
+
+.section-heading {
+
+    animation: sectionReveal 0.9s ease both;
+
+}
+
+
+@keyframes sectionReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   SERVICE CARDS
+--------------------------------------------------------- */
+
+.service-card {
+
+    position: relative;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-12px) scale(1.015);
+
+    box-shadow:
+        0 25px 55px rgba(23,107,58,0.18);
+
+}
+
+
+.service-image {
+
+    overflow: hidden;
+
+}
+
+
+.service-image img {
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+
+}
+
+
+.service-card:hover .service-image img {
+
+    transform: scale(1.10);
+
+    filter: brightness(1.05);
+
+}
+
+
+/* SERVICE BADGE */
+
+.service-badge {
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+
+}
+
+
+.service-card:hover .service-badge {
+
+    transform: scale(1.08) rotate(-2deg);
+
+    background: var(--secondary);
+
+    color: #111;
+
+}
+
+
+/* SERVICE CONTENT */
+
+.service-content h3 {
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.service-card:hover .service-content h3 {
+
+    color: var(--primary);
+
+    transform: translateX(4px);
+
+}
+
+
+/* SERVICE TAGS */
+
+.service-tags span {
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.service-tags span:hover {
+
+    transform: translateY(-3px);
+
+    background: var(--secondary);
+
+    color: #111;
+
+}
+
+
+/* BOOK NOW ARROW */
+
+.service-bottom a {
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.service-bottom a:hover {
+
+    color: var(--secondary);
+
+    transform: translateX(6px);
+
+}
+
+
+/* ---------------------------------------------------------
+   WHY CHOOSE US IMAGE
+--------------------------------------------------------- */
+
+.why-image {
+
+    overflow: visible;
+
+}
+
+
+.why-image img {
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+
+}
+
+
+.why-image:hover img {
+
+    transform: scale(1.035);
+
+    filter: brightness(1.04);
+
+}
+
+
+/* EXPERIENCE CARD FLOAT */
+
+.experience-card {
+
+    animation: floatingCard 4s ease-in-out infinite;
+
+}
+
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   BENEFIT ITEMS
+--------------------------------------------------------- */
+
+.benefit-item {
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.benefit-item:hover {
+
+    transform: translateX(8px);
+
+    box-shadow:
+        0 10px 30px rgba(23,107,58,0.08);
+
+}
+
+
+.benefit-icon {
+
+    transition:
+        transform 0.4s ease,
+        background 0.3s ease;
+
+}
+
+
+.benefit-item:hover .benefit-icon {
+
+    transform: rotate(360deg) scale(1.08);
+
+    background: var(--secondary);
+
+}
+
+
+/* ---------------------------------------------------------
+   PROCESS CARDS
+--------------------------------------------------------- */
+
+.process-item {
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+
+}
+
+
+.process-item:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.15);
+
+}
+
+
+/* PROCESS IMAGE */
+
+.process-image {
+
+    overflow: hidden;
+
+}
+
+
+.process-image img {
+
+    transition:
+        transform 0.7s ease;
+
+}
+
+
+.process-item:hover .process-image img {
+
+    transform: scale(1.10);
+
+}
+
+
+/* PROCESS NUMBER */
+
+.process-number {
+
+    transition:
+        transform 0.4s ease,
+        color 0.3s ease;
+
+}
+
+
+.process-item:hover .process-number {
+
+    transform: scale(1.15);
+
+    color: var(--secondary);
+
+}
+
+
+/* PROCESS ICON */
+
+.process-icon {
+
+    transition:
+        transform 0.45s ease,
+        background 0.35s ease;
+
+}
+
+
+.process-item:hover .process-icon {
+
+    transform: rotate(360deg) scale(1.08);
+
+    background: var(--secondary);
+
+}
+
+
+/* ---------------------------------------------------------
+   TEAM CARDS
+--------------------------------------------------------- */
+
+.team-card {
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+
+}
+
+
+.team-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 25px 55px rgba(23,107,58,0.16);
+
+}
+
+
+.team-image {
+
+    overflow: hidden;
+
+}
+
+
+.team-image img {
+
+    transition:
+        transform 0.7s ease;
+
+}
+
+
+.team-card:hover .team-image img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* SOCIAL ICONS */
+
+.team-social a {
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.team-social a:hover {
+
+    transform: translateY(-6px) rotate(8deg);
+
+    background: var(--secondary);
+
+}
+
+
+/* ---------------------------------------------------------
+   BEFORE / AFTER
+--------------------------------------------------------- */
+
+.comparison-image {
+
+    overflow: hidden;
+
+}
+
+
+.comparison-image img {
+
+    transition:
+        transform 0.8s ease,
+        filter 0.5s ease;
+
+}
+
+
+.comparison-image:hover img {
+
+    transform: scale(1.08);
+
+    filter: brightness(1.05);
+
+}
+
+
+/* LABEL */
+
+.comparison-image span {
+
+    transition:
+        transform 0.35s ease;
+
+}
+
+
+.comparison-image:hover span {
+
+    transform: translateY(-5px);
+
+}
+
+
+/* ---------------------------------------------------------
+   RESULT STATISTICS
+--------------------------------------------------------- */
+
+.result-stats > div {
+
+    transition:
+        transform 0.35s ease;
+
+}
+
+
+.result-stats > div:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+.result-stats strong {
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.result-stats > div:hover strong {
+
+    color: var(--secondary);
+
+    transform: scale(1.08);
+
+}
+
+
+/* ---------------------------------------------------------
+   TESTIMONIAL CARDS
+--------------------------------------------------------- */
+
+.testimonial-card {
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+
+.testimonial-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(23,107,58,0.14);
+
+}
+
+
+/* QUOTE ICON */
+
+.quote-icon {
+
+    transition:
+        transform 0.5s ease,
+        color 0.3s ease;
+
+}
+
+
+.testimonial-card:hover .quote-icon {
+
+    transform: rotate(-10deg) scale(1.12);
+
+    color: var(--secondary);
+
+}
+
+
+/* STARS */
+
+.stars {
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.testimonial-card:hover .stars {
+
+    transform: scale(1.08);
+
+}
+
+
+/* ---------------------------------------------------------
+   FAQ ANIMATION
+--------------------------------------------------------- */
+
+.faq-item {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.faq-item:hover {
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 10px 30px rgba(23,107,58,0.08);
+
+}
+
+
+.faq-question span {
+
+    transition:
+        transform 0.35s ease,
+        background 0.3s ease;
+
+}
+
+
+.faq-item.active .faq-question span {
+
+    transform: rotate(45deg);
+
+}
+
+
+/* ---------------------------------------------------------
+   BOOKING CTA
+--------------------------------------------------------- */
+
+.booking-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.booking-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(234,200,0,0.25);
+
+    top: -180px;
+    right: -100px;
+
+    animation:
+        pulseCircle 4s ease-in-out infinite;
+
+}
+
+
+.booking-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    bottom: -120px;
+    left: -80px;
+
+    animation:
+        pulseCircle 5s ease-in-out infinite reverse;
+
+}
+
+
+@keyframes pulseCircle {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: .5;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+}
+
+
+/* BOOKING DECORATIONS */
+
+.booking-decoration span {
+
+    display: inline-block;
+
+    animation:
+        sparkle 2s ease-in-out infinite;
+
+}
+
+
+.booking-decoration span:nth-child(2) {
+
+    animation-delay: .5s;
+
+}
+
+
+.booking-decoration span:nth-child(3) {
+
+    animation-delay: 1s;
+
+}
+
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: .5;
+    }
+
+    50% {
+        transform: scale(1.5) rotate(20deg);
+        opacity: 1;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   HEADER ANIMATIONS
+--------------------------------------------------------- */
+
+.site-logo {
+
+    transition:
+        transform 0.35s ease;
+
+}
+
+
+.site-logo:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.site-logo img {
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.site-logo:hover img {
+
+    transform: rotate(-5deg) scale(1.05);
+
+}
+
+
+.nav-link {
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.nav-link:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.control-btn {
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.control-btn:hover {
+
+    transform: translateY(-3px) rotate(3deg);
+
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+
+.footer-column h3 {
+
+    position: relative;
+
+}
+
+
+.footer-column h3::after {
+
+    content: "";
+
+    display: block;
+
+    width: 0;
+
+    height: 2px;
+
+    margin-top: 8px;
+
+    background: var(--secondary);
+
+    transition: width 0.4s ease;
+
+}
+
+
+.footer-column:hover h3::after {
+
+    width: 35px;
+
+}
+
+
+.social-icons a {
+
+    transition:
+        transform 0.35s ease,
+        background 0.3s ease;
+
+}
+
+
+.social-icons a:hover {
+
+    transform:
+        translateY(-6px)
+        rotate(8deg);
+
+}
+
+
+/* ---------------------------------------------------------
+   SCROLL REVEAL
+--------------------------------------------------------- */
+
+.scroll-reveal {
+
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.scroll-reveal.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* LEFT REVEAL */
+
+.reveal-left {
+
+    opacity: 0;
+
+    transform: translateX(-50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.reveal-left.show {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+/* RIGHT REVEAL */
+
+.reveal-right {
+
+    opacity: 0;
+
+    transform: translateX(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.reveal-right.show {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+/* ---------------------------------------------------------
+   ACCESSIBILITY
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
