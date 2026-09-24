@@ -55,6 +55,8 @@
                 <strong>Clean<span>Nest</span></strong>
                 
             </div>
+            <span class="logo-tagline">Deep Clean. Fresh Nest.</span>
+    </span>
 </a>
         </div>
 
@@ -123,7 +125,7 @@
                 <i class="fa-solid fa-circle-check"></i>
             </div>
 
-            <div>
+            <div class="status-icon-11">
 
                 <strong>
                     Cleaning Team Active
@@ -251,29 +253,58 @@
 
                 <!-- Profile -->
 
-                <div class="dashboard-profile">
+               <!-- Admin Profile -->
+<div class="dashboard-profile-wrapper">
 
-                    <div class="profile-avatar">
-                        UK
-                    </div>
+    <button class="dashboard-profile" id="adminProfileBtn">
+        <div class="profile-avatar">
+            UK
+        </div>
 
-                    <div>
+        <div class="profile-info">
+            <strong>Uday Kiran</strong>
+            <span>Cleaning Admin</span>
+        </div>
 
-                        <strong>
-                            Uday Kiran
-                        </strong>
+        <i class="fa-solid fa-chevron-down profile-arrow"></i>
+    </button>
 
-                        <span>
-                            Cleaning Admin
-                        </span>
+    <!-- Admin Dropdown -->
+    <div class="admin-dropdown" id="adminDropdown">
 
-                    </div>
-
-                    <i class="fa-solid fa-chevron-down"></i>
-
-                </div>
-
+        <div class="dropdown-user-info">
+            <div class="dropdown-avatar">
+                UK
             </div>
+
+            <div>
+                <strong>Uday Kiran</strong>
+                <span>Cleaning Admin</span>
+            </div>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <button class="dropdown-item" id="profileBtn">
+            <i class="fa-regular fa-user"></i>
+            <span>My Profile</span>
+        </button>
+
+        <button class="dropdown-item" id="settingsBtn">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </button>
+
+        <div class="dropdown-divider"></div>
+
+        <button class="dropdown-item logout-item" id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </button>
+
+    </div>
+
+</div>
 
         </header>
 
@@ -2229,6 +2260,177 @@ document.addEventListener(
 
     }
 );
+/* =========================================================
+   ADMIN PROFILE DROPDOWN
+========================================================= */
+
+const adminProfileWrapper =
+    document.querySelector(".dashboard-profile-wrapper");
+
+const adminProfileBtn =
+    document.getElementById("adminProfileBtn");
+
+const adminDropdown =
+    document.getElementById("adminDropdown");
+
+
+/* Open / Close dropdown */
+
+if (adminProfileBtn) {
+
+    adminProfileBtn.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        adminProfileWrapper.classList.toggle("active");
+
+    });
+
+}
+
+
+/* Close when clicking outside */
+
+document.addEventListener("click", function (event) {
+
+    if (
+        adminProfileWrapper &&
+        !adminProfileWrapper.contains(event.target)
+    ) {
+
+        adminProfileWrapper.classList.remove("active");
+
+    }
+
+});
+
+
+/* =========================================================
+   MY PROFILE
+========================================================= */
+
+const profileBtn =
+    document.getElementById("profileBtn");
+
+if (profileBtn) {
+
+    profileBtn.addEventListener("click", function () {
+
+        adminProfileWrapper.classList.remove("active");
+
+        const settingsSection =
+            document.getElementById("settings");
+
+        if (settingsSection) {
+
+            /* Remove active from all sections */
+
+            document
+                .querySelectorAll(".dashboard-section")
+                .forEach(function (section) {
+
+                    section.classList.remove("active");
+
+                });
+
+            /* Show settings */
+
+            settingsSection.classList.add("active");
+
+            /* Update sidebar */
+
+            document
+                .querySelectorAll(".dashboard-nav-link")
+                .forEach(function (link) {
+
+                    link.classList.remove("active");
+
+                });
+
+            const settingsLink =
+                document.querySelector(
+                    '[data-section="settings"]'
+                );
+
+            if (settingsLink) {
+                settingsLink.classList.add("active");
+            }
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+const settingsBtn =
+    document.getElementById("settingsBtn");
+
+if (settingsBtn) {
+
+    settingsBtn.addEventListener("click", function () {
+
+        adminProfileWrapper.classList.remove("active");
+
+        const settingsLink =
+            document.querySelector(
+                '[data-section="settings"]'
+            );
+
+        if (settingsLink) {
+            settingsLink.click();
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+const logoutBtn =
+    document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", function () {
+
+        const confirmLogout =
+            confirm("Are you sure you want to logout?");
+
+        if (confirmLogout) {
+
+            /* Clear login/session data */
+
+            sessionStorage.clear();
+
+            /*
+             * If you are using localStorage for authentication,
+             * uncomment this:
+             *
+             * localStorage.removeItem("isLoggedIn");
+             */
+
+            /* Redirect to login page */
+
+            window.location.href = "login.html";
+
+        }
+
+    });
+
+}
 </script>
 </body>
 

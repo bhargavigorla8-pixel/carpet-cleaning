@@ -286,36 +286,48 @@ button {
 .site-logo {
     display: flex;
     align-items: center;
-    gap: 0px;
+    gap: 10px;
     text-decoration: none;
-    flex-shrink: 0;
 }
 
 .site-logo img {
-    width: 100px;
-    height: 75px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
-    display: block;
 }
 
 .logo-text {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-name {
+    display: flex;
     align-items: center;
-    
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    white-space: nowrap;
+    line-height: 1;
 }
 
 .logo-go {
-    color: var(--primary);
+    color: var(--primary, #176B3A);
+    font-size: 25px;
+    font-weight: 800;
 }
 
 .logo-clean {
-    color: var(--secondary);
+    color: var(--secondary, #eac800);
+    font-size: 25px;
+    font-weight: 800;
 }
 
+.logo-tagline {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: Black;
+    white-space: nowrap;
+}
 /* Dark Mode */
 
 body.dark-mode .logo-go {
@@ -324,6 +336,9 @@ body.dark-mode .logo-go {
 
 body.dark-mode .logo-clean {
     color: var(--secondary);
+}
+body.dark-mode .logo-tagline {
+    color: white;
 }
 
 /* RTL */

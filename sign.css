@@ -307,7 +307,17 @@ body {
 .brand-details h1 span {
     color:var(--secondary);
 }
-
+.logo-tagline {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: Black;
+    white-space: nowrap;
+}
+body.dark-mode .logo-tagline {
+    color: white;
+}
 
 /* =========================================================
    HEADING

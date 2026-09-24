@@ -292,16 +292,16 @@ button {
 }
 
 .site-logo img {
-    width: 100px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    display: block;
+   
 }
 
 .logo-text {
     display: flex;
     align-items: center;
-    
+     flex-direction: column;
     font-size: 24px;
     font-weight: 800;
     letter-spacing: -0.5px;
@@ -315,6 +315,14 @@ button {
 .logo-clean {
     color: var(--secondary);
 }
+.logo-tagline {
+   
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: Black;
+    white-space: nowrap;
+}
 
 /* Dark Mode */
 
@@ -324,6 +332,9 @@ body.dark-mode .logo-go {
 
 body.dark-mode .logo-clean {
     color: var(--secondary);
+}
+body.dark-mode .logo-tagline {
+    color: white;
 }
 
 /* RTL */
