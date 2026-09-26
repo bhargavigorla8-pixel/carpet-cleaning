@@ -315,7 +315,7 @@ body {
     color: Black;
     white-space: nowrap;
 }
-body.dark-mode .logo-tagline {
+body.dark .logo-tagline {
     color: white;
 }
 
@@ -714,7 +714,7 @@ body.dark-mode .logo-tagline {
 }
 
 #googleButton i {
-    color: #4285f4;
+    color: #db4437;
 }
 
 #appleButton i {
