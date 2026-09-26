@@ -2171,6 +2171,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
 .mission-card:hover,
 .vision-card:hover {
     transform: translateY(-8px);
+    
 }
 
 
@@ -4159,67 +4160,7 @@ body.dark-mode .about-page
    HERO BUTTONS
 ========================================================= */
 
-.about-btn-primary,
-.about-btn-outline,
-.about-btn-yellow {
 
-    position: relative;
-    overflow: hidden;
-
-    transition:
-        transform .35s ease,
-        background .35s ease,
-        color .35s ease,
-        box-shadow .35s ease;
-}
-
-
-.about-btn-primary::before,
-.about-btn-outline::before,
-.about-btn-yellow::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -120%;
-
-    width: 70%;
-    height: 100%;
-
-    background:
-        linear-gradient(
-            110deg,
-            transparent,
-            rgba(255,255,255,.3),
-            transparent
-        );
-
-    transform:
-        skewX(-20deg);
-
-    transition:
-        left .65s ease;
-}
-
-.about-btn-primary:hover::before,
-.about-btn-outline:hover::before,
-.about-btn-yellow:hover::before {
-    left: 150%;
-}
-
-.about-btn-primary:hover,
-.about-btn-outline:hover,
-.about-btn-yellow:hover {
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 12px 30px
-        rgba(0,0,0,.12);
-}
 
 
 /* =========================================================

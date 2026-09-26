@@ -1733,102 +1733,148 @@ html[dir="rtl"] .footer-column ul li a:hover {
 
     line-height: 1.8;
 }
+/* Disable hero zoom animation */
+.contact-hero,
+.contact-hero::before,
+.contact-hero::after,
+.contact-hero-content {
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
 
-
-/* =========================================================
-   1. HERO
-========================================================= */
+/* Prevent hover zoom */
+.contact-hero:hover,
+.contact-hero:hover::before,
+.contact-hero:hover::after,
+.contact-hero-content:hover {
+    transform: none !important;
+}
 
 .contact-hero {
+position: relative;
+min-height: 500px;
 
-    position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
 
-    min-height: 560px;
+background:
+    url("images/contact-banner.jpg")
+    center center / cover no-repeat;
 
-    display: flex;
+overflow: hidden;
+color: #fff;
 
-    align-items: center;
 
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 100px 20px;
-
-    
+}
+/* Remove yellow line from Contact Hero */
+.contact-hero::after,
+.contact-hero h1::after,
+.contact-hero h1 span::after {
+    display: none !important;
+    content: none !important;
+    border: none !important;
+    background: none !important;
 }
 
+/* Black Overlay */
 .contact-hero-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.5);
+z-index: 1;
 }
 
+/* Content */
 .contact-hero-content {
+position: relative;
+z-index: 2;
 
-    position: relative;
 
-    z-index: 2;
+width: min(900px, 90%);
+margin: auto;
 
-    max-width: 800px;
+text-align: center;
 
-    color: var(--white);
+
 }
 
-.contact-hero .contact-eyebrow {
+/* Small Heading */
+.contact-eyebrow {
+display: inline-block;
 
-    color: var(--secondary);
+
+margin-bottom: 15px;
+
+color: var(--primary);
+
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+
 }
 
-.contact-hero h1 {
+/* Main Heading */
+.contact-hero-content h1 {
+margin: 0 0 20px;
+color: black;
+font-size: clamp(38px, 5vw, 64px);
+line-height: 1.1;
+font-weight: 800;
 
-    margin: 0 0 22px;
 
-    color: var(--white);
-
-    font-size: clamp(42px, 6vw, 60px);
-
-    line-height: 1.05;
-
-    font-weight: 850;
 }
 
-.contact-hero h1 span {
-
-    display: block;
-
-    color: var(--);
+.contact-hero-content h1 span {
+display: block;
+color: var(--primary);
 }
 
-.contact-hero p {
+/* Description */
+.contact-hero-content p {
+max-width: 650px;
+margin: 0 auto 30px;
 
-    max-width: 680px;
 
-    margin: 0 auto 35px;
+font-size: 17px;
+line-height: 1.7;
 
-    color: rgba(255,255,255,.88);
+color: rgba(255, 255, 255, 0.9);
 
-    font-size: 18px;
 
-    line-height: 1.8;
 }
 
-.contact-hero-buttons {
+/* Button */
+.contact-hero-btn {
+display: inline-flex;
+align-items: center;
+gap: 10px;
 
-    display: flex;
 
-    justify-content: center;
+padding: 14px 26px;
 
-    gap: 14px;
+background: var(--primary, #176B3A);
+color: #fff;
 
-    flex-wrap: wrap;
+text-decoration: none;
+font-size: 15px;
+font-weight: 700;
+
+border-radius: 6px;
+
+transition: 0.3s ease;
+
+
 }
 
-.contact-primary-btn,
-.contact-secondary-btn {
+.btn-primary {
+
+    height: 42px;
+
+    padding: 0 20px;
 
     display: inline-flex;
 
@@ -1836,53 +1882,130 @@ html[dir="rtl"] .footer-column ul li a:hover {
 
     justify-content: center;
 
-    gap: 10px;
-
-    min-height: 52px;
-
-    padding: 0 25px;
+    gap: 8px;
 
     border-radius: 10px;
 
-    font-weight: 750;
-
-    transition: .3s ease;
-}
-
-.contact-primary-btn {
-
     background: var(--primary);
-
-    color:var(--white);
-}
-
-.contact-primary-btn:hover {
-
-    background: var(--secondary);
-
-    color: var(--black);
-
-    transform: translateY(-3px);
-}
-
-.contact-secondary-btn {
-
-    border: 1px solid rgba(255,255,255,.5);
 
     color: var(--white);
 
-    background: rgba(255,255,255,.08);
+    border-color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        all var(--transition);
+
 }
 
-.contact-secondary-btn:hover {
-
-    background: var(--white);
+.btn-primary:hover {
+background: var(--secondary);
 
     color: var(--black);
 
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
+
+
+/* Tablet */
+@media (max-width: 768px) {
+.contact-hero {
+min-height: 450px;
+}
+
+
+.contact-hero-content h1 {
+    font-size: 42px;
+}
+
+.contact-hero-content p {
+    font-size: 15px;
+}
+
+
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+.contact-hero {
+min-height: 420px;
+}
+
+
+.contact-hero-content {
+    width: 92%;
+}
+
+.contact-hero-content h1 {
+    font-size: 34px;
+}
+
+.contact-hero-content p {
+    font-size: 14px;
+}
+
+.contact-hero-btn {
+    padding: 12px 22px;
+}
+
+
+}
+
+
+.section-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:10px 0px 10px 0px;
+}
+
+.label-line {
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-label-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:10px 0px 10px 0px;
+}
+
+.label-line{
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label-1 span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
 /* =========================================================
    2. CONTACT INFORMATION
@@ -3852,123 +3975,6 @@ body.dark-mode .cleaning-contact {
    HERO CONTENT
 --------------------------------------------------------- */
 
-.contact-hero-content {
-
-    z-index: 3;
-
-    animation:
-        contactContentReveal
-        1.15s
-        cubic-bezier(.16,1,.3,1)
-        both;
-
-}
-
-
-@keyframes contactContentReveal {
-
-    0% {
-        opacity: 0;
-
-        transform:
-            translateY(65px)
-            scale(.96);
-
-        filter:
-            blur(10px);
-    }
-
-    100% {
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-        filter:
-            blur(0);
-    }
-
-}
-
-
-/* ---------------------------------------------------------
-   EYEBROW
---------------------------------------------------------- */
-
-.contact-hero .contact-eyebrow {
-
-    position: relative;
-
-    animation:
-        eyebrowDrop
-        .9s
-        .15s
-        cubic-bezier(.16,1,.3,1)
-        both;
-
-}
-
-
-@keyframes eyebrowDrop {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(-25px)
-            scale(.85);
-
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
-}
-
-
-/* Eyebrow glowing line */
-
-.contact-hero .contact-eyebrow::before {
-
-    content: "";
-
-    display: inline-block;
-
-    width: 0;
-
-    height: 2px;
-
-    margin-right: 10px;
-
-    vertical-align: middle;
-
-    background:
-        var(--secondary);
-
-    animation:
-        eyebrowLine
-        1s
-        .7s
-        ease
-        forwards;
-
-}
-
-
-@keyframes eyebrowLine {
-
-    to {
-        width: 32px;
-    }
-
-}
 
 
 /* ---------------------------------------------------------

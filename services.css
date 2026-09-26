@@ -1799,7 +1799,6 @@ a {
 
 .services-hero {
     position: relative;
-    
 
     min-height: 720px;
 
@@ -1807,11 +1806,33 @@ a {
     align-items: center;
 
     background:
-        
-        url(images/ABOUT.jpg)
+        url("images/ABOUT.jpg")
         center / cover no-repeat;
 
     color: var(--white);
+
+    overflow: hidden;
+}
+
+
+/* Background image overlay */
+.services-hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+   background: rgba(234, 200, 0, 0.5);
+
+    z-index: 1;
+}
+
+
+/* Keep all hero content above overlay */
+.services-hero > * {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content {
@@ -1887,6 +1908,56 @@ a {
     color: rgba(255,255,255,.75);
 
     font-size: 13px;
+}
+.section-label-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:10px 0px 10px 0px;
+}
+
+.label-line{
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label-1 span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:10px 0px 10px 0px;
+}
+
+.label-line {
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 
@@ -1967,7 +2038,7 @@ a {
 
     box-shadow: var(--shadow);
 
-    border-color: transparent;
+    border-color: var(--primary);
 }
 
 .service-card.hidden {
@@ -2291,6 +2362,7 @@ a {
     background: rgba(255,255,255,.12);
 
     transform: translateY(-5px);
+    border-color: var(--secondary);
 }
 
 .process-number {
@@ -3406,59 +3478,7 @@ body.dark-mode .process-card {
    HERO BUTTON ANIMATION
 --------------------------------------------------------- */
 
-.btn-primary,
-.btn-outline {
 
-    position: relative;
-    overflow: hidden;
-
-}
-
-
-.btn-primary::before,
-.btn-outline::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -120%;
-
-    width: 80%;
-    height: 100%;
-
-    background: rgba(255,255,255,0.20);
-
-    transform: skewX(-25deg);
-
-    transition: left 0.6s ease;
-
-}
-
-
-.btn-primary:hover::before,
-.btn-outline:hover::before {
-
-    left: 140%;
-
-}
-
-
-.btn-primary i,
-.btn-primary span {
-
-    transition: transform 0.3s ease;
-
-}
-
-
-.btn-primary:hover i,
-.btn-primary:hover span {
-
-    transform: translateX(5px);
-
-}
 
 
 /* ---------------------------------------------------------

@@ -1813,7 +1813,56 @@ button {
     
    
 }
+.section-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:10px 0px 10px 0px;
+}
 
+.label-line {
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-label-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:10px 0px 10px 0px;
+}
+
+.label-line-1{
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label-1 span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
 /* =========================================
    HERO DECORATION
@@ -1837,7 +1886,9 @@ button {
 
     border-radius: 50%;
 
-    background: var(--primary);
+    background: rgba(0, 0, 0, 0.5);
+
+
     opacity: 0.08;
 }
 
@@ -2176,6 +2227,8 @@ button {
 .blog-card:hover {
     transform: translateY(-7px);
     box-shadow: var(--shadow);
+    border-color: var(--primary);
+  
 }
 
 .blog-image {
@@ -2636,6 +2689,7 @@ body.dark-mode .mini-cta a:hover{
 .tip-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow);
+    border-color: var(--primary);
 }
 
 .tip-number {
@@ -4657,97 +4711,7 @@ body,
    BUTTONS
 ----------------------------------------- */
 
-.hero-buttons {
-    animation:
-        buttonsReveal 1s
-        0.9s
-        cubic-bezier(.16,1,.3,1)
-        both;
-}
 
-@keyframes buttonsReveal {
-
-    from {
-        opacity: 0;
-        transform:
-            translateY(35px);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            translateY(0);
-    }
-
-}
-
-
-/* Button shine */
-
-.primary-btn,
-.secondary-btn {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-}
-
-
-/* Shine layer */
-
-.primary-btn::before,
-.secondary-btn::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -130%;
-
-    width: 80%;
-    height: 100%;
-
-    background:
-        linear-gradient(
-            100deg,
-            transparent,
-            rgba(255,255,255,.45),
-            transparent
-        );
-
-    transform:
-        skewX(-20deg);
-
-    transition:
-        left .7s ease;
-
-    z-index: -1;
-}
-
-
-.primary-btn:hover::before,
-.secondary-btn:hover::before {
-
-    left: 140%;
-
-}
-
-
-/* Button icon */
-
-.hero-buttons i {
-
-    transition:
-        transform .35s ease;
-}
-
-
-.primary-btn:hover i {
-
-    transform:
-        translateY(4px);
-
-}
 
 
 /* -----------------------------------------

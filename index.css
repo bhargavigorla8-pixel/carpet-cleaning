@@ -224,6 +224,7 @@ button {
 
 
 
+
 /* =========================================================
                            HEADER
 ========================================================= */
@@ -1585,7 +1586,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
     width:
         min(
             calc(100% - 40px),
-            1200px
+             var(--container-width)
         );
 
     margin:
@@ -1605,7 +1606,441 @@ html[dir="rtl"] .footer-column ul li a:hover {
         relative;
 
 }
+/* =========================
+   HERO SECTION
+========================= */
 
+.hero-section {
+    width: 100%;
+    min-height: calc(100vh - 102px);
+    background: #ffffff;
+    overflow: hidden;
+    margin: 0;
+    padding: 10px 0 70px;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 64px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: #176B3A;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.hero-label span {
+    width: 48px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+}
+
+.hero-content h1 {
+    margin: 0;
+
+    font-size: clamp(52px, 5vw, 72px);
+    line-height: 1.02;
+
+    font-weight: 800;
+    letter-spacing: -3px;
+
+    color: #171717;
+}
+
+.hero-content h1 span {
+    color: #176B3A;
+}
+
+.hero-content p {
+    max-width: 650px;
+
+    margin: 32px 0;
+
+    font-size: 18px;
+    line-height: 1.9;
+
+    color: #666666;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 17px 28px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: #176B3A;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background: var(--secondary);
+    color: black;
+    transform: translateY(-2px);
+
+}
+
+.secondary-btn {
+    border: 1.5px solid #176B3A;
+    color: #222222;
+    background: #ffffff;
+}
+
+.secondary-btn:hover {
+    background: #176B3A;
+    color: #ffffff;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.hero-features {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    margin-top: 42px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #edf6f0;
+    border-radius: 10px;
+
+    color: #176B3A;
+    font-size: 20px;
+}
+
+.feature strong {
+    display: block;
+
+    font-size: 15px;
+    color: #222222;
+}
+
+.feature small {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 13px;
+    color: #777777;
+}
+
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+
+.hero-image-area {
+    position: relative;
+
+    min-height: 640px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 800px;
+    height: 640px;
+
+    object-fit: cover;
+
+    border-radius: 38px;
+
+    display: block;
+}
+
+
+/* Yellow Background Circle */
+
+.yellow-circle {
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    background: #eac800;
+
+    border-radius: 50%;
+
+    right: -40px;
+    top: -30px;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   RATING CARD
+========================= */
+
+.rating-card {
+    position: absolute;
+
+    left: -25px;
+    bottom: 80px;
+
+    z-index: 4;
+
+    background: #ffffff;
+
+    padding: 20px 24px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+    min-width: 180px;
+}
+
+.rating-card .stars {
+    color: #eac800;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.rating-card strong {
+    display: block;
+
+    font-size: 15px;
+    color: #222222;
+}
+
+.rating-card small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #777777;
+}
+
+
+/* =========================
+   EXPERIENCE CARD
+========================= */
+
+.experience-card {
+    position: absolute;
+
+    right: 20px;
+    bottom: -15px;
+
+    z-index: 4;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: #eac800;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #111111;
+}
+
+.experience-card strong {
+    font-size: 40px;
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+.experience-card span {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/* =========================
+   REMOVE ALL ANIMATION
+========================= */
+
+.hero-section,
+.hero-section *,
+.hero-section::before,
+.hero-section::after {
+    animation: none !important;
+    transition: none !important;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding: 0 40px;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero-image-area {
+        min-height: 550px;
+    }
+
+    .hero-image {
+        height: 550px;
+    }
+
+    .hero-features {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero-section {
+        padding: 45px 0 60px;
+    }
+
+    .hero-container {
+        padding: 0 22px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .hero-image-area {
+        min-height: 400px;
+    }
+
+    .hero-image {
+        height: 400px;
+        border-radius: 25px;
+    }
+
+    .yellow-circle {
+        width: 220px;
+        height: 220px;
+        right: -70px;
+    }
+
+    .rating-card {
+        left: 5px;
+        bottom: 30px;
+    }
+
+    .experience-card {
+        width: 110px;
+        height: 110px;
+        right: 0;
+        bottom: -10px;
+    }
+
+    .experience-card strong {
+        font-size: 30px;
+    }
+}
 
 /* =========================================================
                        HERO
@@ -1726,7 +2161,7 @@ header,
 
     margin-bottom:
         20px;
-    padding: 80px 0px 40px 0px;
+    padding: 40px 0px 40px 0px;
 
 }
 
@@ -1856,8 +2291,7 @@ body.dark-mode .sc-hero-content h1 span{
     font-weight:
         800;
 
-    transition:
-        all 0.3s ease;
+    
 
 }
 
@@ -1871,9 +2305,7 @@ body.dark-mode .sc-hero-content h1 span{
 
     color:
         var(--sc-white);
-        transition:
-        all var(--transition);
-        border: var(--primary);
+        
 
 }
 
@@ -1886,9 +2318,7 @@ body.dark-mode .sc-hero-content h1 span{
     color:
         var(--sc-black);
 
-    transform:
-        translateY(-2px);
-
+    
     
 
 }
@@ -1922,8 +2352,7 @@ body.dark-mode .sc-hero-content h1 span{
     border-color:
         var(--sc-primary);
 
-    transform:
-        translateY(-3px);
+    
 
 }
 
@@ -2409,7 +2838,8 @@ body.dark-mode .sc-btn-yellow:hover{
         var(--sc-primary);
 
     padding:
-        25px 0;
+        25px 20px;
+    padding-bottom: 20px;
 
 }
 
@@ -2586,6 +3016,7 @@ body.dark-mode .sc-heading h2 span{
 
     background:
         var(--sc-bg);
+    padding-bottom: 20px;
 
 }
 
@@ -2839,6 +3270,7 @@ a i {
 
     background:
         var(--sc-bg);
+        padding-bottom: 20px;
 
 }
 
@@ -3111,7 +3543,9 @@ body.dark-mode .sc-eyebrow-line h2{
 
 }
 
-
+.sc-eyebrow-line h2{
+    padding: 10px 0px 0px 0px;
+}
 .sc-feature {
 
     display:
@@ -3193,6 +3627,7 @@ body.dark-mode .sc-eyebrow-line h2{
 
     background:
         var(--surface, #f5f7f5);
+        padding-bottom: 20px;
 
 }
 
@@ -3308,6 +3743,8 @@ body.dark-mode .sc-eyebrow-line h2{
 
     background:
         var(--sc-bg);
+
+        padding-bottom: 20px;
 
 }
 
@@ -3565,6 +4002,7 @@ body.dark-mode .sc-process-icon {
 
     background:
         var(--surface, #f5f7f5);
+        padding-bottom: 20px;
 
 }
 
@@ -4867,71 +5305,7 @@ body {
 }
 
 
-/* ---------------------------------------------------------
-   6. BUTTON SHINE EFFECT
---------------------------------------------------------- */
 
-.sc-btn {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-}
-
-.sc-btn::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -120%;
-
-    width: 70%;
-    height: 100%;
-
-    background:
-        linear-gradient(
-            110deg,
-            transparent,
-            rgba(255,255,255,0.25),
-            transparent
-        );
-
-    transform: skewX(-20deg);
-
-    transition:
-        left 0.7s ease;
-
-    pointer-events: none;
-}
-
-.sc-btn:hover::before {
-    left: 150%;
-}
-
-.sc-btn:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 14px 30px rgba(23,107,58,0.18);
-}
-
-.sc-btn:active {
-    transform: translateY(-1px) scale(0.98);
-}
-
-
-/* ---------------------------------------------------------
-   7. BUTTON ARROW
---------------------------------------------------------- */
-
-.sc-btn i {
-    transition:
-        transform 0.35s ease;
-}
-
-.sc-btn:hover i {
-    transform: translateX(6px);
-}
 
 
 /* ---------------------------------------------------------
@@ -5978,4 +6352,183 @@ body {
         scroll-behavior:
             auto !important;
     }
+}
+.section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:60px 0px 10px 0px;
+}
+
+.label-line {
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-label-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:60px 0px 10px 0px;
+}
+.label-line-1{
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label-1 span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}/* =========================================
+   DARK MODE - HERO SECTION
+========================================= */
+
+body.dark-mode .hero-section {
+    background: #101512;
+}
+
+body.dark-mode .hero-content h1 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .hero-content h1 span {
+    color: var(--secondary);
+}
+
+body.dark-mode .hero-content p {
+    color: #b7c0ba;
+}
+
+body.dark-mode .hero-label {
+    color: #42a968;
+}
+
+body.dark-mode .hero-label span {
+    background: #eac800;
+}
+
+
+/* Primary Button */
+
+body.dark-mode .primary-btn {
+    background: #176B3A;
+    color: #ffffff;
+}
+
+body.dark-mode .primary-btn:hover {
+    background: var(--secondary);
+    color: var(--white);
+    
+}
+
+
+/* Secondary Button */
+
+body.dark-mode .secondary-btn {
+    background: #161d19;
+    color: #f5f5f5;
+    border-color: #42a968;
+}
+
+body.dark-mode .secondary-btn:hover {
+    background: #176B3A;
+    color: #ffffff;
+}
+
+
+/* Features */
+
+body.dark-mode .feature-icon {
+    background: #1b2b22;
+    color: #42a968;
+}
+
+body.dark-mode .feature strong {
+    color: #f5f5f5;
+}
+
+body.dark-mode .feature small {
+    color: #9ca69f;
+}
+
+
+/* Yellow Circle */
+
+body.dark-mode .yellow-circle {
+    background: #eac800;
+}
+
+
+/* Image */
+
+body.dark-mode .hero-image {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Rating Card */
+
+body.dark-mode .rating-card {
+    background: #1a211d;
+    color: #ffffff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .rating-card strong {
+    color: #ffffff;
+}
+
+body.dark-mode .rating-card small {
+    color: #aab3ad;
+}
+
+body.dark-mode .rating-card .stars {
+    color: #eac800;
+}
+
+
+/* Experience Card */
+
+body.dark-mode .experience-card {
+    background: #eac800;
+    color: #111111;
+}
+
+
+/* =========================================
+   SMOOTH DARK MODE
+========================================= */
+
+body,
+.hero-section,
+.hero-content h1,
+.hero-content p,
+.secondary-btn,
+.rating-card,
+.feature-icon {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
 }

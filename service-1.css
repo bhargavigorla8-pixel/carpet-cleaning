@@ -1909,7 +1909,7 @@ button {
             rgba(8, 36, 20, .18)
         ),
 
-        url("images/ABOUT.jpg")
+        url("images/details\ 9.jpg")
         center / cover no-repeat;
 }
 
@@ -3131,8 +3131,7 @@ button {
     padding:
         90px 0;
 
-    background:
-        var(--primary);
+    
 }
 
 
@@ -3838,4 +3837,53 @@ html[dir="rtl"] .booking-decoration span:nth-child(4) {
             45px 20px;
     }
 
+}.section-label-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:10px 0px 10px 0px;
+}
+
+.label-line{
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label-1 span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+    padding:10px 0px 10px 0px;
+}
+
+.label-line {
+    width: 40px;
+    height: 2px;
+    background: #eac800;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.section-label span:last-child {
+    color: #176B3A;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
