@@ -1249,12 +1249,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
 
 }
 
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
+
 
 @media (max-width: 800px) {
 
