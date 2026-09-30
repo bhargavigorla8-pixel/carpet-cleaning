@@ -1272,8 +1272,8 @@ html[dir="rtl"] .footer-column ul li a:hover {
     }
 
     .site-logo img {
-        width: 125px;
-        max-width: 100%;
+        width: 50px;
+        max-width: 25px;
         height: auto;
         display: block;
     }
@@ -1311,7 +1311,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
         width: 100%;
         box-sizing: border-box;
         padding: 14px 10px;
-        font-size: 14px;
+        font-size: 8px;
     }
 
     .nav-link::after {

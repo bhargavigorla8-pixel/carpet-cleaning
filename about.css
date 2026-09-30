@@ -1270,8 +1270,8 @@ html[dir="rtl"] .footer-column ul li a:hover {
     }
 
     .site-logo img {
-        width: 125px;
-        max-width: 100%;
+        width: 50px;
+        max-width:25px;
         height: auto;
         display: block;
     }
@@ -1309,7 +1309,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
         width: 100%;
         box-sizing: border-box;
         padding: 14px 10px;
-        font-size: 14px;
+        font-size: 8px;
     }
 
     .nav-link::after {
@@ -1369,9 +1369,9 @@ html[dir="rtl"] .footer-column ul li a:hover {
     .control-btn,
     .login-btn,
     .menu-btn {
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
         box-sizing: border-box;
     }
 
