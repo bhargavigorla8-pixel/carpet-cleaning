@@ -223,63 +223,51 @@
          BLOG HERO
     ========================== -->
 
-    <section class="blog-hero">
+    <section class="cleaning-insights-hero">
 
-        <div class="blog-container">
+    <!-- Background Overlay -->
+    <div class="cleaning-insights-overlay"></div>
 
-            <div class="blog-hero-content">
+    <div class="cleaning-insights-container">
 
-                <div class="section-label-1">
+        <div class="cleaning-insights-content">
+            <div class="section-label-1">
     <span class="label-line"></span>
-    <span>Cleaning & Insights</span>
+    <span>CARPET & UPHOLSTERY CLEANING</span>
 </div>
 
-                <h1>
-                    Fresh ideas for a
-                    <span>cleaner home.</span>
-                </h1>
+            
 
-                <p>
-                    Discover expert carpet and upholstery cleaning tips,
-                    helpful maintenance advice, and simple ways to keep
-                    your home looking fresh and beautiful.
-                </p>
+            <h1>
+                A Cleaner Home
+                <span>Starts Here.</span>
+            </h1>
 
-                <div class="hero-buttons">
-                    <a href="#latest-posts" class="primary-btn">
-                        Explore Articles
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </a>
+            <p>
+                Discover professional carpet and upholstery cleaning
+                solutions designed to remove dirt, stains and odors,
+                leaving your home fresh, clean and inviting.
+            </p>
 
-                    <a href="#newsletter" class="secondary-btn">
-                        Get Cleaning Tips
-                    </a>
-                </div>
+            <div class="cleaning-insights-buttons">
 
-            </div>
+                <a href="services.html" class="cleaning-btn cleaning-btn-primary">
+                    Explore Services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-            <div class="blog-hero-decoration">
-
-                <div class="hero-cleaning-card">
-                    <div class="hero-icon">
-                        <i class="fa-solid fa-broom-ball"></i>
-                    </div>
-
-                    <div>
-                        <strong>Expert Cleaning Tips</strong>
-                        <span>Simple advice for a fresher home</span>
-                    </div>
-                </div>
-
-                <div class="floating-shape shape-one"></div>
-                <div class="floating-shape shape-two"></div>
+                <a href="contact.html" class="cleaning-btn cleaning-btn-secondary">
+                    Get a Free Quote
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
     <!-- =========================
          BLOG CATEGORIES
@@ -292,8 +280,10 @@
             <div class="section-heading">
 
                 <div>
-                    <span class="small-label">EXPLORE OUR BLOG</span>
-
+                    <div class="section-label-1">
+    <span class="label-line"></span>
+    <span>Explore Our Blog</span>
+</div>
                     <h2>
                         Cleaning advice made
                         <span>simple.</span>
@@ -359,9 +349,10 @@
 
                 <div class="featured-content">
 
-                    <span class="post-category">
-                        CARPET CLEANING
-                    </span>
+                    <div class="section-label-1">
+    <span class="label-line"></span>
+    <span>Carpet Cleaning</span>
+</div>
 
                     <h2>
                         How professional carpet cleaning
@@ -414,9 +405,10 @@
 
             <div class="section-title-center">
 
-                <span class="small-label">
-                    LATEST ARTICLES
-                </span>
+                <div class="section-label">
+    <span class="label-line"></span>
+    <span>Latest Articles</span>
+</div>
 
                 <h2>
                     Tips for a <span>fresher space.</span>
@@ -756,9 +748,10 @@
 
             <div class="why-clean-content">
 
-                <span class="small-label">
-                    PROFESSIONAL CLEANING
-                </span>
+                <div class="section-label-1">
+    <span class="label-line"></span>
+    <span>Profeessional Cleaning</span>
+</div>
 
                 <h2>
                     More than clean.
@@ -844,9 +837,10 @@
 
         <div class="section-title-center">
 
-            <span class="small-label">
-                QUICK CLEANING TIPS
-            </span>
+           <div class="section-label">
+    <span class="label-line"></span>
+    <span>Quick Cleaning Tips</span>
+</div>
 
             <h2>
                 Small habits,
@@ -969,11 +963,10 @@
         <div class="transformation-heading">
 
             <div>
-
-                <span class="small-label">
-                    REAL CLEANING RESULTS
-                </span>
-
+<div class="section-label-1">
+    <span class="label-line"></span>
+    <span>Real Cleaning Results</span>
+</div>
                 <h2>
                     See the
                     <span>transformation.</span>
@@ -1086,9 +1079,10 @@
 
         <div class="section-title-center">
 
-            <span class="small-label">
-                FREQUENTLY ASKED QUESTIONS
-            </span>
+            <div class="section-label">
+    <span class="label-line"></span>
+    <span>Frequently Asked Questions</span>
+</div>
 
             <h2>
                 Your cleaning
@@ -2151,7 +2145,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+const faqItems =
+    document.querySelectorAll(".faq-item");
 
+
+faqItems.forEach(item => {
+
+    const question =
+        item.querySelector(".faq-question");
+
+
+    question.addEventListener("click", () => {
+
+        // Close other FAQs
+        faqItems.forEach(otherItem => {
+
+            if (otherItem !== item) {
+                otherItem.classList.remove("active");
+            }
+
+        });
+
+
+        // Toggle selected FAQ
+        item.classList.toggle("active");
+
+    });
+
+});
 </script>
 
 

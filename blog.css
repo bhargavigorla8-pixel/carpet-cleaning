@@ -1270,10 +1270,16 @@ html[dir="rtl"] .footer-column ul li a:hover {
     }
 
     .site-logo img {
-        width: 50px;
+        width: 75px;
         max-width: 25px;
         height: auto;
         display: block;
+    }
+    .logo-name span{
+        font-size: 15px;
+    }
+    .logo-tagline{
+        font-size: 8px;
     }
 
     /* MOBILE NAV */
@@ -1438,6 +1444,45 @@ html[dir="rtl"] .footer-column ul li a:hover {
 }
 
 
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    #rtlBtn {
+        display: flex !important;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        padding: 0;
+        color: var(--black) !important;
+        background: #ffffff !important;
+    }
+
+    #rtlBtn span,
+    #rtlBtn .directionText {
+        display: inline-block !important;
+        color: var(--black) !important;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+    #rtlBtn {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 11px;
+    }
+
+    #rtlBtn span,
+    #rtlBtn .directionText {
+        font-size: 11px;
+    }
+}
+
 /* =========================================
    ROOT VARIABLES
 ========================================= */
@@ -1511,141 +1556,255 @@ button {
     margin: auto;
 }
 
-
 /* =========================================
-   BLOG HERO
+   CLEAN NEST - CLEANING INSIGHTS HERO
 ========================================= */
 
-.blog-hero {
+.cleaning-insights-hero {
     position: relative;
-    overflow: hidden;
-    padding: 120px 0 110px;
-    background:
-        radial-gradient(circle at 85% 30%,
-        rgba(234, 200, 0, 0.12),
-        transparent 28%),
-        linear-gradient(
-            135deg,
-            #f4faf5 0%,
-            #ffffff 55%,
-            #f7fbf8 100%
-        );
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-         url("images/details\ 9.jpg"); 
-         background-size: cover;
-          background-position: top;
-           background-repeat: no-repeat;
-           
-}
 
-.blog-container {
-    position: relative;
-    z-index: 2;
-}
+    min-height: 600px;
 
-.blog-hero .blog-container {
-    display: grid;
-    grid-template-columns: 1fr 0.75fr;
-    align-items: center;
-    gap: 80px;
-}
+    padding: 30px 30px;
 
-.blog-eyebrow,
-.small-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1.7px;
-
-    color: var(--white);
-}
-
-.blog-eyebrow i {
-    color: var(--secondary);
-    font-size: 14px;
-}
-
-.blog-hero h1 {
-    margin-top: 18px;
-
-    font-family: "Manrope", sans-serif;
-    font-size: clamp(42px, 5vw, 60px);
-    line-height: 1.05;
-
-    color: var(--black);
-    letter-spacing: -2.5px;
-}
-
-.blog-hero h1 span {
-    color: var(--primary);
-}
-
-.blog-hero p {
-    max-width: 600px;
-    margin-top: 25px;
-
-    font-size: 17px;
-    color: var(--white);
-}
-
-.hero-buttons {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-top: 35px;
+
+    background:
+        url("images/cc\ clean.jpg")
+        center center / cover no-repeat;
+
+   
+    color: #ffffff;
 }
 
-.primary-btn,
-.secondary-btn {
+
+/* =========================================
+   DARK IMAGE OVERLAY
+========================================= */
+
+.cleaning-insights-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.70) 38%,
+            rgba(0, 0, 0, 0.38) 72%,
+            rgba(0, 0, 0, 0.25) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.cleaning-insights-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.cleaning-insights-content {
+    width: 680px;
+}
+
+
+/* =========================================
+   SMALL LABEL
+========================================= */
+
+.cleaning-insights-label {
+    display: inline-block;
+
+    margin-bottom: 38px;
+
+    color: #eac800;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.cleaning-insights-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(55px, 6vw, 60px);
+
+    line-height: 1.02;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+}
+
+
+.cleaning-insights-content h1 span {
+    display: block;
+
+    color: #176B3A;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.cleaning-insights-content p {
+    max-width: 700px;
+
+    margin: 30px 0 34px;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 18px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   BUTTON WRAPPER
+========================================= */
+
+.cleaning-insights-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   BUTTON COMMON
+========================================= */
+
+.cleaning-btn {
+    min-height: 58px;
+
+    padding: 0 28px;
+
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
-    gap: 10px;
 
-    padding: 14px 22px;
-    border-radius: 50px;
+    gap: 12px;
 
-    font-size: 14px;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
     font-weight: 700;
 
-    transition: 0.3s ease;
+    transition:
+        all 0.3s ease;
 }
 
-.primary-btn {
-    background: var(--primary);
-    color: var(--white);
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.cleaning-btn-primary {
+
+    color: #ffffff;
+
+    background:
+        var(--primary);
+
 }
 
-.primary-btn:hover {
+
+.cleaning-btn-primary:hover {
+
+    transform: translateY(-3px);
+
     background: var(--secondary);
-    color: var(--black);
-    transform: translateY(-2px);
+
+    color: black;
 }
 
-.secondary-btn {
-    border: 1px solid var(--border);
-    color: var(--white);
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.cleaning-btn-secondary {
+
+    color: #ffffff;
+
     background: transparent;
+    border: 1px solid var(--primary);
 }
 
-.secondary-btn:hover {
-    border-color: var(--primary);
-    background: var(--primary);
-    color: var(--white);
+
+.cleaning-btn-secondary:hover {
+
+    color: #ffffff;
+
+    background: #176B3A;
+
     
-   
 }
-.section-label{
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.cleaning-btn i {
+
+    font-size: 14px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.cleaning-btn:hover i {
+
+    transform: translateX(5px);
+}
+.section-label {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     width: 100%;
     text-align: center;
-    padding:10px 0px 10px 0px;
+    padding:60px 0px 10px 0px;
 }
 
 .label-line {
@@ -1670,9 +1829,8 @@ button {
     gap: 12px;
     width: 100%;
     text-align: center;
-    padding:10px 0px 10px 0px;
+    padding:60px 0px 10px 0px;
 }
-
 .label-line-1{
     width: 40px;
     height: 2px;
@@ -1689,114 +1847,109 @@ button {
     text-transform: uppercase;
 }
 
+
+
 /* =========================================
-   HERO DECORATION
+   RESPONSIVE - TABLET
 ========================================= */
 
-.blog-hero-decoration {
-    min-height: 360px;
-    position: relative;
+@media (max-width: 900px) {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .cleaning-insights-hero {
+        min-height: 650px;
+    }
+
+    .cleaning-insights-container {
+        width: 90%;
+    }
+
+    .cleaning-insights-content {
+        width: 650px;
+    }
+
+    .cleaning-insights-content h1 {
+        font-size: 60px;
+    }
+
 }
 
-.blog-hero-decoration::before {
-    content: "";
-    position: absolute;
 
-    width: 310px;
-    height: 310px;
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
 
-    border-radius: 50%;
+@media (max-width: 600px) {
 
-    background: rgba(0, 0, 0, 0.5);
+    .cleaning-insights-hero {
+        min-height: 650px;
+
+        background-position: center;
+    }
 
 
-    opacity: 0.08;
-}
+    .cleaning-insights-overlay {
 
-.hero-cleaning-card {
-    position: relative;
-    z-index: 2;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.88),
+                rgba(0, 0, 0, 0.65)
+            );
+    }
 
-    width: min(360px, 90%);
 
-    display: flex;
-    align-items: center;
-    gap: 18px;
+    .cleaning-insights-container {
+        width: 90%;
+    }
 
-    padding: 25px;
 
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 22px;
+    .cleaning-insights-content {
+        width: 100%;
+    }
 
-    box-shadow: var(--shadow);
 
-    transform: rotate(-4deg);
-}
+    .cleaning-insights-label {
+        margin-bottom: 22px;
 
-.hero-icon {
-    width: 65px;
-    height: 65px;
+        font-size: 12px;
 
-    flex-shrink: 0;
+        letter-spacing: 1.5px;
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    border-radius: 18px;
+    .cleaning-insights-content h1 {
 
-    background: var(--soft-green);
-    color: var(--primary);
+        font-size: 48px;
 
-    font-size: 27px;
-}
+        line-height: 1.04;
 
-.hero-cleaning-card strong {
-    display: block;
+        letter-spacing: -2px;
+    }
 
-    font-family: "Manrope", sans-serif;
-    font-size: 17px;
-    color: var(--heading);
-}
 
-.hero-cleaning-card span {
-    display: block;
-    margin-top: 4px;
+    .cleaning-insights-content p {
 
-    font-size: 13px;
-    color: var(--text);
-}
+        margin: 24px 0 28px;
 
-.floating-shape {
-    position: absolute;
-    border-radius: 50%;
-}
+        font-size: 16px;
 
-.shape-one {
-    width: 75px;
-    height: 75px;
+        line-height: 1.6;
+    }
 
-    top: 35px;
-    right: 40px;
 
-    background: var(--secondary);
-    opacity: 0.8;
-}
+    .cleaning-insights-buttons {
 
-.shape-two {
-    width: 48px;
-    height: 48px;
+        flex-direction: column;
 
-    bottom: 35px;
-    left: 55px;
+        align-items: stretch;
+    }
 
-    background: var(--primary);
-    opacity: 0.7;
+
+    .cleaning-btn {
+
+        width: 100%;
+    }
+
 }
 
 
@@ -3899,73 +4052,103 @@ body.dark-mode {
    BLOG HERO
 ========================================= */
 
-body.dark-mode .blog-hero {
-    background:
-        radial-gradient(
-            circle at 85% 30%,
-            rgba(234, 200, 0, 0.10),
-            transparent 28%
-        ),
-        linear-gradient(
-            135deg,
-            #0c1911 0%,
-            #101b15 55%,
-            #09130e 100%
-        );
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-         url("images/ABOUT.jpg"); 
-         background-size: cover;
-          background-position: center;
-           background-repeat: no-repeat;
-}
+/* =========================================
+   CLEAN NEST HERO - DARK MODE
+   DARK MODE KEYWORD: body.dark-mode
+========================================= */
 
-body.dark-mode .blog-hero h1,
-body.dark-mode .blog-hero p {
-    color: var(--heading);
-}
-
-body.dark-mode .blog-hero h1 span {
-    color: #eac800;
-}
-body.dark-mode .primary-btn{
-    color: var(--black);
-}
-body.dark-mode .primary-btn:hover{
-    color: var(--white);
-}
-body.dark-mode .secondary-btn {
-   background: var(--white);
-    color: var(--black);
-}
-
-body.dark-mode .secondary-btn:hover {
-    border-color:var(--primary);
-    color: var(--black);
-    background-color: var(--primary);
+body.dark-mode .cleaning-insights-hero {
+    background-color: #07130d;
+    color: #ffffff;
 }
 
 
 /* =========================================
-   HERO CLEANING CARD
+   DARK MODE OVERLAY
 ========================================= */
 
-body.dark-mode .hero-cleaning-card {
-    background: #14231a;
-    border-color: #294335;
-    box-shadow: var(--shadow);
+body.dark-mode .cleaning-insights-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(3, 20, 12, 0.84) 40%,
+            rgba(0, 0, 0, 0.55) 75%,
+            rgba(0, 0, 0, 0.40) 100%
+        );
 }
 
-body.dark-mode .hero-cleaning-card strong {
-    color: #f4f8f5;
-}
 
-body.dark-mode .hero-cleaning-card span {
-    color: #aebeb5;
-}
+/* =========================================
+   LABEL
+========================================= */
 
-body.dark-mode .hero-icon {
-    background: #1a3827;
+body.dark-mode .cleaning-insights-label {
     color: #eac800;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+body.dark-mode .cleaning-insights-content h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .cleaning-insights-content h1 span {
+    color: secondary;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+body.dark-mode .cleaning-insights-content p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+
+
+/* =========================================
+   BUTTON ICON
+========================================= */
+
+body.dark-mode .cleaning-btn i {
+    color: inherit;
+}
+
+
+/* =========================================
+   MOBILE DARK MODE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body.dark-mode .cleaning-insights-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.94),
+                rgba(3, 20, 12, 0.78)
+            );
+    }
+
+    body.dark-mode .cleaning-insights-content h1 {
+        color: #ffffff;
+    }
+
+    body.dark-mode .cleaning-insights-content h1 span {
+        color: #3dbb68;
+    }
+
+    body.dark-mode .cleaning-btn-secondary {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: #3dbb68;
+    }
+
 }
 
 

@@ -1272,10 +1272,16 @@ html[dir="rtl"] .footer-column ul li a:hover {
     }
 
     .site-logo img {
-        width: 50px;
+        width: 75px;
         max-width: 25px;
         height: auto;
         display: block;
+    }
+    .logo-name span{
+        font-size: 15px;
+    }
+    .logo-tagline{
+        font-size: 8px;
     }
 
     /* MOBILE NAV */
@@ -1339,7 +1345,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
         padding: 5px;
 
         display: none;
-        transform: none !important;
+        
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -1349,7 +1355,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
     }
 
     .nav-dropdown:hover .dropdown-menu {
-        display: block;
+        display: flex;
     }
 
     .dropdown-menu a {
@@ -1439,6 +1445,50 @@ html[dir="rtl"] .footer-column ul li a:hover {
     }
 }
 
+/* ================================
+   RTL / LTR BUTTON
+================================ */
+
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    #rtlBtn {
+        display: flex !important;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        padding: 0;
+        color: var(--black) !important;
+        background: #ffffff !important;
+    }
+
+    #rtlBtn span,
+    #rtlBtn .directionText {
+        display: inline-block !important;
+        color: var(--black) !important;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+    #rtlBtn {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 11px;
+    }
+
+    #rtlBtn span,
+    #rtlBtn .directionText {
+        font-size: 11px;
+    }
+}
 
 
 /* =========================================================

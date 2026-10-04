@@ -1252,10 +1252,16 @@ html[dir="rtl"] .footer-column ul li a:hover {
     }
 
     .site-logo img {
-        width: 50px;
+        width: 75px;
         max-width: 25px;
         height: auto;
         display: block;
+    }
+    .logo-name span{
+        font-size: 15px;
+    }
+    .logo-tagline{
+        font-size: 8px;
     }
 
     /* MOBILE NAV */
@@ -1419,6 +1425,84 @@ html[dir="rtl"] .footer-column ul li a:hover {
     }
 }
 
+/* ================================
+   RTL / LTR BUTTON
+================================ */
+
+#rtlBtn {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    background: #ffffff;
+    box-sizing: border-box;
+    color: var(--primary) !important;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: 700;
+    font-family: inherit;
+
+    cursor: pointer;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible;
+    white-space: nowrap;
+
+    position: relative;
+    z-index: 10;
+}
+
+/* Make sure the text inside is visible */
+#rtlBtn span,
+#rtlBtn .directionText {
+    display: inline-block !important;
+    color: var(--primary) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    #rtlBtn {
+        display: flex !important;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        padding: 0;
+        color: var(--black) !important;
+        background: #ffffff !important;
+    }
+
+    #rtlBtn span,
+    #rtlBtn .directionText {
+        display: inline-block !important;
+        color: var(--black) !important;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+    #rtlBtn {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 11px;
+    }
+
+    #rtlBtn span,
+    #rtlBtn .directionText {
+        font-size: 11px;
+    }
+}
 /* =========================================================
                 SOFA CLEANING HOME PAGE
 ========================================================= */
@@ -1532,7 +1616,7 @@ html[dir="rtl"] .footer-column ul li a:hover {
 .hero-content h1 {
     margin: 0;
 
-    font-size: clamp(52px, 5vw, 72px);
+    font-size: clamp(52px, 5vw, 60px);
     line-height: 1.02;
 
     font-weight: 800;
@@ -2065,7 +2149,7 @@ header,
         clamp(
             50px,
             6vw,
-            60px
+            50px
         );
 
     line-height:
@@ -2838,7 +2922,7 @@ body.dark-mode .sc-btn-yellow:hover{
         clamp(
             38px,
             5vw,
-            58px
+            50px
         );
 
     line-height:
@@ -2910,7 +2994,7 @@ body.dark-mode .sc-heading h2 span{
         relative;
 
     padding:
-        35px 28px;
+        28px 28px;
 
     background:
         var(--sc-bg);
@@ -3018,19 +3102,18 @@ body.dark-mode .sc-service-card a{
 }
 
 
-.sc-service-icon {
+.sc-service-icon img {
 
     width:
-        64px;
+        250px;
 
     height:
-        64px;
+        auto;
 
-    display:
-        grid;
+    
 
-    place-items:
-        center;
+    
+    place-items:start;
 
     color:
         var(--sc-primary);
@@ -3043,14 +3126,12 @@ body.dark-mode .sc-service-card a{
             0.08
         );
 
-    border-radius:
-        15px;
+    
 
     font-size:
         25px;
 
-    margin-bottom:
-        27px;
+   
 
 }
 body.dark-mode .sc-service-icon{
@@ -3358,7 +3439,7 @@ a i {
         clamp(
             38px,
             5vw,
-            57px
+            50px
         );
 
     line-height:
@@ -3970,7 +4051,10 @@ body.dark-mode .sc-process-icon {
 
 }
 
-
+.sc-testimonial-top img {
+    width: 50px;
+    height: auto;
+}
 .sc-testimonial-top strong,
 .sc-testimonial-top span {
 
